@@ -7,6 +7,7 @@ import linkedin from "../Assets/linkedin.png";
 import youtube from "../Assets/youtube.png";
 import location from "../Assets/location.png";
 import phone from "../Assets/phone-call.png";
+import shape from "../Assets/pentagon.png";
 
 function Footer() {
   return (
@@ -89,6 +90,10 @@ function Footer() {
           <img src={instagram} alt="instagram" />
           <img src={youtube} alt="youtube" />
         </div>
+      </div>
+      <div className="pentogon">
+        <img src={shape} alt="shape" />
+        <img src={shape} className="shape2" alt="shape" />
       </div>
     </footer>
   );

@@ -59,17 +59,41 @@
     margin-bottom: 6px;
 }
 .footer-last{
+    z-index: 99;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    position: relative;
 }
 .social img{
     width: 36px;
     height: 43px;
-    margin: 0 20px;
-
+    margin: 0 13px;
+}
+.social{
+    position: relative;
+    left: 78px;
+}
+.foot-line{
+    position: relative;
+    right: 81px;
 }
 .foot-line p{
     color: #69C8EF;
+    font-size: 22px;
+    font-weight: 500;
+}
+.pentogon img{
+    z-index: 99;
+    top: -342px;
+    width: 32px;
+    position: relative;
+}
+.shape2{
+    position: relative;
+    top: -420px !important;
+    left: 1159px;
+    width: 82px !important; 
+    height: 75px;
 }
 
 @media screen and (max-width: 768px) {
