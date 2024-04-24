@@ -1,0 +1,40 @@
+.contactusDiv {
+  margin-top: 50px;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.contactusDiv p {
+  font-size: 21px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.contactusDiv h2 {
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.contactusDiv button {
+  width: 342px;
+  height: 94px;
+  border-radius: 23px;
+  background-color: #2bb0e9;
+  color: white;
+  font-size: 35px;
+  font-weight: 700;
+  text-align: center;
+  border: none;
+  outline: none;
+  margin-top: 70px;
+}
+
+.contactDivVector {
+  position: absolute;
+  top: 50%;
+  left: 84%;
+}
