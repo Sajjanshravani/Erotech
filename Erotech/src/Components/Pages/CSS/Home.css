@@ -10,6 +10,10 @@ img {
   height: auto;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 .HomeBanner {
   position: relative;
   z-index: -1;
@@ -358,7 +362,7 @@ img {
 .section4-Boxes {
   opacity: 0;
   transform: translateX(50px);
-  transition: opacity 0.5s, transform 0.5s;
+  transition: opacity 0.9s, transform 0.9s;
 }
 .section4-Description {
   opacity: 0;
@@ -372,6 +376,28 @@ img {
 .section4-Description.visible {
   opacity: 1;
   transform: translateX(0);
+}
+
+.section4 .section4Box {
+  opacity: 0;
+  transition: opacity 0.9s, transform 0.9s;
+}
+
+.section4.visible .section4Box1 {
+  opacity: 1;
+  transition-delay: 1s;
+}
+.section4.visible .section4Box2 {
+  opacity: 1;
+  transition-delay: 1.4s;
+}
+.section4.visible .section4Box3 {
+  opacity: 1;
+  transition-delay: 1.8s;
+}
+.section4.visible .section4Box4 {
+  opacity: 1;
+  transition-delay: 2.2s;
 }
 
 /* ---------------Popular Courses---------------- */

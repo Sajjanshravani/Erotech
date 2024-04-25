@@ -70,6 +70,10 @@ const Home = () => {
 
   const [isSection4Visible, setIsSection4Visible] = useState(false);
   const section4Ref = useRef(null);
+  const [box1Count, setBox1Count] = useState(0);
+  const [box2Count, setBox2Count] = useState(0);
+  const [box3Count, setBox3Count] = useState(0);
+  const [box4Count, setBox4Count] = useState(0);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -89,6 +93,36 @@ const Home = () => {
       }
     };
   }, []);
+
+  useEffect(() => {
+    let start = 0;
+    let end1 = 1.926;
+    let end2 = 3.092;
+    let end3 = 100;
+    let end4 = 20;
+    let totalSteps = 100;
+    let currentStep = 0;
+
+    const interval = setInterval(() => {
+      currentStep++;
+      const step1 = ((end1 - start) * (currentStep / totalSteps)).toFixed(3);
+      const step2 = ((end2 - start) * (currentStep / totalSteps)).toFixed(3);
+      const step3 = ((end3 - start) * (currentStep / totalSteps)).toFixed(0);
+      const step4 = ((end4 - start) * (currentStep / totalSteps)).toFixed(0);
+      setBox1Count(step1);
+      setBox2Count(step2);
+      setBox3Count(step3);
+      setBox4Count(step4);
+
+      if (currentStep >= totalSteps) {
+        clearInterval(interval);
+      }
+    }, 30);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [isSection4Visible]);
 
   return (
     <>
@@ -260,24 +294,32 @@ const Home = () => {
           >
             <div className="leftBoxes">
               <div className="section4Box section4Box1">
-                <h2>1.926</h2>
+                <h2>
+                  <span className="count">{box1Count}</span>
+                </h2>
                 <h3>Finished Sessions</h3>
                 <p>Get Some Variety Guidance And For Your Future Career.</p>
               </div>
               <div className="section4Box section4Box2">
-                <h2>3.092+</h2>
+                <h2>
+                  <span className="count">{box2Count}</span>
+                </h2>
                 <h3>Enrolled Learners</h3>
                 <p>GMake Reservation With Consultant To Get Dream Career.</p>
               </div>
             </div>
             <div className="rightBoxes">
               <div className="section4Box section4Box3">
-                <h2>100%</h2>
+                <h2>
+                  <span className="count">{box3Count}%</span>
+                </h2>
                 <h3>Satisfaction Rate</h3>
                 <p>Develop Skill For Career Various Science & Language.</p>
               </div>
               <div className="section4Box section4Box4">
-                <h2>20k+</h2>
+                <h2>
+                  <span className="count">{box4Count}k+</span>
+                </h2>
                 <h3>Online Instructors</h3>
                 <p>Learn From Anywhere In The World With Any Devices.</p>
               </div>
