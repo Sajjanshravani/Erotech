@@ -10,6 +10,11 @@ img {
   height: auto;
 }
 
+.HomeBanner {
+  position: relative;
+  z-index: -1;
+}
+
 .HomeBanner .slick-arrow {
   display: none !important;
 }
