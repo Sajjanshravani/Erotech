@@ -14,9 +14,10 @@ function Footer() {
     <footer className="footer">
       <div className="wave-shape">
         <svg
-          width="1440"
-          height="460"
+          width="2000"
+          height="300"
           viewBox="0 0 1440 460"
+          preserveAspectRatio="none"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
