@@ -45,7 +45,7 @@ function NavBar() {
               <a href="/">Careers</a>
             </li>
             <li>
-              <a href="/">Contact Us</a>
+              <a href="/contact_us">Contact Us</a>
             </li>
           </ul>
         </nav>
