@@ -10,6 +10,15 @@ img {
   height: auto;
 }
 
+html {
+  overflow-x: hidden;
+}
+
+.HomeBanner {
+  position: relative;
+  z-index: -1;
+}
+
 .HomeBanner .slick-arrow {
   display: none !important;
 }
@@ -71,6 +80,16 @@ img {
   align-items: center;
   gap: 1rem;
   position: relative;
+}
+
+.investing .invest-body {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.9s, transform 0.9s;
+}
+.investing.visible .invest-body {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .invest-title p {
@@ -236,6 +255,35 @@ img {
   z-index: 3;
 }
 
+/* section3animation */
+.section3 {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+.section3.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.section3-Image {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+.section3-Description {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.9s, transform 0.9s;
+}
+.section3-Image.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+.section3-Description.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 /*-------Section 4-------*/
 .section4 {
   margin-top: 50px;
@@ -299,6 +347,57 @@ img {
   top: 105%;
   left: 22%;
   width: 100px;
+}
+/* section4animations */
+
+.section4 {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+.section4.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.section4-Boxes {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.9s, transform 0.9s;
+}
+.section4-Description {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.9s, transform 0.9s;
+}
+.section4-Boxes.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+.section4-Description.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.section4 .section4Box {
+  opacity: 0;
+  transition: opacity 0.9s, transform 0.9s;
+}
+
+.section4.visible .section4Box1 {
+  opacity: 1;
+  transition-delay: 1s;
+}
+.section4.visible .section4Box2 {
+  opacity: 1;
+  transition-delay: 1.4s;
+}
+.section4.visible .section4Box3 {
+  opacity: 1;
+  transition-delay: 1.8s;
+}
+.section4.visible .section4Box4 {
+  opacity: 1;
+  transition-delay: 2.2s;
 }
 
 /* ---------------Popular Courses---------------- */

@@ -3,7 +3,8 @@ import "./App.css";
 import NavBar from "./Components/NavBar/NavBar";
 import Footer from "./Components/Footer/Footer";
 import Home from "./Components/Pages/Home";
-import ContactUs from "./Components/ContactUs/ContactUs"
+import About from "./Components/About/About";
+import Training from "./Components/Training/Training";
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path = '/contact_us' element={<ContactUs/>} />
+          <Route path="/about" element={<About />} />
+          <Route path="/training" element={<Training />} />
         </Routes>
         <Footer />
       </BrowserRouter>

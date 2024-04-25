@@ -6,10 +6,10 @@
 
 .wave-shape {
     position: absolute;
-    top: 0; /* Adjust positioning to place it at the top */
+    top: 0;
     left: 0;
     width: 100%;
-    height: auto; /* Adjust height to maintain aspect ratio */
+    height: auto; 
     z-index: 1;
 }
 
@@ -50,7 +50,10 @@
     height: 20px;
     position: relative;
     top: 0px;
-    right: 37px;
+    /* right: 37px; */
+}
+.footer-column ul{
+    padding-left: 0;
 }
 
 .footer-column ul li {
@@ -82,6 +85,9 @@
     font-size: 22px;
     font-weight: 500;
 }
+.pentogon{
+    position: relative; 
+}
 .pentogon img{
     z-index: 99;
     top: -342px;
@@ -95,10 +101,163 @@
     width: 82px !important; 
     height: 75px;
 }
+.wave-shape svg{
+    width: 100%;
+}
 
 @media screen and (max-width: 768px) {
     .footer-column {
         flex: 1 1 100%;
         margin-right: 0;
+    }
+} 
+@media screen and (min-width:1444px) {
+    .shape2{
+        top: -480px !important;
+        left: 1362px;    
+    }
+    .footer{
+        overflow: unset;
+    }
+    .pentogon img{
+        top: -384px;
+    }
+}
+
+@media screen and (min-width:1377px) and (max-width:1443px) {
+    .shape2{
+        top: -478px !important;
+        left: 1270px;
+    }
+    .footer{
+        overflow: unset;
+    }
+    .pentogon img{
+        top: -377px;
+    }
+}
+
+@media screen and (min-width:1300px) and (max-width:1376px) {
+    .shape2{
+        top: -480px !important;
+        left: 1219px;
+    }
+    .footer{
+        overflow: unset;
+    }
+    .pentogon img{
+        top: -394px;
+    }
+}
+
+@media screen and (min-width:1024px) and (max-width:1199px){
+    .shape2{
+        top: -481px !important;
+        left: 879px;
+    }
+    .footer{
+        overflow: unset;
+    }
+    .pentogon img{
+        top: -395px;
+    }
+
+
+}
+
+@media screen and (min-width:500px) and (max-width:786px) {
+    .pentogon img{
+        top: -963px;
+    }
+    .shape2{
+        top: -1052px !important;
+        left: 603px;    
+    }
+    .footer{
+        overflow: unset;
+    }
+    .foot-line{
+        right: -22px;
+    }
+    .footer-last{
+        justify-content: normal;
+    }
+}
+
+@media screen and (min-width:400px) and (max-width:500px){
+.pentogon img{
+    top: -1012px;
+    width: 32px;
+    position: relative;
+    left: 3px;
+}
+.shape2 {
+    top: -1081px !important;
+    left: 262px !important;
+}
+.footer{
+    overflow: unset;
+}
+.footer-last{
+    flex-direction: column-reverse;
+}
+.foot-line{
+    right: -21px;
+}
+.social{
+    left: 15px;
+    top: -30px;
+}
+}
+
+@media screen and (min-width:375px) and (max-width:399px) {
+    .pentogon img{
+        top: -1012px;
+        width: 32px;
+        position: relative;
+        left: 3px;
+    }
+    .shape2 {
+        top: -1097px !important;
+        left: 237px !important;
+    }
+    .footer{
+        overflow: unset;
+    }
+    .footer-last{
+        flex-direction: column-reverse;
+    }
+    .foot-line{
+        right: -21px;
+    }
+    .social{
+        left: 15px;
+        top: -30px;
+    }
+}
+
+@media screen and (min-width:300px) and (max-width:374px){
+    .pentogon img{
+        top: -1012px;
+        width: 32px;
+        position: relative;
+        left: 3px;
+    }
+    .shape2 {
+        top: -1091px !important;
+        left: 207px !important;
+    }
+    .footer{
+        overflow: unset;
+    }
+    .footer-last{
+        flex-direction: column-reverse;
+    }
+    .foot-line{
+        right: -21px;
+    }
+    .social{
+        left: 15px;
+        top: -30px;
     }
 }
