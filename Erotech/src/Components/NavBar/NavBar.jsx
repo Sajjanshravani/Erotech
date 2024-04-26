@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+// import { Link } from "react-router-dom";
 import "./NavBar.css";
 import logo from "../Assets/logo.png";
 
@@ -29,9 +30,12 @@ function NavBar() {
         </label>
         <nav>
           <ul>
+         
             <li>
+              
               <a href="/">Home</a>
             </li>
+           
             <li>
               <a href="/">About Us</a>
             </li>
@@ -44,9 +48,13 @@ function NavBar() {
             <li>
               <a href="/">Careers</a>
             </li>
+           
             <li>
-              <a href="/contact_us">Contact Us</a>
+              <a href="/contactUs">Contact Us</a>
+            
             </li>
+            
+           
           </ul>
         </nav>
       </header>
