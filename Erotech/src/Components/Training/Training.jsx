@@ -3,6 +3,10 @@ import "./Training.css";
 import trainbanner from "../Assets/train-banner.png";
 import train from "../Assets/train-1.png";
 import cbox from "../Assets/cbox.png";
+import user from "../Assets/user.png";
+import phone from "../Assets/telephone.png";
+import mail from "../Assets/email.png";
+import chat from "../Assets/chat.png";
 
 function Training() {
   const [activeTab, setActiveTab] = useState("Description");
@@ -61,7 +65,7 @@ function Training() {
                 For Enrollment
               </div>
             </div>
-            <div className="content">
+            <div className="content-train">
               {activeTab === "Description" && (
                 <div className="par-train">
                   <p>
@@ -175,31 +179,37 @@ function Training() {
         </div>
         <div className="form">
           <div className="custom-form-container">
-            <h2>Contact Form</h2>
+            {/* <h2>Contact Form</h2> */}
             <form onSubmit={handleSubmit}>
               <div className="custom-row">
                 <div className="custom-col">
                   <div className="custom-form-group">
                     <label htmlFor="name">Name:</label>
-                    <input
-                      type="text"
-                      id="name"
-                      value={name}
-                      onChange={(e) => setName(e.target.value)}
-                      required
-                    />
+                    <div className="input-with-icon">
+                      <img src={user} alt="" />
+                      <input
+                        type="text"
+                        id="name"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        required
+                      />
+                    </div>
                   </div>
                 </div>
                 <div className="custom-col">
                   <div className="custom-form-group">
                     <label htmlFor="email">Email:</label>
-                    <input
-                      type="email"
-                      id="email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      required
-                    />
+                    <div className="input-with-icon">
+                      <img src={mail} alt="" />
+                      <input
+                        type="email"
+                        id="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -207,41 +217,50 @@ function Training() {
                 <div className="custom-col">
                   <div className="custom-form-group">
                     <label htmlFor="course">Course:</label>
-                    <select
-                      id="course"
-                      value={course}
-                      onChange={(e) => setCourse(e.target.value)}
-                      required
-                    >
-                      <option value="">Select Course</option>
-                      <option value="course1">Course 1</option>
-                      <option value="course2">Course 2</option>
-                      <option value="course3">Course 3</option>
-                    </select>
+                    <div className="input-with-icon">
+                      {/* <img src={courseIcon} alt="" /> */}
+                      <select
+                        id="course"
+                        value={course}
+                        onChange={(e) => setCourse(e.target.value)}
+                        required
+                      >
+                        <option value="">Select Course</option>
+                        <option value="course1">Course 1</option>
+                        <option value="course2">Course 2</option>
+                        <option value="course3">Course 3</option>
+                      </select>
+                    </div>
                   </div>
                 </div>
                 <div className="custom-col">
                   <div className="custom-form-group">
                     <label htmlFor="phone">Phone Number:</label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      value={phone}
-                      onChange={(e) => setPhone(e.target.value)}
-                      required
-                    />
+                    <div className="input-with-icon">
+                      <img src={phone} alt="" />
+                      <input
+                        type="tel"
+                        id="phone"
+                        value={phone}
+                        onChange={(e) => setPhone(e.target.value)}
+                        required
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
               <div className="custom-form-group">
                 <label htmlFor="comment">Comment:</label>
-                <textarea
-                  id="comment"
-                  value={comment}
-                  onChange={(e) => setComment(e.target.value)}
-                  rows="4"
-                  cols="50"
-                ></textarea>
+                <div className="input-with-icon textarea-with-icon">
+                  <img src={chat} alt="" style={{ top: "18%" }} />
+                  <textarea
+                    id="comment"
+                    value={comment}
+                    onChange={(e) => setComment(e.target.value)}
+                    rows="4"
+                    cols="50"
+                  ></textarea>
+                </div>
               </div>
               <div className="custom-form-group">
                 <button className="custom-button" type="submit">

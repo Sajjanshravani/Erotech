@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Judson", serif;
+  }
+
+  .recent{
+    text-align: center;
+    font-weight: 700;
+    font-size: 47px;
+  }
+  .discover{
+    text-align: center;
+    font-weight: 400;
+    font-size: 22px;
+  }
+
+  /* CardSection.css */
+
+.card-section .title {
+    color: black;
+    font-size: 22px;
+    text-align: center;
+    position: relative;
+    margin: -129px 23px 26px 20px;
+    background-color: #5FC5EE;
+    padding: 10px 3px 13px 3px;
+    transition: all 0.8s ease-in-out 0s;
+    height: 100px;
+  }
+  
+  .content {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 10px;
+  }
+  
+  .content-image {
+    width: 100%;
+    border-radius: 3px;
+    height: 300px;
+  }
+  
+  .content-details {
+    position: absolute;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease-in-out 0s;
+  }
+  
+  .content:hover .content-details {
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+  }
+  
+  .content:hover .title {
+    margin: -270px 23px 26px 20px;
+    height: 250px;
+  }
+  
+  .content .title p {
+    font-size: 15px;
+  }
+  
+  .title .content-text {
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.2s ease;
+  }
+  
+  .title .content-text:hover {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .content:hover .content-text {
+    visibility: visible;
+    margin-top: -60px;
+    color: white !important;
+    font-size: 15px;
+    opacity: 1;
+    transition: 1.6s;
+    color: #a1a0a0 !important;
+  }
+  
+  .content:hover .content-text-1 {
+    visibility: hidden;
+  }
+  
+  .content-details h3 {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 0.5em;
+    border-bottom: 1px solid gray;
+    padding-bottom: 10px;
+  }
+     
+  .fadeIn-bottom {
+    top: 80%;
+  }
+  
+  .badge-img {
+    float: right;
+    margin-top: -175px;
+    position: relative;
+    margin-right: 25px;
+  }
+  
+  .content:hover .badge-img {
+    visibility: hidden;
+  }
+  
+  .btn  {
+    color: #2BB0E9;
+    background-color: white;
+    width: 118px;
+    position: relative;
+    top: 39px;
+  }
+  
+  .description{
+    text-align: justify;
+    position: relative;
+    top: 40px;
+    color: black !important;
+    left: 30px;
+    font-size: 16px;
+    width: 265px;
+    padding: 10px;
+  }
+  .career-banner img{
+    width: 100%;
+  }
+
+  @media screen and (min-width:1444px) {
+    .description{
+        left: 49px;
+    }
+  }
+  @media screen and (min-width:1300px) and (max-width:1376px) {
+    .description{
+        left: 26px;
+    }
+  }
+  @media screen and (min-width:1024px) and (max-width:1199px){
+  .description{
+    font-size: 15px;
+    width: 200px;
+  }
+}
+
+@media screen and (min-width:500px) and (max-width:786px) {
+    .description{
+        font-size: 11px;
+        width: 116px;
+    }
+}
+
+@media screen and (min-width:375px) and (max-width:399px){
+    .description{
+        left: 49px;
+    }
+}
+
+@media screen and (min-width:375px) and (max-width:399px){
+    .description {
+        left: 24px;
+    }
+}
+
+@media screen and (min-width:300px) and (max-width:374px){
+    .description{
+        left: 18px;
+        font-size: 15px;
+    }
+}

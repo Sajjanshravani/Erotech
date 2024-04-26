@@ -37,7 +37,7 @@
     border-top-color: blue;
   }
   
-  .content {
+  .content-train {
     padding: 20px;
   }
 
@@ -229,6 +229,17 @@
     position: relative;
     left: 369px;
     
+  }
+  .input-with-icon {
+    position: relative;
+  }
+  
+  .input-with-icon img {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 26px;
   }
   
 
