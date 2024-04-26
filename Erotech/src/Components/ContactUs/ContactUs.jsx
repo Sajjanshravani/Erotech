@@ -37,6 +37,22 @@ function ContactUs(){
                     </p>
                 </div>
             </div>
+            <div className="maps-bg">
+                
+                <div className="maps-embed">
+                        <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.8790634157795!2d78.36221442429307!3d17.417590501936054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb940bae9a58b7%3A0xbb3e52dce390cfd3!2sChaitanya%20Enclave%2C%20Khajaguda%2C%20Hyderabad%2C%20Telangana%20500075!5e0!3m2!1sen!2sin!4v1714117852892!5m2!1sen!2sin"
+                                width={600}
+                                height={450}
+                                style={{ border: 0 }}
+                                allowFullScreen=""
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                        >
+                        </iframe>
+                </div>
+            </div>
+            
             <div className="form-section">
                 <img src={ladysittingonbooks} alt="contactUs"/>
             </div>
