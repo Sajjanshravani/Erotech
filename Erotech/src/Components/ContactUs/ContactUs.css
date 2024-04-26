@@ -1,0 +1,14 @@
+*{
+    margin:0px;
+    box-sizing: border-box;
+}
+
+
+
+.form-section{
+    display: flex;
+}
+
+.form-section img{
+    width: 50%;
+}
