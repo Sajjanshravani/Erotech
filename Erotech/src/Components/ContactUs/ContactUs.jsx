@@ -4,6 +4,11 @@ import ladysittingonbooks from '../Assets/ladysittingonbooks.png';
 import Frame7 from '../Assets/Frame7.png';
 import location from '../Assets/location.png';
 import contactCard from '../Assets/contactCard.png';
+import cbox from "../Assets/cbox.png";
+import user from "../Assets/user.png";
+import mail from "../Assets/email.png";
+import phone from "../Assets/telephone.png";
+import chat from "../Assets/chat.png";
 import "./ContactUs.css";
 
 
@@ -55,13 +60,95 @@ function ContactUs(){
             
             <div className="form-section">
                 <img src={ladysittingonbooks} alt="contactUs"/>
-            </div>
-            <div className="" style={{marginTop:"100px"}}>
-              <p>START TODAY FOR GETTING ONLINE CERTIFICATION</p>
-              <h2>
-                You Can Be Your Own Guiding Star With Our Help
-              </h2>
-              <button type='button'>Contact Us</button>
+                    <form >
+                        <div className="custom-row">
+                            <div className="custom-col">
+                            <div className="custom-form-group">
+                                <label htmlFor="name">Name:</label>
+                                <div className="input-with-icon">
+                                <img src={user} alt="" />
+                                <input
+                                
+                                    type="text"
+                                    id="name"
+                                    // value={name}
+                                    // onChange={(e) => setName(e.target.value)}
+                                    required
+                                />
+                                </div>
+                            </div>
+                            </div>
+                            <div className="custom-col">
+                            <div className="custom-form-group">
+                                <label htmlFor="email">Email:</label>
+                                <div className="input-with-icon">
+                                <img src={mail} alt="" />
+                                <input
+                                    type="email"
+                                    id="email"
+                                    // value={email}
+                                    // onChange={(e) => setEmail(e.target.value)}
+                                    required
+                                />
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <div className="custom-row">
+                            <div className="custom-col">
+                            <div className="custom-form-group">
+                                <label htmlFor="course">Course:</label>
+                                <div className="input-with-icon">
+                                {/* <img src={courseIcon} alt="" /> */}
+                                <select
+                                    id="course"
+                                    // value={course}
+                                    // onChange={(e) => setCourse(e.target.value)}
+                                    required
+                                >
+                                    <option value="">Select Course</option>
+                                    <option value="course1">Course 1</option>
+                                    <option value="course2">Course 2</option>
+                                    <option value="course3">Course 3</option>
+                                </select>
+                                </div>
+                            </div>
+                            </div>
+                            <div className="custom-col">
+                            <div className="custom-form-group">
+                                <label htmlFor="phone">Phone Number:</label>
+                                <div className="input-with-icon">
+                                <img src={phone} alt="" />
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    // value={phone}
+                                    // onChange={(e) => setPhone(e.target.value)}
+                                    required
+                                />
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <div className="custom-form-group">
+                            <label htmlFor="comment">Comment:</label>
+                            <div className="input-with-icon textarea-with-icon">
+                            <img src={chat} alt="" style={{ top: "18%" }} />
+                            <textarea
+                                id="comment"
+                                // value={comment}
+                                // onChange={(e) => setComment(e.target.value)}
+                                rows="4"
+                                cols="50"
+                            ></textarea>
+                            </div>
+                        </div>
+                        <div className="custom-form-group">
+                            <button className="customs-button" type="submit">
+                            Submit
+                            </button>
+                        </div>
+                        </form>   
             </div>
         </>
        )
