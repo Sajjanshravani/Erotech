@@ -1,9 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Judson:ital,wght@0,400;0,700;1,400&display=swap');
+
 *{
     margin:0px;
     box-sizing: border-box;
+   
 }
 
+.contact-bg{
+    background-image: url('../Assets/Frame7.png');
+    height: 100vh;
+    width:100vw;
+    z-index: -1;
+    background-size: contain;
+}
 
+.address-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.address-section div{
+    width: 385px;
+    height: 228px;
+    border-radius: 8px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:30px;
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+.address-section img{
+    height: 80px;
+}
+.address-section h3,p{
+    font-family: "Judson";
+    text-align: center;
+}
+.address-section h3{
+    font-weight: bold;
+}
 
 .form-section{
     display: flex;
@@ -12,3 +52,4 @@
 .form-section img{
     width: 50%;
 }
+
