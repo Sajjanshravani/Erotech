@@ -1,6 +1,6 @@
 .footer {
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
     font-family: "Kreon", serif;
 }
 
@@ -96,9 +96,9 @@
 }
 .shape2{
     position: relative;
-    top: -420px !important;
-    left: 1159px;
-    width: 82px !important; 
+    top: -483px !important;
+    left: 1119px;
+    width: 82px !important;
     height: 75px;
 }
 .wave-shape svg{
