@@ -1,0 +1,23 @@
+.publication-banner img{
+    width: 100%;
+  }
+  .publication-banner h1{
+    position: absolute;
+    top: 180px;
+    left: 852px;
+    font-size: 22px;
+    font-weight: 400;
+    color: #023760;
+    font-family: "Judson", serif;
+  }
+  .publication-banner p{
+    font-size: 33px;
+    font-weight: 400;
+    line-height: 47.15px;
+    text-align: center;
+    font-family: "Judson", serif;
+    position: absolute;
+    top: 210px;
+    left: 761px;
+    color: #023760;
+  }

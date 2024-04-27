@@ -10,7 +10,8 @@ import greywave from "../Assets/Frame.png";
 
 function About() {
   const [isSection3Visible, setIsSection3Visible] = useState(false);
-  const section3Ref = useRef(null);
+  const section3Ref1 = useRef(null); // First section ref
+  const section3Ref2 = useRef(null); // Second section ref
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -20,13 +21,21 @@ function About() {
       { threshold: 0.5 }
     );
 
-    if (section3Ref.current) {
-      observer.observe(section3Ref.current);
+    if (section3Ref1.current) {
+      observer.observe(section3Ref1.current);
+    }
+
+    if (section3Ref2.current) {
+      observer.observe(section3Ref2.current);
     }
 
     return () => {
-      if (section3Ref.current) {
-        observer.unobserve(section3Ref.current);
+      if (section3Ref1.current) {
+        observer.unobserve(section3Ref1.current);
+      }
+
+      if (section3Ref2.current) {
+        observer.unobserve(section3Ref2.current);
       }
     };
   }, []);
@@ -47,7 +56,7 @@ function About() {
         } else {
           clearInterval(interval);
         }
-      }, 5); // Adjust the interval speed for the counting animation
+      }, 5);
       return interval;
     });
 
@@ -75,20 +84,20 @@ function About() {
   ];
 
   return (
-    <div>
+    <div className="abu">
       <div className="about">
         <img src={background} alt="" />
         <h1>Get Personalized Recommendations</h1>
         <p>Your high- Quality Training Specialist of IT - EROTECH Solutions</p>
       </div>
-      <div>
+      <div className="about-ani">
         <div
-          ref={section3Ref}
+          ref={section3Ref1}
           className={`section3 ${isSection3Visible ? "visible" : ""}`}
         >
           <div className="row">
             <div
-              className={`col-lg-5 col-sm-12 section3-Description ${
+              className={`col-lg-5 col-sm-12 section3-Description11 ${
                 isSection3Visible ? "visible" : ""
               }`}
             >
@@ -113,29 +122,29 @@ function About() {
               <img
                 src={pentagon}
                 alt="Section3Vectors"
-                className="Section3Vector vector1"
+                className="Section3Vector vector12"
               />
               <img
                 src={investVector2}
                 alt="Section3Vectors"
-                className="Section3Vector vector2"
+                className="Section3Vector vector22"
               />
               <img
                 src={Section3Dots}
                 alt="Section3Vectors"
-                className="Section3Vector dotsVector"
+                className="Section3Vector dotsVector1"
               />
               <img
                 src={Section3Waves}
                 alt="Section3Vectors"
-                className="Section3Vector wavesVector"
+                className="Section3Vector wavesVector1"
               />
               <img
                 src={Section3Pentagon}
                 alt="Section3Vectors"
-                className="Section3Vector pentagonVector"
+                className="Section3Vector pentagonVector1"
               />
-              <div className="GrayImg">IMAGE</div>
+              <div className="Graybox">IMAGE</div>
             </div>
           </div>
         </div>
@@ -165,7 +174,7 @@ function About() {
       </div>
       <div className="text-image">
         <div
-          ref={section3Ref}
+          ref={section3Ref2}
           className={`section3 ${isSection3Visible ? "visible" : ""}`}
         >
           <div className="row">
@@ -177,32 +186,32 @@ function About() {
               <img
                 src={pentagon}
                 alt="Section3Vectors"
-                className="Section3Vector vector1"
+                className="Section3Vector vector13"
               />
               <img
                 src={investVector2}
                 alt="Section3Vectors"
-                className="Section3Vector vector2"
+                className="Section3Vector vector23"
               />
               <img
                 src={Section3Dots}
                 alt="Section3Vectors"
-                className="Section3Vector dotsVector"
+                className="Section3Vector dotsVector3"
               />
               <img
                 src={Section3Waves}
                 alt="Section3Vectors"
-                className="Section3Vector wavesVector"
+                className="Section3Vector wavesVector3"
               />
               <img
                 src={Section3Pentagon}
                 alt="Section3Vectors"
-                className="Section3Vector pentagonVector"
+                className="Section3Vector pentagonVector3"
               />
-              <div className="GrayImg">IMAGE</div>
+              <div className="GrayImg3">IMAGE</div>
             </div>
             <div
-              className={`col-lg-5 col-sm-12 section3-Description ${
+              className={`col-lg-5 col-sm-12 section3-Description3 ${
                 isSection3Visible ? "visible" : ""
               }`}
             >
@@ -222,10 +231,12 @@ function About() {
           </div>
         </div>
       </div>
-      <div className="contactusDiv">
-        <p>START TODAY FOR GETTING ONLINE CERTIFICATION</p>
-        <h2>You Can Be Your Own Guiding Star With Our Help</h2>
-        <button>Contact US</button>
+      <div className="con-last">
+        <div className="contactusDiv">
+          <p>START TODAY FOR GETTING ONLINE CERTIFICATION</p>
+          <h2>You Can Be Your Own Guiding Star With Our Help</h2>
+          <button>Contact US</button>
+        </div>
       </div>
     </div>
   );
