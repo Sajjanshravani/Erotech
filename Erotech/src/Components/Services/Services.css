@@ -86,3 +86,31 @@ button{
 .why-list img{
     height: 100px;
 }
+
+.process{
+    border:1px solid #000000;
+    background-color:#F0FBFF;
+    padding:20px;
+    width: 87%;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.process-ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.process-ul li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Judson";
+}

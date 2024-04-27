@@ -49,7 +49,7 @@ const cirtificationContent = [
         description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's Lorem Ipsum",
     },
   
-]
+];
 
 const whyGetCirtificateContent = [
     {
@@ -62,6 +62,27 @@ const whyGetCirtificateContent = [
         logo:cirtify,
         description:"Add a globally recognized certification to your LinkedIn profile to prove to your employer or future employer you know your stuff. Your resume will never be the same.",
     }
+];
+
+const processContent = [
+    {
+        id:1,
+        logo:quality,
+        mainHeading:"Complete All Sessions",
+        description:"Watch videos and take simple quizzes to complete all lessons.",
+    },
+    {
+        id:2,
+        logo:quality,
+        mainHeading:"Pass the Assessment",
+        description:"Pass the certification exam and complete practical exercises.",
+    },
+    {
+        id:3,
+        logo:quality,
+        mainHeading:"Get the Certification",
+        description:"Earn your certificate.",
+    }
 ]
 
-export {cirtificationContent,whyGetCirtificateContent};
+export {cirtificationContent,whyGetCirtificateContent,processContent};

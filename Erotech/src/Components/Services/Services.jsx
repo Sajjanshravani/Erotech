@@ -1,5 +1,5 @@
 import './Services.css'
-import {cirtificationContent,whyGetCirtificateContent} from '../Assets/ServicesContent/Service';
+import {cirtificationContent,whyGetCirtificateContent,processContent} from '../Assets/ServicesContent/Service';
 function Services(){
     return(
         <div className='container-fluid'>
@@ -40,7 +40,24 @@ function Services(){
                     </li>
             )}
             </ul>
-            
+            <div className='row process'>
+                <h3 style={{textAlign:"center"}}>The Certification Process</h3>
+                <ul className='process-ul'>
+                    {processContent.map((each)=>
+                <li key={each.id} className='col-md-4'>
+                    <div>
+                        <img src={each.logo} alt="logo" />
+                    </div>
+                    <h4 style={{fontWeight:"bold"}}>
+                        {each.mainHeading}
+                    </h4>
+                    <p>{each.description}</p>
+                </li>
+                )}
+                </ul>
+                <button type="button">Sign up for courses</button>
+            </div>
+
 
         </div>
     )
