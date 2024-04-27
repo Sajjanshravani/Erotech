@@ -7,7 +7,7 @@ import About from "./Components/About/About";
 import Training from "./Components/Training/Training";
 import ContactUs from "./Components/ContactUs/ContactUs";
 import Career from "./Components/Career/Career";
-import Services from "./Components/Services/Services";
+import Certification from "./Components/Services/Certification";
 import Publication from "./Components/Publication/Publication";
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/training" element={<Training />} />
-          <Route path="/Services" element={<Services />} />
+          <Route path="/Services/certification" element={<Certification />} />
           <Route path="/contactUs" element={<ContactUs />} />
           <Route path="/career" element={<Career />} />
           <Route path="/publication" element={<Publication />} />

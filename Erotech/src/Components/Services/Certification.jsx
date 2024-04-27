@@ -1,6 +1,6 @@
-import './Services.css'
+import './Certification.css'
 import {cirtificationContent,whyGetCirtificateContent,processContent} from '../Assets/ServicesContent/Service';
-function Services(){
+function Certification(){
     return(
         <div className='container-fluid'>
             <div className='row'>
@@ -63,4 +63,4 @@ function Services(){
     )
 }
 
-export default Services;
+export default Certification;
