@@ -13,10 +13,22 @@
     background-size: 100%;
 }
 
+.address-section img{
+    height: 80px;
+}
+
 @media screen and (max-width:567px){
     .contact-bg{
         width:100vw;
         height: 20vh;
+    }
+
+    .address-section img{
+        height: 20px;
+    }
+
+    .address-section h3,p{
+        font-size: 10px;
     }
 }
 
@@ -24,6 +36,9 @@
     .contact-bg{
         width:100vw;
         height: 21vh;
+    }
+    .address-section img{
+        height: 20px;
     }
 }
 @media screen and (max-width:992px){
@@ -59,9 +74,7 @@
     box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.3);
 }
 
-.address-section img{
-    height: 80px;
-}
+
 .address-section h3,p{
     font-family: "Judson";
     text-align: center;
