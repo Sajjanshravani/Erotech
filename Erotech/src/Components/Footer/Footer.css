@@ -44,6 +44,7 @@
     color: #00AEEF;
     font-size: 1rem;
     margin-bottom: 7px;
+    text-align: left;
 }
 .footer-column p img{
     width: 20px;
@@ -174,7 +175,7 @@
         left: 603px;    
     }
     .footer{
-        overflow: unset;
+        overflow: hidden;
     }
     .foot-line{
         right: -22px;
@@ -196,13 +197,13 @@
     left: 262px !important;
 }
 .footer{
-    overflow: unset;
+    overflow: hidden;
 }
 .footer-last{
     flex-direction: column-reverse;
 }
 .foot-line{
-    right: -21px;
+    right: 14px;
 }
 .social{
     left: 15px;
@@ -222,7 +223,7 @@
         left: 237px !important;
     }
     .footer{
-        overflow: unset;
+        overflow: hidden;
     }
     .footer-last{
         flex-direction: column-reverse;
@@ -248,7 +249,7 @@
         left: 207px !important;
     }
     .footer{
-        overflow: unset;
+        overflow: hidden;
     }
     .footer-last{
         flex-direction: column-reverse;

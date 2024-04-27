@@ -32,6 +32,8 @@ function Training() {
     <div className="train">
       <div className="train-banner">
         <img src={trainbanner} alt="" />
+        <h1>Get Personalized Recommendations</h1>
+        <p>Your high- Quality Training Specialist of IT - EROTECH Solutions</p>
       </div>
       <div className="training">
         <div className="custom">
@@ -179,8 +181,7 @@ function Training() {
         </div>
         <div className="form">
           <div className="custom-form-container">
-            {/* <h2>Contact Form</h2> */}
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} style={{ border: "none" }}>
               <div className="custom-row">
                 <div className="custom-col">
                   <div className="custom-form-group">
