@@ -167,17 +167,24 @@
         width: 116px;
     }
 }
-
-@media screen and (min-width:375px) and (max-width:399px){
-    .description{
-        left: 49px;
-    }
+@media screen and (min-width:400px) and (max-width:500px){
+  .career-banner img {
+    width: 100%;
+    height: 344px;
+  }
+  .description{
+    left: 49px;
+}
 }
 
 @media screen and (min-width:375px) and (max-width:399px){
     .description {
         left: 24px;
     }
+    .career-banner img {
+      width: 100%;
+      height: 300px;
+  }
 }
 
 @media screen and (min-width:300px) and (max-width:374px){
@@ -185,4 +192,8 @@
         left: 18px;
         font-size: 15px;
     }
+    .career-banner img {
+      width: 100%;
+      height: 300px;
+  }
 }

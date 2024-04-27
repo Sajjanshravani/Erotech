@@ -537,7 +537,7 @@ margin: 69px 6px 0px 18px;
   font-size: 7px;
 }
 .grey{
-  top: -409px;
+  top: -279px;
 }
 .section3 .vector23 {
   left: 29%;
@@ -556,6 +556,20 @@ margin: 69px 6px 0px 18px;
   position: relative;
   left: 12px;
   top: 54px;
+}
+.greybox {
+  width: 363px;
+  height: 200px;
+}
+.greywave img {
+  width: 100%;
+  height: 400px;
+}
+.box1{
+  margin-bottom: 20px;
+}
+.text-image {
+  margin-top: -88px;
 }
 }
 
@@ -586,12 +600,20 @@ margin: 69px 6px 0px 18px;
     height: 476px;
   }
   .vector22 {
-    left: 8%;
+    left: 0%;
     top: 55%;
   }
   .vector12 {
     top: 100%;
     left: 96%;
+  }
+  .greybox {
+    width: 363px;
+    height: 199px;
+  }
+  .greywave img {
+    width: 100%;
+    height: 329px;
   }
   .Graybox{
     position: relative;
@@ -623,8 +645,14 @@ margin: 69px 6px 0px 18px;
   margin: 0px 7px 14px;
   font-size: 7px;
 }
-.grey{
-  top: -409px;
+.box1{
+  margin-bottom: 20px;
+}
+.text-image {
+  margin-top: -143px;
+}
+.grey {
+  top: -253px;
 }
 .section3 .vector23 {
   left: 29%;
@@ -644,6 +672,7 @@ margin: 69px 6px 0px 18px;
   left: 12px;
   top: 54px;
 }
+
 }
 
 @media screen and (min-width:300px) and (max-width:374px){
@@ -673,7 +702,7 @@ margin: 69px 6px 0px 18px;
     height: 476px;
   }
   .vector22 {
-    left: 8%;
+    left: 0%;
     top: 55%;
   }
   .vector12 {
@@ -684,6 +713,14 @@ margin: 69px 6px 0px 18px;
     position: relative;
     right: 16px;
     width: 275px;
+  }
+  .greybox {
+    width: 363px;
+    height: 200px;
+  }
+  .greywave img {
+    width: 100%;
+    height: 400px;
   }
   .section3 .wavesVector1 {
     left: 4%;
@@ -710,8 +747,11 @@ margin: 69px 6px 0px 18px;
   margin: 0px 7px 14px;
   font-size: 7px;
 }
-.grey{
-  top: -409px;
+.grey {
+  top: -276px;
+}
+.text-image {
+  margin-top: -93px;
 }
 .section3 .vector23 {
   left: 29%;
