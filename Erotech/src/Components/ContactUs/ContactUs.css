@@ -8,11 +8,36 @@
 
 .contact-bg{
     background-image: url('../Assets/Frame7.png');
-    height: 100vh;
-    width:auto;
+    height: 80vh;
     z-index: -1;
-    background-size: cover;
+    background-size: 100%;
 }
+
+@media screen and (max-width:567px){
+    .contact-bg{
+        width:100vw;
+        height: 20vh;
+    }
+}
+
+@media screen and (max-width:767px){
+    .contact-bg{
+        width:100vw;
+        height: 21vh;
+    }
+}
+@media screen and (max-width:992px){
+    .contact-bg{
+        width:100vw;
+    }
+}
+
+@media screen and (min-width:993px){
+    .contact-bg{
+        width:100vw;
+    }
+}
+
 
 .address-section{
     display: flex;
@@ -53,8 +78,8 @@
 
 .maps-embed{
     margin: auto;
-    width: 767px;
-    height: 439px;
+    height: 50vh;
+    width: 50vw;
     border-radius: 47px;
     border: 10px solid #62C6EF;
 
@@ -67,10 +92,11 @@
 
 .form-section{
     display: flex;
-    margin-top: 100px;
+    /* margin-top: 100px; */
     justify-content: space-around;
   
 }
+
 
 .form-section img{
     width: 569px;
@@ -106,4 +132,17 @@ form label{
     position: relative;
     left:300px;
     
+}
+
+@media screen and (max-width:767px){
+    .form-section{
+        flex-direction: column;
+    }
+    .customs-button{
+        left:200px;
+    }
+
+    .maps-embed{
+        width: 70vw;
+    }
 }
