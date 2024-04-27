@@ -43,7 +43,7 @@ function NavBar() {
               <a href="/">Training</a>
             </li>
             <li>
-              <a href="/">Services</a>
+              <a href="/Services">Services</a>
             </li>
             <li>
               <a href="/">Careers</a>

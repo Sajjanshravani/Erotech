@@ -14,8 +14,6 @@ import "./ContactUs.css";
 
 
 function ContactUs(){
-
-
     return(
         <div className="container-fluid">
             <div className="row">
