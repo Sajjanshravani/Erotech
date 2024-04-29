@@ -4,7 +4,7 @@ import trainbanner from "../Assets/train-banner.png";
 import train from "../Assets/train-1.png";
 import cbox from "../Assets/cbox.png";
 import user from "../Assets/user.png";
-import phone from "../Assets/telephone.png";
+import phones from "../Assets/telephone.png";
 import mail from "../Assets/email.png";
 import chat from "../Assets/chat.png";
 
@@ -238,7 +238,7 @@ function Training() {
                   <div className="custom-form-group">
                     <label htmlFor="phone">Phone Number:</label>
                     <div className="input-with-icon">
-                      <img src={phone} alt="" />
+                      <img src={phones} alt="" />
                       <input
                         type="tel"
                         id="phone"

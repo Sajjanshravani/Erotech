@@ -236,7 +236,7 @@
   select,
   textarea {
     width: 100%;
-    padding: 8px;
+    padding: 8px 48px;
     border: 1px solid #ccc;
     border-radius: 5px;
   }
@@ -250,6 +250,7 @@
     cursor: pointer;
     position: relative;
     left: 369px;
+    width: 100px;
     
   }
   .input-with-icon {
