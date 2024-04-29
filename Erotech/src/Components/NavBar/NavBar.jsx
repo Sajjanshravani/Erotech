@@ -30,31 +30,26 @@ function NavBar() {
         </label>
         <nav>
           <ul>
-         
             <li>
-              
               <a href="/">Home</a>
             </li>
-           
+
             <li>
-              <a href="/">About Us</a>
+              <a href="/about">About Us</a>
             </li>
             <li>
-              <a href="/">Training</a>
+              <a href="/training">Training</a>
             </li>
             <li>
               <a href="/">Services</a>
             </li>
             <li>
-              <a href="/">Careers</a>
+              <a href="/career">Careers</a>
             </li>
-           
+
             <li>
               <a href="/contactUs">Contact Us</a>
-            
             </li>
-            
-           
           </ul>
         </nav>
       </header>

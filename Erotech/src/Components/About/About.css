@@ -1,3 +1,6 @@
+.about img{
+  width: 100%;
+}
 .about h1{
   position: absolute;
   top: 180px;
@@ -97,4 +100,675 @@ box-shadow: 0px 0px 17px 0px #000000e3;
   to {
     transform: scale(1);
   }
+}
+
+.vector12{
+  top: 100%;
+    left: 90%;
+    width: 30px;
+    transform: rotate(28.08deg);
+}
+
+.vector22{
+  left: 13%;
+  top: 56%;
+  width: 314px;
+}
+.dotsVector1{
+  left: 73%;
+  top: 20%;
+  z-index: 1;
+}
+.section3 .wavesVector1 {
+  left: 15%;
+  top: 15%;
+  z-index: 3;
+}
+
+.section3 .pentagonVector1 {
+  left: 74%;
+  top: -5%;
+}
+
+.about-ani{
+  margin-bottom: 54px;
+}
+
+.box1{
+  margin-bottom: 50px;
+}
+.Graybox {
+  background-color: #d9d9d9;
+  width: 515px;
+  height: 455px;
+  border-radius: 40px;
+  margin-left: 40px;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section3-Description11 p {
+  font-size: 20px;
+  font-weight: 400;
+  text-align: justify;
+}
+.section3-Description11.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.section3-Description11 {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.9s, transform 0.9s;
+}
+
+.section3 {
+  padding: 2%;
+}
+.section3-Image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.section3 .row {
+  width: 100%;
+}
+
+.Section3Vector {
+  position: absolute;
+}
+
+.section3 {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+.section3.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.section3-Image {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+.section3-Description11 {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.9s, transform 0.9s;
+}
+.section3-Image.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+.section3-Description11.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/*----2 animation-------*/
+
+.section3 {
+  padding: 2%;
+}
+.section3-Image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.GrayImg3 {
+  background-color: #d9d9d9;
+  width: 515px;
+  height: 455px;
+  border-radius: 40px;
+  margin-left: 40px;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section3-Description3 p {
+  font-size: 25px;
+  font-weight: 400;
+  text-align: justify;
+}
+
+.section3 .row {
+  width: 100%;
+}
+
+.Section3Vector {
+  position: absolute;
+}
+
+.section3 .vector13 {
+  top: 100%;
+  left: 10%;
+  width: 30px;
+  transform: rotate(28.08deg);
+}
+
+.section3 .vector23 {
+  left: 51%;
+  top: 56%;
+  width: 314px;
+}
+
+.section3 .pentagonVector3 {
+  left: 2%;
+  top: 20%;
+}
+
+.section3 .dotsVector3 {
+  left: 3%;
+  top: 38%;
+  z-index: 1;
+}
+
+.section3 .wavesVector3 {
+  left: 78%;
+  top: 15%;
+  z-index: 3;
+}
+
+/* section3animation */
+.section3 {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+.section3.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.section3-Image {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+.section3-Description3 {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.9s, transform 0.9s;
+}
+.section3-Image.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+.section3-Description3.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+
+
+
+
+
+@media screen and (min-width:1444px) {
+.about p{
+  position: absolute;
+  top: 266px;
+  left: 959px;
+  color: #023760;
+  width: 509px;
+}
+.about h1 {
+  position: absolute;
+  top: 228px;
+  left: 1042px;
+}
+.about-ani{
+  margin-left: 106px;
+}
+.box1{
+  margin-bottom: 64px;
+}
+.text-image{
+  margin-right: 90px;
+}
+}
+
+@media screen and (min-width:1377px) and (max-width:1443px) {
+  .about p{
+    left: 930px;
+  }
+  .about h1{
+    left: 1011px;
+  }
+  .about-ani{
+    margin-left: 88px;
+  }
+  .text-image{
+    margin-right: 71px;
+  }
+}
+
+@media screen and (min-width:1300px) and (max-width:1376px) {
+.about p{
+  left: 847px;
+}
+.about h1{
+  left: 932px;
+}
+.about-ani{
+  margin-left: 82px;
+}
+.text-image{
+  margin-right: 62px;
+}
+}
+
+@media screen and (min-width:1024px) and (max-width:1199px){
+.about h1 {
+  position: absolute;
+  top: 136px;
+  left: 611px;
+}
+.about p{
+  position: absolute;
+    top: 166px;
+    left: 514px;
+}
+.vector22 {
+  left: 9%;
+  top: 54%;
+}
+.vector12 {
+  top: 81%;
+  left: 92%;
+}
+.Graybox {
+  background-color: #d9d9d9;
+  width: 423px;
+}
+.section3 .pentagonVector1 {
+  left: 74%;
+  top: 10%;
+}
+.section3 .wavesVector1 {
+  left: 9%;
+  top: 24%;
+  z-index: 3;
+}
+.section3-Description11 p {
+  font-size: 20px;
+  position: relative;
+  top: 8px;
+  left: 25px;
+}
+.animated-box h3 {
+  margin: 0px 10px 14px;
+  font-size: 19px;
+}
+.animated-box p {
+  margin: 0px 15px 14px;
+  font-size: 16px;
+}
+.animated-box{
+  margin-bottom: 8px;
+}
+.GrayImg3 {
+  background-color: #d9d9d9;
+  width: 428px;
+}
+.section3 .pentagonVector3 {
+  left: 0%;
+  top: 12%;
+}
+.section3 .wavesVector3 {
+  left: 84%;
+  top: 26%;
+}
+.section3 .dotsVector3 {
+  left: 1%;
+  top: 27%;
+}
+.section3 .vector23 {
+  left: 44%;
+  top: 54%;
+}
+.section3 .vector13 {
+  top: 81%;
+}
+.abu{
+  overflow: hidden;
+}
+.section3-Description3 p {
+  font-size: 22px;
+}
+.con-last {
+  margin: -24px 0px 5px;
+}
+}
+
+@media screen and (min-width:500px) and (max-width:786px) {
+.about p{
+  font-size: 20px;
+  line-height: 33.15px;
+  top: 133px;
+  left: 457px;
+}
+.about h1{
+  top: 115px;
+  left: 514px;
+  font-size: 13px;
+}
+.abu{
+  overflow: hidden;
+}
+.section3-Description11 p {
+  margin-left: 28px;
+}
+.section3-Description3 p {
+margin: 69px 6px 0px 18px;
+}
+.animated-box {
+  margin: 0 7px;
+  margin-bottom: 4px;
+}
+.animated-box h3{
+  font-size: 15px;
+}
+}
+@media screen and (min-width:400px) and (max-width:500px){
+  .about h1 {
+    position: absolute;
+    top: 172px;
+    left: 231px;
+    font-size: 10px;
+  }
+  .about p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.15px;
+    text-align: center;
+    font-family: "Judson", serif;
+    position: absolute;
+    top: 191px;
+    left: 174px;
+  }
+  .about img {
+    width: 100%;
+    height: 476px;
+  }
+  .vector22 {
+    left: 8%;
+    top: 55%;
+  }
+  .vector12 {
+    top: 100%;
+    left: 96%;
+  }
+  .Graybox{
+    position: relative;
+    right: 16px;
+    width: 275px;
+  }
+  .section3 .wavesVector1 {
+    left: 4%;
+  }
+  .section3 .pentagonVector1 {
+    left: 58%;
+  }
+  .dotsVector1 {
+    left: 58%;
+  }
+  .animated-box {
+    width: 90px;
+    height: 130px;
+    margin: 0px 7px;
+}
+.animated-count {
+  font-size: 20px;
+}
+.animated-box h3 {
+  margin: 0px 7px 14px;
+  font-size: 10px;
+}
+.animated-box p {
+  margin: 0px 7px 14px;
+  font-size: 7px;
+}
+.grey{
+  top: -279px;
+}
+.section3 .vector23 {
+  left: 29%;
+  top: 54%;
+}
+.section3 .wavesVector3 {
+  left: 82%;
+}
+.abu{
+  overflow: hidden;
+}
+.section3-Description3 p {
+  font-size: 21px;
+  font-weight: 400;
+  text-align: justify;
+  position: relative;
+  left: 12px;
+  top: 54px;
+}
+.greybox {
+  width: 363px;
+  height: 200px;
+}
+.greywave img {
+  width: 100%;
+  height: 400px;
+}
+.box1{
+  margin-bottom: 20px;
+}
+.text-image {
+  margin-top: -88px;
+}
+}
+
+@media screen and (min-width:375px) and (max-width:399px) {
+  .about h1 {
+    position: absolute;
+    top: 172px;
+    left: 204px;
+    font-size: 10px;
+  }
+
+  .section3-Description11 p {
+  position: relative;
+    left: 14px;
+}
+  .about p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.15px;
+    text-align: center;
+    font-family: "Judson", serif;
+    position: absolute;
+    top: 191px;
+    left: 174px;
+  }
+  .about img {
+    width: 100%;
+    height: 476px;
+  }
+  .vector22 {
+    left: 0%;
+    top: 55%;
+  }
+  .vector12 {
+    top: 100%;
+    left: 96%;
+  }
+  .greybox {
+    width: 363px;
+    height: 199px;
+  }
+  .greywave img {
+    width: 100%;
+    height: 329px;
+  }
+  .Graybox{
+    position: relative;
+    right: 16px;
+    width: 275px;
+  }
+  .section3 .wavesVector1 {
+    left: 4%;
+  }
+  .section3 .pentagonVector1 {
+    left: 58%;
+  }
+  .dotsVector1 {
+    left: 58%;
+  }
+  .animated-box {
+    width: 90px;
+    height: 130px;
+    margin: 0px 7px;
+}
+.animated-count {
+  font-size: 20px;
+}
+.animated-box h3 {
+  margin: 0px 7px 14px;
+  font-size: 10px;
+}
+.animated-box p {
+  margin: 0px 7px 14px;
+  font-size: 7px;
+}
+.box1{
+  margin-bottom: 20px;
+}
+.text-image {
+  margin-top: -143px;
+}
+.grey {
+  top: -253px;
+}
+.section3 .vector23 {
+  left: 29%;
+  top: 54%;
+}
+.section3 .wavesVector3 {
+  left: 82%;
+}
+.abu{
+  overflow: hidden;
+}
+.section3-Description3 p {
+  font-size: 21px;
+  font-weight: 400;
+  text-align: justify;
+  position: relative;
+  left: 12px;
+  top: 54px;
+}
+
+}
+
+@media screen and (min-width:300px) and (max-width:374px){
+    .about h1 {
+    position: absolute;
+    top: 172px;
+    left: 204px;
+    font-size: 10px;
+  }
+
+  .section3-Description11 p {
+  position: relative;
+    left: 14px;
+}
+  .about p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.15px;
+    text-align: center;
+    font-family: "Judson", serif;
+    position: absolute;
+    top: 191px;
+    left: 174px;
+  }
+  .about img {
+    width: 100%;
+    height: 476px;
+  }
+  .vector22 {
+    left: 0%;
+    top: 55%;
+  }
+  .vector12 {
+    top: 100%;
+    left: 96%;
+  }
+  .Graybox{
+    position: relative;
+    right: 16px;
+    width: 275px;
+  }
+  .greybox {
+    width: 363px;
+    height: 200px;
+  }
+  .greywave img {
+    width: 100%;
+    height: 400px;
+  }
+  .section3 .wavesVector1 {
+    left: 4%;
+  }
+  .section3 .pentagonVector1 {
+    left: 58%;
+  }
+  .dotsVector1 {
+    left: 58%;
+  }
+  .animated-box {
+    width: 90px;
+    height: 130px;
+    margin: 0px 7px;
+}
+.animated-count {
+  font-size: 20px;
+}
+.animated-box h3 {
+  margin: 0px 7px 14px;
+  font-size: 10px;
+}
+.animated-box p {
+  margin: 0px 7px 14px;
+  font-size: 7px;
+}
+.grey {
+  top: -276px;
+}
+.text-image {
+  margin-top: -93px;
+}
+.section3 .vector23 {
+  left: 29%;
+  top: 54%;
+}
+.section3 .wavesVector3 {
+  left: 82%;
+}
+.abu{
+  overflow: hidden;
+}
+.section3-Description3 p {
+  font-size: 21px;
+  font-weight: 400;
+  text-align: justify;
+  position: relative;
+  left: 12px;
+  top: 54px;
+}
 }

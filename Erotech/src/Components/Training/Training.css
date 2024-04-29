@@ -6,6 +6,24 @@
   box-sizing: border-box;
   font-family: "Judson", serif;
 }
+.train-banner h1{
+  position: absolute;
+  top: 147px;
+  left: 839px;
+  font-size: 24px;
+  width: 402px;
+}
+.train-banner p{
+  font-size: 33px;
+  position: absolute;
+  top: 188px;
+  left: 772px;
+  width: 500px;
+}
+
+.train-banner img{
+  width: 100%;
+}
 .training{
     display: grid;
     grid-template-columns: 70% 30%;
@@ -37,7 +55,7 @@
     border-top-color: blue;
   }
   
-  .content {
+  .content-train {
     padding: 20px;
   }
 
@@ -181,12 +199,13 @@
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid black;
     border-radius: 5px;
     position: relative;
     left: 151px;
     background-color: #F0FBFF;
-    width: 502px;
+    width: 556px;
+    height: 541px;
   }
   
   .custom-row {
@@ -230,6 +249,49 @@
     left: 369px;
     
   }
+  .input-with-icon {
+    position: relative;
+  }
+  
+  .input-with-icon img {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 26px;
+  }
   
 
+  
+  @media screen and (min-width:1444px) {
+    .train-banner p {
+      left: 973px;
+    }
+    .train-banner h1{
+      left: 1039px;
+    }
+  }
+
+  @media screen and (min-width:1377px) and (max-width:1443px) {
+
+    .train-banner h1{
+      position: absolute;
+      top: 147px;
+      left: 969px;
+    }
+    .train-banner p{
+      top: 188px;
+      left: 902px;
+    }
+  }
+
+  @media screen and (min-width:1300px) and (max-width:1376px) {
+    .train-banner p{
+      left: 846px;
+    }
+    .train-banner h1{
+      left: 917px;
+
+    }
+  }
   
