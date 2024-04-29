@@ -1,3 +1,6 @@
+*{
+    text-decoration: none !important;
+}
 .footer {
     position: relative;
     /* overflow: hidden; */
@@ -29,7 +32,7 @@
 }
 
 .footer-column {
-    flex: 1;
+    /* flex: 1; */
     margin-right: 20px;
     margin-bottom: 30px;
 }
@@ -52,6 +55,9 @@
     position: relative;
     top: 0px;
     /* right: 37px; */
+}
+.footer-column p a{
+    color: #00AEEF;
 }
 .footer-column ul{
     padding-left: 0;
@@ -111,43 +117,90 @@
         flex: 1 1 100%;
         margin-right: 0;
     }
+    .footer-column h4{
+        margin-top: 29px;
+        color: black
+    }
 } 
 @media screen and (min-width:1444px) {
     .shape2{
-        top: -480px !important;
+        top: -529px !important;
         left: 1362px;    
     }
     .footer{
         overflow: unset;
     }
     .pentogon img{
-        top: -384px;
+        top: -439px;
+    }
+    .footer-column img{
+        width: 145px;
+    }
+    .footer-column h4{
+        font-size: 1.6rem;
+    }
+    .footer-column ul li{
+        font-size: 1.3rem;
+    }
+    .foot-line p{
+        font-size: 28px;
     }
 }
 
+
 @media screen and (min-width:1377px) and (max-width:1443px) {
     .shape2{
-        top: -478px !important;
+        top: -509px !important;
         left: 1270px;
     }
     .footer{
         overflow: unset;
     }
     .pentogon img{
-        top: -377px;
+        top: -421px;
+    }
+    .footer-column img{
+        width: 141px;
+    }
+    .footer-column p{
+        font-size: 1.2rem;
+    }
+    .footer-column ul li{
+        font-size: 1.2rem;
+    }
+    .footer-column h4{
+        font-size: 1.6rem;
+    }
+    .foot-line p{
+        font-size: 25px;
     }
 }
 
 @media screen and (min-width:1300px) and (max-width:1376px) {
     .shape2{
-        top: -480px !important;
-        left: 1219px;
+        top: -554px !important;
+        left: 1214px;
     }
     .footer{
         overflow: unset;
     }
     .pentogon img{
-        top: -394px;
+        top: -462px;
+    }
+    .footer-column img{
+        width: 148px;
+    }
+    .footer-column h4{
+        font-size: 1.5rem;
+    }
+    .footer-column p{
+        font-size: 1.4rem;
+    }
+    .footer-column ul li{
+        font-size: 1.4rem;
+    }
+    .foot-line p{
+        font-size: 28px;
     }
 }
 
@@ -168,10 +221,10 @@
 
 @media screen and (min-width:500px) and (max-width:786px) {
     .pentogon img{
-        top: -963px;
+        top: -1059px;
     }
     .shape2{
-        top: -1052px !important;
+        top: -1138px !important;
         left: 603px;    
     }
     .footer{
@@ -187,13 +240,13 @@
 
 @media screen and (min-width:400px) and (max-width:500px){
 .pentogon img{
-    top: -1012px;
+    top: -1102px;
     width: 32px;
     position: relative;
     left: 3px;
 }
 .shape2 {
-    top: -1081px !important;
+    top: -1174px !important;
     left: 262px !important;
 }
 .footer{
@@ -213,14 +266,14 @@
 
 @media screen and (min-width:375px) and (max-width:399px) {
     .pentogon img{
-        top: -1012px;
+        top: -1103px;
         width: 32px;
         position: relative;
         left: 3px;
     }
     .shape2 {
-        top: -1097px !important;
-        left: 237px !important;
+        top: -1176px !important;
+        left: 223px !important;
     }
     .footer{
         overflow: hidden;
@@ -239,13 +292,13 @@
 
 @media screen and (min-width:300px) and (max-width:374px){
     .pentogon img{
-        top: -1012px;
+        top: -1108px;
         width: 32px;
         position: relative;
         left: 3px;
     }
     .shape2 {
-        top: -1091px !important;
+        top: -1175px !important;
         left: 207px !important;
     }
     .footer{

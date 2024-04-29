@@ -1,13 +1,24 @@
 import React, { useState } from "react";
-// import { Link } from "react-router-dom";
 import "./NavBar.css";
 import logo from "../Assets/logo.png";
 
 function NavBar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [showServicesDropdown, setShowServicesDropdown] = useState(false);
+  const [showTrainingDropdown, setShowTrainingDropdown] = useState(false);
 
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
+  };
+
+  const toggleServicesDropdown = () => {
+    setShowServicesDropdown(!showServicesDropdown);
+    setShowTrainingDropdown(false); // Close training dropdown when opening or closing services dropdown
+  };
+
+  const toggleTrainingDropdown = () => {
+    setShowTrainingDropdown(!showTrainingDropdown);
+    setShowServicesDropdown(false); // Close services dropdown when opening or closing training dropdown
   };
 
   return (
@@ -33,20 +44,45 @@ function NavBar() {
             <li>
               <a href="/">Home</a>
             </li>
-
             <li>
               <a href="/about">About Us</a>
             </li>
-            <li>
-              <a href="/training">Training</a>
-            </li>
-            <li>
+            <li
+              className="dropdown"
+              onMouseEnter={toggleServicesDropdown}
+              onMouseLeave={toggleServicesDropdown}
+            >
               <a href="/">Services</a>
+              {showServicesDropdown && (
+                <div className="dropdown-content">
+                  <a href="/">Embedded Software</a>
+                  <a href="/">IoT</a>
+                  <a href="/">Our Clients</a>
+                  <a href="/">Paper Publication</a>
+                  <a href="/">Certifications</a>
+                </div>
+              )}
+            </li>
+            <li
+              className="dropdown"
+              onMouseEnter={toggleTrainingDropdown}
+              onMouseLeave={toggleTrainingDropdown}
+            >
+              <a href="/training">Training</a>
+              {showTrainingDropdown && (
+                <div className="dropdown-content">
+                  <a href="/">Embedded Graduate</a>
+                  <a href="/">Embedded Software Developer</a>
+                  <a href="/">Embedded Automotive Engineer</a>
+                  <a href="/">Embedded IoT Engineer</a>
+                  <a href="/">Short Term Courses</a>
+                  <a href="/">Workshops</a>
+                </div>
+              )}
             </li>
             <li>
               <a href="/career">Careers</a>
             </li>
-
             <li>
               <a href="/contactUs">Contact Us</a>
             </li>

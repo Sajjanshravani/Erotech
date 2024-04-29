@@ -69,15 +69,21 @@ function Footer() {
         <div className="footer-column">
           <h4>Contact Us</h4>
           <p>
-            <img src={location} alt="location" />
-            #103, Rajamma Towers,
-            <br />
-            Jayanagar Rd, Kukatpally <br /> Housing Board Colony, <br />
-            Hyderabad, Telangana <br /> 500072
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Jayanagar+Rd,+Kukatpally+Housing+Board+Colony,+Hyderabad,+Telangana+500072"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={location} alt="location" />
+              #103, Rajamma Towers,
+              <br />
+              Jayanagar Rd, Kukatpally <br /> Housing Board Colony, <br />
+              Hyderabad, Telangana <br /> 500072
+            </a>
           </p>
           <p>
-            {" "}
-            <img src={phone} alt="phone" /> 096763 27118
+            <img src={phone} alt="phone" />{" "}
+            <a href="tel:09676327118">096763 27118</a>
           </p>
         </div>
       </div>
@@ -86,10 +92,34 @@ function Footer() {
           <p>© All right reserved Erotech Solutions</p>
         </div>
         <div className="social">
-          <img src={facebook} alt="facebook" />
-          <img src={linkedin} alt="linkeden" />
-          <img src={instagram} alt="instagram" />
-          <img src={youtube} alt="youtube" />
+          <a
+            href="https://www.facebook.com/your-facebook-page"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={facebook} alt="facebook" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/your-linkedin-profile"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={linkedin} alt="linkedin" />
+          </a>
+          <a
+            href="https://www.instagram.com/your-instagram-username"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={instagram} alt="instagram" />
+          </a>
+          <a
+            href="https://www.youtube.com/your-youtube-channel"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={youtube} alt="youtube" />
+          </a>
         </div>
       </div>
       <div className="pentogon">

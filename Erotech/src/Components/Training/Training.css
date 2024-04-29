@@ -6,6 +6,9 @@
   box-sizing: border-box;
   font-family: "Judson", serif;
 }
+.train{
+  overflow: hidden;
+}
 .train-banner h1{
   position: absolute;
   top: 147px;
