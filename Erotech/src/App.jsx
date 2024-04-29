@@ -7,6 +7,8 @@ import About from "./Components/About/About";
 import Training from "./Components/Training/Training";
 import ContactUs from "./Components/ContactUs/ContactUs";
 import Career from "./Components/Career/Career";
+import Service from "./Components/Pages/Service";
+import OurClient from "./Components/Pages/OurClient";
 
 function App() {
   return (
@@ -19,6 +21,12 @@ function App() {
           <Route path="/training" element={<Training />} />
           <Route path="/contactUs" element={<ContactUs />} />
           <Route path="/career" element={<Career />} />
+          <Route path="/Services/IOT" element={<Service page={"IOT"} />} />
+          <Route
+            path="/Services/EmbeddedSystems"
+            element={<Service page={"EmbeddedSystems"} />}
+          />
+          <Route path="/ourclients" element={<OurClient />} />
         </Routes>
         <Footer />
       </BrowserRouter>

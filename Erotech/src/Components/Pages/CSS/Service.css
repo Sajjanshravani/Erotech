@@ -1,0 +1,91 @@
+.ServiceBanner {
+  height: 80vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.ServiceBanner img {
+  width: 100%;
+}
+
+.ServiceAbout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3% 8%;
+  gap: 20px;
+}
+
+.ServiceAbout h2 {
+  font-size: 43px;
+  font-weight: 700;
+}
+
+.ServiceAbout p {
+  font-size: 22px;
+  font-weight: 400;
+  text-align: justify;
+}
+
+.industriesServe {
+  height: 110vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.industriesServe h2 {
+  font-size: 43px;
+  font-weight: 700;
+}
+
+.industryCards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 1% 4%;
+}
+
+.industyCard {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  padding: 8%;
+  box-shadow: 0px 0px 4px 0px #000000b8;
+}
+
+.industyCard h3 {
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.industyCard p {
+  font-size: 15px;
+  font-weight: 400;
+  text-align: justify;
+}
+
+.industrybtn {
+  background-color: #2bb0e9;
+  color: white;
+  width: 496px;
+  height: 67px;
+  border-radius: 13px;
+  font-size: 35px;
+  font-weight: 700;
+  border: none;
+  outline: none;
+}
