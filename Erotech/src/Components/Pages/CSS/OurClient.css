@@ -1,0 +1,129 @@
+.ClientBanner img {
+  width: 100%;
+}
+.Deliver {
+  padding: 2% 6%;
+}
+
+.Deliver h2 {
+  font-size: 43px;
+  font-weight: 700;
+  margin-left: 23px;
+}
+
+.Deliver p {
+  font-size: 22px;
+  font-weight: 400;
+  text-align: justify;
+}
+
+.deliverText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.deliverImage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.topPoly {
+  margin-left: 150px;
+  margin-bottom: -25px;
+  display: flex;
+  gap: 1rem;
+}
+
+.bottomPoly {
+  margin-top: -25px;
+  display: flex;
+  gap: 1rem;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.stat {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.stat h3 {
+  font-size: 35px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.stat h6 {
+  font-size: 17px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.statBox {
+  width: 65px;
+  height: 67px;
+  background-color: #d9d9d9;
+}
+
+.clients {
+  margin-top: 100px;
+  height: auto;
+  background-position: top;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  position: relative;
+}
+
+.clients h2 {
+  font-size: 43px;
+  font-weight: 700;
+}
+
+.clientCards {
+  width: 75%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2rem;
+}
+
+.clientCard {
+  width: 213px;
+  height: 181px;
+  border-radius: 16px;
+  background-color: white;
+  box-shadow: 0px 0px 4px 0px #000000b8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.clientCard h2 {
+  font-size: 33px;
+  font-weight: 700;
+}
+
+.clientCard p {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.WaveClient {
+  position: absolute;
+  bottom: -5%;
+  left: 36%;
+}
