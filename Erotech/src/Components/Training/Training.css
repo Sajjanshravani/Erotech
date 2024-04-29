@@ -20,8 +20,9 @@
   font-size: 33px;
   position: absolute;
   top: 188px;
-  left: 772px;
-  width: 500px;
+  left: 832px;
+  width: 381px;
+  text-align: center;
 }
 
 .train-banner img{
@@ -92,16 +93,15 @@
   
   .table-row {
     display: flex;
-    border-bottom: 1px solid #000000; /* Horizontal line */
+    border-bottom: 1px solid #000000; 
   }
   
   .table-cell {
     padding: 8px;
-    border-right: 1px solid #000000; /* Vertical line */
+    border-right: 1px solid #000000; 
     flex: 1;
   }
   
-  /* Remove border from the last cell */
   .table-cell:last-child {
     border-right: none;
   }
@@ -172,8 +172,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid black; /* Add this line */
-    padding-bottom: 10px; /* Add some padding to space out the text from the line */
+    border-bottom: 1px solid black; 
+    padding-bottom: 10px; 
   }
   
   .faq-arrow {
@@ -269,10 +269,24 @@
   
   @media screen and (min-width:1444px) {
     .train-banner p {
-      left: 973px;
+      left: 1027px;
     }
     .train-banner h1{
-      left: 1039px;
+      left: 1037px;
+    }
+    .form-image{
+      margin: 0px 88px;
+    }
+    .side-text-image p {
+      width: 916px;
+      position: relative;
+      left: 16px;
+      top: -7px;
+      text-align: justify;
+      font-size: 20px;
+    }
+    .frequent{
+      right: 68px;
     }
   }
 
@@ -285,17 +299,507 @@
     }
     .train-banner p{
       top: 188px;
-      left: 902px;
+      left: 961px;
+    }
+    .side-text-image p {
+      width: 837px;
+      position: relative;
+      left: 16px;
+      top: 10px;
+      text-align: justify;
+      font-size: 18px;
+    }
+    .frequent{
+      right: 54px;
+    }
+    .form-image{
+      margin: 0px 40px;
     }
   }
 
   @media screen and (min-width:1300px) and (max-width:1376px) {
     .train-banner p{
-      left: 846px;
+      left: 908px;
     }
     .train-banner h1{
       left: 917px;
 
     }
+    .side-text-image p {
+      width: 807px;
+      position: relative;
+      left: 3px;
+      top: 2px;
+      text-align: justify;
+      font-size: 18px;
+    }
+    .frequent{
+      right: 47px;
+    }
+    .form-image{
+      margin: 0px 15px;
+    }
   }
   
+  @media screen and (min-width:1024px) and (max-width:1199px){
+    .train-banner h1{
+      left: 639px;
+      top: 128px;
+      width: 375px;
+    }
+    .train-banner p {
+      font-size: 27px;
+      position: absolute;
+      top: 163px;
+      left: 628px;
+      width: 381px;
+    }
+    .custom{
+      position: relative;
+      right: 31px;
+    }
+    .custom-image{
+      position: relative;
+      right: 28px;
+    }
+    .name-traine {
+      position: relative;
+      top: 170px;
+      right: 128px;
+    }
+    .desgi-traine {
+      position: relative;
+      top: 199px;
+      right: 218px;
+    }
+    .side-text-image p {
+      width: 601px;
+      position: relative;
+      left: -101px;
+      top: 2px;
+    }
+    .side-image-train{
+      left: 30px;
+    }
+    .frequent{
+      right: 63px;
+    }
+    .image-form img {
+      width: 360px;
+      left: 43px;
+    }
+    .custom-form-container{
+      left: 75px;
+    }
+  }
+
+  @media screen and (min-width:500px) and (max-width:786px) {
+    .train-banner h1 {
+      position: absolute;
+      top: 84px;
+      left: 478px;
+      font-size: 17px;
+      width: 275px;
+  }
+  .train-banner p {
+    font-size: 26px;
+    position: absolute;
+    top: 107px;
+    left: 442px;
+    width: 327px;
+  }
+  .tab-layout{
+    margin: 19px 0px 0px 10px;
+  }
+  .custom h1 {
+    font-family: "Judson", serif;
+    margin: 0 16px;
+    font-size: 25px;
+  }
+  .custom-image{
+    position: relative;
+    right: 17px;
+    top: 35px;
+  }
+  .table-container{
+    width: 92%;
+    top: 37px;
+    right: 3px;
+  }
+  .side-train {
+    display: inline-flex;
+}
+.side-text-image p {
+  width: 501px;
+  position: relative;
+  left: -138px;
+  top: -8px;
+}
+.side-image-train {
+  width: 207px;
+  height: 167px;
+  background-color: #D9D9D9;
+  position: relative;
+  left: 13px;
+}
+.name-traine{
+  right: 132px;
+}
+.desgi-traine{
+  right: 219px;
+}
+.frequent{
+  right: 49px;
+}
+.form-image {
+  display: inline-block;
+}
+.image-form img{
+  left: 112px;
+}
+.custom-form-container{
+  left: 106px;
+    top: 32px;
+}
+}
+
+
+@media screen and (min-width:400px) and (max-width:500px){
+  .train-banner img {
+    width: 100%;
+    height: 500px;
+}
+.train-banner h1 {
+  position: absolute;
+  top: 192px;
+  left: 256px;
+  font-size: 10px;
+  width: 160px;
+}
+.train-banner p {
+  font-size: 12px;
+  position: absolute;
+  top: 209px;
+  left: 241px;
+  width: 182px;
+}
+.training {
+  display: flex;
+  flex-direction: column;
+}
+.custom h1 {
+  font-family: "Judson", serif;
+  margin: 0 19px;
+  font-size: 19px;
+  width: 338px;
+}
+.tab {
+  position: relative;
+  right: 0px;
+  font-size: 12px;
+}
+.tab-layout {
+  width: 91%;
+  margin: 20px 0px 0px 10px;
+}
+.custom-image{
+  margin: 0px auto;
+}
+.side-text-image p {
+  width: 247px;
+  position: relative;
+  left: -82px;
+  top: -6px;
+}
+.side-train {
+  display: inline-flex;
+  margin-top: 44px;
+}
+.side-image-train {
+  width: 127px;
+  height: 97px;
+  background-color: #D9D9D9;
+  position: relative;
+  left: 8px;
+  top: 21px;
+}
+.name-traine {
+  height: 10px;
+  position: relative;
+  top: 121px;
+  right: 80px;
+  font-size: 14px;
+  font-weight: 400;
+}
+.desgi-traine {
+  position: relative;
+  top: 138px;
+  right: 133px;
+  font-size: 14px;
+  font-weight: 400;
+}
+.train-head {
+  position: relative;
+  top: 40px;
+  left: 10px;
+}
+.frequent {
+  position: relative;
+  top: 27px;
+  margin-bottom: 103px;
+  right: 26px;
+}
+.form-image {
+  display: flex;
+  flex-direction: column;
+}
+.image-form img {
+  width: 317px;
+  height: 205px;
+  border-radius: 25px;
+  position: relative;
+  left: 51px;
+}
+.custom-form-container{
+    left: 0px;
+    width: 382px;
+    height: 498px;
+    top: 41px;
+}
+.custom-button{
+  left: 242px;
+}
+}
+
+@media screen and (min-width:375px) and (max-width:399px) {
+  .train-banner img {
+    width: 100%;
+    height: 500px;
+}
+.train-banner h1 {
+  position: absolute;
+  top: 192px;
+  left: 208px;
+  font-size: 10px;
+  width: 160px;
+}
+.train-banner p {
+  font-size: 12px;
+  position: absolute;
+  top: 209px;
+  left: 191px;
+  width: 182px;
+}
+.training {
+  display: flex;
+  flex-direction: column;
+}
+.custom h1 {
+  font-family: "Judson", serif;
+  margin: 0 19px;
+  font-size: 19px;
+  width: 338px;
+}
+.tab {
+  position: relative;
+  right: 0px;
+  font-size: 12px;
+  padding: 10px 15px;
+}
+.tab-layout {
+  width: 91%;
+  margin: 20px 0px 0px 10px;
+}
+.custom-image{
+  margin: 0px auto;
+}
+.side-text-image p {
+  width: 247px;
+  position: relative;
+  left: -82px;
+  top: -6px;
+}
+.side-train {
+  display: inline-flex;
+  margin-top: 44px;
+}
+.side-image-train {
+  width: 127px;
+  height: 97px;
+  background-color: #D9D9D9;
+  position: relative;
+  left: 8px;
+  top: 21px;
+}
+.name-traine {
+  height: 10px;
+  position: relative;
+  top: 121px;
+  right: 80px;
+  font-size: 14px;
+  font-weight: 400;
+}
+.desgi-traine {
+  position: relative;
+  top: 138px;
+  right: 133px;
+  font-size: 14px;
+  font-weight: 400;
+}
+.train-head {
+  position: relative;
+  top: 40px;
+  left: 10px;
+}
+.frequent {
+  position: relative;
+  top: 27px;
+  margin-bottom: 103px;
+  right: 26px;
+}
+.faq-container {
+  width: 92%;
+  margin: 0px 41px;
+}
+.form-image {
+  display: flex;
+  flex-direction: column;
+}
+.image-form img {
+  width: 317px;
+  height: 205px;
+  border-radius: 25px;
+  position: relative;
+  left: 29px;
+}
+.custom-form-container{
+    left: 0px;
+    width: 350px;
+    height: 498px;
+    top: 41px;
+}
+.custom-button{
+  left: 202px;
+} 
+input[type="text"], input[type="email"], input[type="tel"], select, textarea {
+  width: 100%;
+  padding: 9px 1px 10px 32px;
+}
+}
+
+@media screen and (min-width:300px) and (max-width:374px){
+  .train-banner img {
+    width: 100%;
+    height: 500px;
+}
+.train-banner h1 {
+  position: absolute;
+  top: 192px;
+  left: 197px;
+  font-size: 10px;
+  width: 160px;
+}
+.train-banner p {
+  font-size: 12px;
+  position: absolute;
+  top: 209px;
+  left: 176px;
+  width: 182px;
+}
+.training {
+  display: flex;
+  flex-direction: column;
+}
+.custom h1 {
+  font-family: "Judson", serif;
+  margin: 0 19px;
+  font-size: 19px;
+  width: 338px;
+}
+.tab {
+  position: relative;
+  right: 0px;
+  font-size: 12px;
+  padding: 10px 14px;
+}
+.tab-layout {
+  width: 91%;
+  margin: 20px 0px 0px 10px;
+}
+.custom-image{
+  margin: 0px auto;
+}
+.side-text-image p {
+  width: 201px;
+  position: relative;
+  left: -84px;
+  top: -12px;
+}
+.side-train {
+  display: inline-flex;
+  margin-top: 44px;
+}
+.side-image-train {
+  width: 127px;
+  height: 97px;
+  background-color: #D9D9D9;
+  position: relative;
+  left: 8px;
+  top: 21px;
+}
+.name-traine {
+  height: 10px;
+  position: relative;
+  top: 121px;
+  right: 80px;
+  font-size: 14px;
+  font-weight: 400;
+}
+.desgi-traine {
+  position: relative;
+  top: 138px;
+  right: 133px;
+  font-size: 14px;
+  font-weight: 400;
+}
+.train-head {
+  position: relative;
+  top: 40px;
+  left: 10px;
+}
+.frequent {
+  position: relative;
+  top: 1px;
+  margin-bottom: 103px;
+  right: 26px;
+}
+.faq-container {
+  width: 92%;
+  margin: 0px 41px;
+}
+.form-image {
+  display: flex;
+  flex-direction: column;
+}
+.image-form img {
+  width: 317px;
+  height: 205px;
+  border-radius: 25px;
+  position: relative;
+  left: 18px;
+  top: -56px;
+}
+.custom-form-container{
+    left: 0px;
+    width: 350px;
+    height: 498px;
+    top: 0px;
+}
+.custom-button{
+  left: 202px;
+} 
+input[type="text"], input[type="email"], input[type="tel"], select, textarea {
+  width: 100%;
+  padding: 9px 1px 10px 32px;
+}
+}
