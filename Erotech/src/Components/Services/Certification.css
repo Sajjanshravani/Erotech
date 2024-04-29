@@ -69,7 +69,7 @@ li{
     height: 100px;
     position: relative;
     top:-30px;
-    left:70%;
+    left:80%;
 }
 
 .couse-title-logo{
@@ -163,6 +163,56 @@ li{
 
     .service-banner-bg h1{
         font-size: small;
-        
+    }
+
+    .cirtification-container{
+        align-items: center;
+        padding:5px;
+    }
+
+    .cirtification-container .item{
+        width: 40%;
+        height: 40vh;
+    }
+
+    .cirtification-container .cource-icon{
+        height: 20px;
+    }
+
+    .cirtification-container .course-label{
+        left:80%;
+        height:70px;
+    }
+
+    .item-top{
+        top:-50px;
+    }
+
+    .item h3{
+        font-size: small;
+    }
+    .item hr{
+        position: relative;
+        top:-80px;
+    }
+
+    .couse-title-logo{
+        position: relative;
+    }
+
+    .cirtification-container .item br{
+        display: none;
+    }
+    
+    .process-logo-bg img{
+        width: 40px;
+    }
+
+    .process-ul h4{
+        font-size: small;
+        text-align: center;
+    }
+    .start-button{
+        font-size: small;
     }
 }

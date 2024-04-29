@@ -17,7 +17,7 @@ function Certification(){
             <div className='row'>
                 <ul className='cirtification-container'>
                     {cirtificationContent.map((cource)=> 
-                    <li key={cource.id} className='item col-1 col-md-3'>
+                    <li key={cource.id} className='item col-md-3'>
                         <div className='course-label'> <img src={cource.icon} alt="icon" className='cource-icon'/>  </div>
                         
                             <h3 className='item-top'>{cource.graduateTitle}</h3>
