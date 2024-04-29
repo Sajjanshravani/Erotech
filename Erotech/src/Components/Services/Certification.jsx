@@ -17,17 +17,19 @@ function Certification(){
             <div className='row'>
                 <ul className='cirtification-container'>
                     {cirtificationContent.map((cource)=> 
-                    <li key={cource.id} className='item col-md-3'>
+                    <li key={cource.id} className='item col-1 col-md-3'>
                         <div className='course-label'> <img src={cource.icon} alt="icon" className='cource-icon'/>  </div>
-                        <h1>{cource.graduateTitle}</h1>
-                        <h1>{cource.aboute}</h1>
-                        <hr/>
-                        <div className='d-flex'>
-                            <h1>{cource.courseName}</h1>
+                        
+                            <h3 className='item-top'>{cource.graduateTitle}</h3>
+                            <br/><br/>
+                            <h3 className='item-top'>{cource.aboute}</h3>
+                        <hr style={{position:"relative",top:"-40px"}}/>
+                        <div className='couse-title-logo'>
+                            <h3>{cource.courseName}</h3>
                             <img src={cource.quality} alt="quality" className='quality-logo'/>
                         </div>
                         <p>{cource.description}</p>
-                        <button type='button'>Start Certification</button>
+                        <button type='button' className='start-button'>Start Certification</button>
                     </li>)}
                 </ul>
             </div>
@@ -44,18 +46,24 @@ function Certification(){
                 <h3 style={{textAlign:"center"}}>The Certification Process</h3>
                 <ul className='process-ul'>
                     {processContent.map((each)=>
-                <li key={each.id} className='col-md-4'>
-                    <div>
+                <li key={each.id} className='col-md-4 '>
+                    <div className='process-logo-bg'>
                         <img src={each.logo} alt="logo" />
                     </div>
                     <h4 style={{fontWeight:"bold"}}>
                         {each.mainHeading}
                     </h4>
-                    <p>{each.description}</p>
+                    <p style={{textAlign:"center"}}>{each.description}</p>
                 </li>
                 )}
                 </ul>
-                <button type="button">Sign up for courses</button>
+                <button type="button" className='sign-up-button'>Sign up for courses</button>
+            </div>
+
+            <div className='row d-flex flex-column justify-content-center mt-5'>
+                <p style={{textAlign:"center"}}>START TODAY FOR GETTING ONLINE CERTIFICATION</p>
+                <h1 style={{textAlign:"center"}}>You Can Be Your Own Guiding Star With Our Help</h1>
+                <button type='button' className='sign-up-button' style={{margin:"auto"}}>Contact Us</button>
             </div>
 
 
