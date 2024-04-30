@@ -89,3 +89,79 @@
   border: none;
   outline: none;
 }
+
+@media screen and (max-width: 525px) {
+  .ServiceBanner {
+    height: auto;
+  }
+  .ServiceBanner img {
+    width: 100%;
+    height: 45vh;
+  }
+  .ServiceAbout {
+    gap: 10px;
+  }
+  .ServiceAbout h2 {
+    font-size: 30px;
+    font-weight: 700;
+  }
+  .ServiceAbout p {
+    font-size: 15px;
+    font-weight: 200;
+  }
+  .industriesServe {
+    gap: 1rem;
+    height: auto;
+  }
+  .industriesServe h2 {
+    font-size: 30px;
+    font-weight: 700;
+  }
+  .industryCards {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .GrayImg {
+    width: 250px;
+    height: 250px;
+    margin-left: 20px;
+  }
+  .section3 .vector2 {
+    width: 155px;
+  }
+  .section3 .dotsVector {
+    width: 130px;
+  }
+  .section3 .pentagonVector {
+    width: 65px;
+  }
+  .section3-Description p {
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 50px;
+  }
+  .contactDivVector {
+    top: 15%;
+    left: 80%;
+    width: 70px;
+  }
+  .contactusDiv h2 {
+    font-size: 30px;
+  }
+  .industrybtn {
+    width: 300px;
+    height: 50px;
+    font-size: 20px;
+  }
+  .contactusDiv button {
+    width: 300px;
+    height: 60px;
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  .section3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
