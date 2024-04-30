@@ -504,6 +504,16 @@
 }
 .custom-image{
   margin: 0px auto;
+  position: absolute;
+        top: 4034px;
+        left: 58px;
+        z-index: 98;
+}
+.trai-contact{
+  position: relative;
+  top: 517px;
+  margin-bottom: 518px;
+
 }
 .side-text-image p {
   width: 247px;
@@ -610,9 +620,6 @@
   width: 91%;
   margin: 20px 0px 0px 10px;
 }
-.custom-image{
-  margin: 0px auto;
-}
 .side-text-image p {
   width: 247px;
   position: relative;
@@ -685,6 +692,18 @@ input[type="text"], input[type="email"], input[type="tel"], select, textarea {
   width: 100%;
   padding: 9px 1px 10px 32px;
 }
+.custom-image{
+  margin: 0px auto;
+  position: absolute;
+  top: 4261px;
+  left: 24px;
+  z-index: 98;
+}
+.trai-contact{
+  position: relative;
+  top: 517px;
+  margin-bottom: 518px;
+}
 }
 
 @media screen and (min-width:300px) and (max-width:374px){
@@ -728,6 +747,15 @@ input[type="text"], input[type="email"], input[type="tel"], select, textarea {
 }
 .custom-image{
   margin: 0px auto;
+  position: absolute;
+  top: 4328px;
+  left: 20px;
+  z-index: 98;
+}
+.trai-contact{
+  position: relative;
+  top: 517px;
+  margin-bottom: 518px;
 }
 .side-text-image p {
   width: 201px;

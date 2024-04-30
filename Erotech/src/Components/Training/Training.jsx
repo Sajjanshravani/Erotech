@@ -272,10 +272,12 @@ function Training() {
           </div>
         </div>
       </div>
-      <div className="contactusDiv">
-        <p>START TODAY FOR GETTING ONLINE CERTIFICATION</p>
-        <h2>You Can Be Your Own Guiding Star With Our Help</h2>
-        <button>Contact US</button>
+      <div className="trai-contact">
+        <div className="contactusDiv">
+          <p>START TODAY FOR GETTING ONLINE CERTIFICATION</p>
+          <h2>You Can Be Your Own Guiding Star With Our Help</h2>
+          <button>Contact US</button>
+        </div>
       </div>
     </div>
   );
