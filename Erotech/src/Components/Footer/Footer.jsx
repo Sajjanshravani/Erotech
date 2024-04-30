@@ -59,11 +59,21 @@ function Footer() {
         <div className="footer-column">
           <h4>Services</h4>
           <ul>
-            <li>Embedded Software</li>
-            <li>IoT</li>
-            <li>Our clients</li>
-            <li>Paper publications</li>
-            <li>Certifications</li>
+            <li>
+              <a href="/Services/EmbeddedSystems">Embedded Software</a>
+            </li>
+            <li>
+              <a href="/Services/IOT">IoT</a>
+            </li>
+            <li>
+              <a href="/ourclients">Our clients</a>
+            </li>
+            <li>
+              <a href="/publication">Paper publications</a>
+            </li>
+            <li>
+              <a href="/Services/certification">Certifications</a>
+            </li>
           </ul>
         </div>
         <div className="footer-column">

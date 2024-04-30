@@ -52,14 +52,14 @@ function NavBar() {
               onMouseEnter={toggleServicesDropdown}
               onMouseLeave={toggleServicesDropdown}
             >
-              <a href="/">Services</a>
+              <a href="/Services/IOT">Services</a>
               {showServicesDropdown && (
                 <div className="dropdown-content">
-                  <a href="/">Embedded Software</a>
-                  <a href="/">IoT</a>
-                  <a href="/">Our Clients</a>
-                  <a href="/">Paper Publication</a>
-                  <a href="/">Certifications</a>
+                  <a href="/Services/EmbeddedSystems">Embedded Software</a>
+                  <a href="/Services/IOT">IoT</a>
+                  <a href="/ourclients">Our Clients</a>
+                  <a href="/publication">Paper Publication</a>
+                  <a href="/Services/certification">Certifications</a>
                 </div>
               )}
             </li>
