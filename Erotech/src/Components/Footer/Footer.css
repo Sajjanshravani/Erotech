@@ -111,6 +111,9 @@
 .wave-shape svg{
     width: 100%;
 }
+.footer-column ul li a{
+    color: #00AEEF;
+}
 
 @media screen and (max-width: 768px) {
     .footer-column {
