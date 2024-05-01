@@ -25,7 +25,9 @@ function NavBar() {
     <div className="app">
       <header className={isNavOpen ? "nav-open" : ""}>
         <div className="logo">
-          <img src={logo} alt="logo" />
+          <a href="/">
+            <img src={logo} alt="logo" />
+          </a>
         </div>
         <input
           type="checkbox"

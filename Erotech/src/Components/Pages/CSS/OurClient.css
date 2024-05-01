@@ -127,3 +127,45 @@
   bottom: -5%;
   left: 36%;
 }
+@media screen and (max-width: 525px) {
+  .ClientBanner img {
+    width: 100%;
+    height: 40vh;
+  }
+  .Deliver p {
+    font-size: 18px;
+  }
+  .deliverImage {
+    margin-top: 30px;
+    margin-left: -20px;
+  }
+  .deliverImage img {
+    width: 100px;
+  }
+  .topPoly {
+    margin-left: 100px;
+    margin-bottom: 0px;
+  }
+  .stats {
+    grid-template-columns: 1fr;
+  }
+  .clientCards {
+    width: auto;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+  }
+  .clientCard {
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    gap: 1rem;
+  }
+  .clientCard h2,
+  .clientCard p {
+    margin: 0;
+  }
+  .clientCard p {
+    font-size: 18px;
+  }
+}
