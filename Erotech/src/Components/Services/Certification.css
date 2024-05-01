@@ -9,9 +9,10 @@
 
 .service-banner-bg{
     background-image: url("../Assets/Frame6.png");
-    background-size: 100%; 
+    background-size: cover; 
     height: 83vh;
     display: flex;
+    background-repeat: no-repeat;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
