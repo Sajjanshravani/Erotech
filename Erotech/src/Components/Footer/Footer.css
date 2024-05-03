@@ -97,7 +97,7 @@
 }
 .pentogon img{
     z-index: 99;
-    top: -342px;
+    top: -388px;
     width: 32px;
     position: relative;
 }
@@ -259,7 +259,7 @@
     flex-direction: column-reverse;
 }
 .foot-line{
-    right: 14px;
+    right: -25px;
 }
 .social{
     left: 15px;

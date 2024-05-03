@@ -8,7 +8,6 @@ function Career() {
 
   const handleApplyNow = (position) => {
     setJobPosition(position);
-    // You can add additional logic here, like opening a modal
   };
   return (
     <div>
@@ -31,16 +30,17 @@ function Career() {
                   src={careerbox}
                   alt="Social Media Executive"
                 />
-                <h3 className="title">Lorem Ipsum</h3>
+                <h3 className="title">Embedded Software Developer</h3>
                 <div className="content-details fadeIn-bottom">
                   <p className="content-text">
                     <p className="description">
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. Lorem Ipsum has been the industry's
+                      Join us in shaping the future of technology as an Embedded
+                      Software Developer. Contribute to innovative projects and
+                      develop software solutions for embedded systems.
                     </p>
                     <button
                       type="button"
-                      className="btn"
+                      className="btns"
                       onClick={() => handleApplyNow("Social Media Executive")}
                     >
                       Apply Now
@@ -56,16 +56,18 @@ function Career() {
                   src={careerbox}
                   alt="Social Media Executive"
                 />
-                <h3 className="title">Lorem Ipsum</h3>
+                <h3 className="title">Embedded IoT Engineer</h3>
                 <div className="content-details fadeIn-bottom">
                   <p className="content-text">
                     <p className="description">
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. Lorem Ipsum has been the industry's
+                      Drive innovation in the Internet of Things (IoT) space as
+                      an Embedded IoT Engineer. Design and implement IoT
+                      solutions that revolutionise industries and transform the
+                      way we live.
                     </p>
                     <button
                       type="button"
-                      className="btn"
+                      className="btns"
                       onClick={() => handleApplyNow("Social Media Executive")}
                     >
                       Apply Now
@@ -81,17 +83,19 @@ function Career() {
                   src={careerbox}
                   alt="Social Media Executive"
                 />
-                <h3 className="title">Lorem Ipsum</h3>
+                <h3 className="title">Embedded Automotive Engineer</h3>
 
                 <div className="content-details fadeIn-bottom">
                   <p className="content-text">
                     <p className="description">
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. Lorem Ipsum has been the industry's
+                      Accelerate your career in automotive technology as an
+                      Embedded Automotive Engineer. Develop cutting-edge
+                      software for connected and autonomous vehicles, shaping
+                      the future of mobility.
                     </p>
                     <button
                       type="button"
-                      className="btn"
+                      className="btns"
                       onClick={() => handleApplyNow("Social Media Executive")}
                     >
                       Apply Now
@@ -107,16 +111,18 @@ function Career() {
                   src={careerbox}
                   alt="Social Media Executive"
                 />
-                <h3 className="title">Lorem Ipsum</h3>
+                <h3 className="title">Trainer</h3>
                 <div className="content-details fadeIn-bottom">
                   <p className="content-text">
                     <p className="description">
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. Lorem Ipsum has been the industry's
+                      Inspire and empower the next generation of tech
+                      enthusiasts as a Trainer. Share your expertise, facilitate
+                      workshops, and help individuals thrive in the
+                      ever-evolving world of technology.
                     </p>
                     <button
                       type="button"
-                      className="btn"
+                      className="btns"
                       onClick={() => handleApplyNow("Social Media Executive")}
                     >
                       Apply Now
@@ -132,16 +138,19 @@ function Career() {
                   src={careerbox}
                   alt="Social Media Executive"
                 />
-                <h3 className="title">Lorem Ipsum</h3>
+                <h3 className="title">Human Resource Executive</h3>
                 <div className="content-details fadeIn-bottom">
                   <p className="content-text">
                     <p className="description">
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. Lorem Ipsum has been the industry's
+                      Join our dynamic HR team and play a pivotal role in talent
+                      management and organisational development as a Human
+                      Resource Executive. Shape our culture and support our team
+                      members' growth. typesetting industry. Lorem Ipsum has
+                      been the industry's
                     </p>
                     <button
                       type="button"
-                      className="btn"
+                      className="btns"
                       onClick={() => handleApplyNow("Social Media Executive")}
                     >
                       Apply Now
@@ -157,16 +166,18 @@ function Career() {
                   src={careerbox}
                   alt="Social Media Executive"
                 />
-                <h3 className="title">Lorem Ipsum</h3>
+                <h3 className="title">Digital Marketing Executive</h3>
                 <div className="content-details fadeIn-bottom">
                   <p className="content-text">
                     <p className="description">
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. Lorem Ipsum has been the industry's
+                      Elevate your career in digital marketing and drive
+                      business growth as a Digital Marketing Executive. Develop
+                      and execute innovative strategies to enhance our online
+                      presence and engage our audience effectively.
                     </p>
                     <button
                       type="button"
-                      className="btn"
+                      className="btns"
                       onClick={() => handleApplyNow("Social Media Executive")}
                     >
                       Apply Now

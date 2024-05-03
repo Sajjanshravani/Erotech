@@ -4,7 +4,7 @@
 .about h1{
   position: absolute;
   top: 180px;
-  left: 852px;
+  left: 910px;
   font-size: 22px;
   font-weight: 400;
   color: #023760;
@@ -55,7 +55,7 @@
 }
 .animated-box h3{
   margin: 0px 10px 14px;
-  font-size: 25px;
+  font-size: 21px;
   font-weight: 700;
   text-align: center;
 }
@@ -152,6 +152,8 @@ box-shadow: 0px 0px 17px 0px #000000e3;
   font-size: 25px;
   font-weight: 400;
   text-align: justify;
+  position: relative;
+  left: 45px;
 }
 .section3-Description11.visible {
   opacity: 1;
@@ -236,6 +238,9 @@ box-shadow: 0px 0px 17px 0px #000000e3;
   font-size: 25px;
   font-weight: 400;
   text-align: justify;
+  position: relative;
+  right: 27px;
+  top: 9px;
 }
 
 .section3 .row {
@@ -322,7 +327,7 @@ box-shadow: 0px 0px 17px 0px #000000e3;
 .about h1 {
   position: absolute;
   top: 228px;
-  left: 1042px;
+  left: 1100px;
 }
 .about-ani{
   margin-left: 106px;
@@ -340,7 +345,7 @@ box-shadow: 0px 0px 17px 0px #000000e3;
     left: 930px;
   }
   .about h1{
-    left: 1011px;
+    left: 1071px;
   }
   .about-ani{
     margin-left: 88px;
@@ -355,7 +360,7 @@ box-shadow: 0px 0px 17px 0px #000000e3;
   left: 847px;
 }
 .about h1{
-  left: 932px;
+  left: 998px;
 }
 .about-ani{
   margin-left: 82px;
@@ -369,7 +374,7 @@ box-shadow: 0px 0px 17px 0px #000000e3;
 .about h1 {
   position: absolute;
   top: 136px;
-  left: 611px;
+  left: 655px;
 }
 .about p{
   position: absolute;
@@ -442,6 +447,7 @@ box-shadow: 0px 0px 17px 0px #000000e3;
 }
 .section3-Description3 p {
   font-size: 22px;
+  right: 0;
 }
 .con-last {
   margin: -24px 0px 5px;
@@ -464,16 +470,20 @@ box-shadow: 0px 0px 17px 0px #000000e3;
   overflow: hidden;
 }
 .section3-Description11 p {
-  margin-left: 28px;
+  left: 14px;
 }
 .section3-Description3 p {
-margin: 69px 6px 0px 18px;
+  margin: 52px 0px 0px 50px;
 }
 .animated-box {
   margin: 0 7px;
   margin-bottom: 4px;
 }
 .animated-box h3{
+  font-size: 14px;
+}
+.animated-box p {
+  margin: 0px 15px 14px;
   font-size: 15px;
 }
 }
@@ -481,7 +491,7 @@ margin: 69px 6px 0px 18px;
   .about h1 {
     position: absolute;
     top: 172px;
-    left: 231px;
+    left: 246px;
     font-size: 10px;
   }
   .about p {
@@ -571,19 +581,28 @@ margin: 69px 6px 0px 18px;
 .text-image {
   margin-top: -88px;
 }
+.section3-Description11 p {
+  font-size: 19px;
+  font-weight: 400;
+  text-align: justify;
+  position: relative;
+  left: 5px;
+}
 }
 
 @media screen and (min-width:375px) and (max-width:399px) {
   .about h1 {
     position: absolute;
     top: 172px;
-    left: 204px;
+    left: 224px;
     font-size: 10px;
   }
 
   .section3-Description11 p {
-  position: relative;
-    left: 14px;
+    position: relative;
+    left: -4px;
+    font-size: 17px;
+
 }
   .about p {
     font-size: 16px;
@@ -665,11 +684,11 @@ margin: 69px 6px 0px 18px;
   overflow: hidden;
 }
 .section3-Description3 p {
-  font-size: 21px;
+  font-size: 17px;
   font-weight: 400;
   text-align: justify;
   position: relative;
-  left: 12px;
+  left: 2px;
   top: 54px;
 }
 
@@ -679,13 +698,14 @@ margin: 69px 6px 0px 18px;
     .about h1 {
     position: absolute;
     top: 172px;
-    left: 204px;
+    left: 219px;
     font-size: 10px;
   }
 
   .section3-Description11 p {
-  position: relative;
-    left: 14px;
+    position: relative;
+    left: 3px;
+    font-size: 17px;
 }
   .about p {
     font-size: 16px;
@@ -764,11 +784,11 @@ margin: 69px 6px 0px 18px;
   overflow: hidden;
 }
 .section3-Description3 p {
-  font-size: 21px;
+  font-size: 20px;
   font-weight: 400;
   text-align: justify;
   position: relative;
-  left: 12px;
+  left: 0px;
   top: 54px;
 }
 }

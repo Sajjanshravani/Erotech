@@ -45,8 +45,8 @@ function Publication() {
     <div className="pub">
       <div className="publication-banner">
         <img src={background} alt="" />
-        <h1>Get Personalized Recommendations</h1>
-        <p>Your high- Quality Training Specialist of IT - EROTECH Solutions</p>
+        <h1>Explore Our Research</h1>
+        <p>Paper Publications by Erotech Solutions</p>
       </div>
       <div className="text-image-publication">
         <div
@@ -91,18 +91,17 @@ function Publication() {
                 isSection3Visible ? "visible" : ""
               }`}
             >
-              <h1>Why Choose Erotech Solutions Publication?</h1>
+              <h1>
+                Curious about the latest advancements and insights in
+                technology?
+              </h1>
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. Lorem
-                Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book.
+                Dive into our collection of paper publications, where our
+                experts share their research findings, innovative ideas, and
+                thought leadership in various fields of technology. From
+                peer-reviewed journals to conference proceedings, our
+                publications reflect our commitment to advancing knowledge and
+                driving innovation in the industry.
               </p>
             </div>
           </div>
@@ -124,8 +123,14 @@ function Publication() {
       </div>
       <div className="con-last">
         <div className="contactusDiv">
-          <p>START TODAY FOR GETTING ONLINE CERTIFICATION</p>
-          <h2>You Can Be Your Own Guiding Star With Our Help</h2>
+          <p>
+            Ready to explore the forefront of technology? Browse our paper
+            publications and stay ahead of the curve with Erotech Solutions.{" "}
+          </p>
+          <h2>
+            Start reading now and unlock new insights for your projects and
+            research
+          </h2>
           <button>Contact US</button>
         </div>
       </div>

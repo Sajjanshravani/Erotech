@@ -13,12 +13,16 @@ function NavBar() {
 
   const toggleServicesDropdown = () => {
     setShowServicesDropdown(!showServicesDropdown);
-    setShowTrainingDropdown(false); // Close training dropdown when opening or closing services dropdown
+    setShowTrainingDropdown(false);
   };
 
   const toggleTrainingDropdown = () => {
     setShowTrainingDropdown(!showTrainingDropdown);
-    setShowServicesDropdown(false); // Close services dropdown when opening or closing training dropdown
+    setShowServicesDropdown(false);
+  };
+
+  const closeNav = () => {
+    setIsNavOpen(false);
   };
 
   return (
@@ -90,6 +94,11 @@ function NavBar() {
             </li>
           </ul>
         </nav>
+        {isNavOpen && (
+          <button className="close-btn" onClick={closeNav}>
+            X
+          </button>
+        )}
       </header>
     </div>
   );

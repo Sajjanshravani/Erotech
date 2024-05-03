@@ -66,20 +66,20 @@ function About() {
   }, [numbers]);
   const boxContent = [
     {
-      title: "Finished Sessions",
-      description: "Get Some Variety Guidance And For Your Future Career.",
+      title: "Training Success Rate",
+      description: "Our Success meets with our Expert Trainers",
     },
     {
-      title: "Satisfaction Rate",
-      description: "Develop Skill For Career Various Science & Language.",
-    },
-    {
-      title: "Enrolled Learners",
-      description: "Make Reservation With Consultant To Get Dream Career.",
+      title: "Job Placement Rate",
+      description: " Top Companies are hiring our Candidates",
     },
     {
       title: "Online Instructors",
-      description: "Learn From Anywhere In The World With Any Devices.",
+      description: "Expert Instructors to train the Candidates",
+    },
+    {
+      title: "Finished Sessions",
+      description: " Completed Sessions with our core team",
     },
   ];
 
@@ -87,8 +87,8 @@ function About() {
     <div className="abu">
       <div className="about">
         <img src={background} alt="" />
-        <h1>Get Personalized Recommendations</h1>
-        <p>Your high- Quality Training Specialist of IT - EROTECH Solutions</p>
+        <h1>Empowering Innovation</h1>
+        <p>Unveiling the Story of Erotech Solutions</p>
       </div>
       <div className="about-ani">
         <div
@@ -102,16 +102,16 @@ function About() {
               }`}
             >
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. Lorem
-                Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book.
+                Welcome to Erotech Solutions, your premier destination for
+                cutting-edge training and consultancy services in Embedded
+                Systems.
+                <br />
+                At Erotech Solutions, we specialize in empowering individuals
+                and businesses with the knowledge and skills needed to excel in
+                the dynamic field of Embedded Systems. With a deep understanding
+                of the industry's evolving landscape, we're dedicated to
+                equipping our clients with the tools and expertise necessary to
+                thrive in today's technology-driven world.
               </p>
             </div>
             <div
@@ -216,16 +216,14 @@ function About() {
               }`}
             >
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. Lorem
-                Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book.
+                Our team of seasoned professionals brings a wealth of experience
+                and insight to every project, ensuring that our training
+                programs and consultancy services are not only comprehensive but
+                also tailored to meet the specific needs of our clients. Whether
+                you're a novice looking to break into the world of Embedded
+                Systems or a seasoned professional seeking to expand your skill
+                set, Erotech Solutions is here to support you every step of the
+                way.
               </p>
             </div>
           </div>
@@ -233,8 +231,14 @@ function About() {
       </div>
       <div className="con-last">
         <div className="contactusDiv">
-          <p>START TODAY FOR GETTING ONLINE CERTIFICATION</p>
-          <h2>You Can Be Your Own Guiding Star With Our Help</h2>
+          <p>
+            Join us as we embark on a journey of discovery and innovation with
+            Erotech Solutions.
+          </p>
+          <h2>
+            Together, let's unlock new opportunities and shape the future of
+            Embedded Systems.
+          </h2>
           <button>Contact US</button>
         </div>
       </div>
