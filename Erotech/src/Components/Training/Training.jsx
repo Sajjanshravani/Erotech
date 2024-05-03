@@ -70,6 +70,7 @@ function Training() {
 
       <div className="training">
         <div className="custom">
+          <h1>Customer-centric Info-Tech Strategies tier level</h1>
           <div className="headi-tra">
             {sections.map(({ title, id }, index) => (
               <div

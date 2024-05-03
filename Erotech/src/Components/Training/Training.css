@@ -67,9 +67,9 @@
     border-top: 3px solid transparent;
   }
   
-  .tab.active {
+  /* .tab.active {
     border-top-color: blue;
-  }
+  } */
   
   .content-train {
     padding: 20px;
