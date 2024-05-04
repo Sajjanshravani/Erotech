@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useParams } from "react-router-dom";
 import "./Training.css";
 import trainbanner from "../Assets/train-banner.png";
 import train from "../Assets/train-1.png";
@@ -7,10 +8,18 @@ import user from "../Assets/user.png";
 import phones from "../Assets/telephone.png";
 import mail from "../Assets/email.png";
 import chat from "../Assets/chat.png";
+import { trainingContent } from "../Assets/Trainingcontent";
 
 function Training() {
+  const { id } = useParams();
+  const [currentContent, setCurrentContent] = useState(
+    trainingContent[parseInt(id) - 1]
+  );
+
   const [activeTab, setActiveTab] = useState("Description");
-  const [expanded, setExpanded] = useState(Array(4).fill(false));
+  const [expanded, setExpanded] = useState(
+    trainingContent[parseInt(id) - 1].faqs
+  );
   const [highlightedSection, setHighlightedSection] = useState("Description");
 
   const sections = [
@@ -21,7 +30,18 @@ function Training() {
   ];
 
   const toggleExpand = (index) => {
-    setExpanded(expanded.map((item, i) => (i === index ? !item : item)));
+    const temp = expanded.map((item, i) => {
+      if (index === i) {
+        return {
+          visited: !item.visited,
+          question: item.question,
+          answer: item.answer,
+        };
+      } else {
+        return item;
+      }
+    });
+    setExpanded(temp);
     setActiveTab(sections[index].title);
   };
 
@@ -61,11 +81,8 @@ function Training() {
     <div className="train">
       <div className="train-banner">
         <img src={trainbanner} alt="" />
-        <h1>Accelerate Your Career</h1>
-        <p>
-          Master Embedded Systems with Erotech Solutions Graduate Training
-          Program
-        </p>
+        <h1>{currentContent.head1}</h1>
+        <p>{currentContent.para1}</p>
       </div>
 
       <div className="training">
@@ -93,21 +110,13 @@ function Training() {
             id="description"
             ref={sectionRefs.current[0]}
           >
-            <p>
-              Embark on a transformative journey towards mastering Embedded
-              Systems with Erotech Solutions' Graduate Training program.
-              Designed for aspiring professionals seeking to launch their
-              careers in this dynamic field, our comprehensive training
-              curriculum, expert instructors, and hands-on approach ensure that
-              you acquire the skills and knowledge needed to excel in today's
-              technology-driven world.
-            </p>
-            <img src={train} className="tra1" alt="" />
+            <p>{currentContent.trainingparagragh}</p>
+            <img src={currentContent.paraimage} className="tra1" alt="" />
             {/* <p>Description content goes here...</p> */}
           </div>
         </div>
         <div className="custom-image">
-          <img src={cbox} alt="" />
+          <img src={currentContent.banneerimage} alt="" />
           <div>
             <div className="table-container">
               <div className="table-row">
@@ -141,13 +150,7 @@ function Training() {
         <p className="name-traine">Name</p>
         <p className="desgi-traine">Designation</p>
         <div className="side-text-image">
-          <p>
-            Meet our dedicated team of industry experts who bring a wealth of
-            experience and insight to every training session. With a passion for
-            education and a commitment to excellence, our trainers are here to
-            guide and support you every step of the way on your path to becoming
-            an Embedded Systems specialist.
-          </p>
+          <p>{currentContent.trainshortdesc}</p>
         </div>
       </div>
 
@@ -155,69 +158,25 @@ function Training() {
         <div className="faq-container">
           <h2>Questions</h2>
           {/* FAQ Item 1 */}
-          <div className="faq-item">
-            <div className="faq-question" onClick={() => toggleExpand(0)}>
-              <i>What is the duration of the training program?</i>
-              <span className="faq-arrow">{expanded[0] ? "▲" : "▼"}</span>
-            </div>
-            {expanded[0] && (
-              <div className="faq-answer">
-                Our Embedded Graduate Training program typically spans [insert
-                duration], providing participants with comprehensive instruction
-                and practical experience in Embedded Systems.
-              </div>
-            )}
-          </div>
-          {/* FAQ Item 2 */}
-          <div className="faq-item">
-            <div className="faq-question" onClick={() => toggleExpand(1)}>
-              <i>
-                Do I need any prior experience or knowledge in Embedded Systems
-                to enroll?
-              </i>
-              <span className="faq-arrow">{expanded[1] ? "▲" : "▼"}</span>
-            </div>
-            {expanded[1] && (
-              <div className="faq-answer">
-                No prior experience is required to enroll in our training
-                program. Our curriculum is designed to accommodate participants
-                with varying levels of experience, from beginners to those with
-                some background in the field.
-              </div>
-            )}
-          </div>
-          {/* FAQ Item 3 */}
-          <div className="faq-item">
-            <div className="faq-question" onClick={() => toggleExpand(2)}>
-              <i>
-                Will I receive any certification upon completion of the
-                training?
-              </i>
-              <span className="faq-arrow">{expanded[2] ? "▲" : "▼"}</span>
-            </div>
-            {expanded[2] && (
-              <div className="faq-answer">
-                Yes, participants who complete our Embedded Graduate Training
-                program will receive a certification, validating their skills
-                and knowledge in Embedded Systems.
-              </div>
-            )}
-          </div>
-          {/* FAQ Item 4 */}
-          <div className="faq-item">
-            <div className="faq-question" onClick={() => toggleExpand(3)}>
-              <i>What is the format of the training sessions?</i>
-              <span className="faq-arrow">{expanded[3] ? "▲" : "▼"}</span>
-            </div>
-            {expanded[3] && (
-              <div className="faq-answer">
-                Our training sessions blend theoretical instruction with
-                hands-on practical exercises, providing participants with a
-                well-rounded learning experience that prepares them for
-                real-world challenges in Embedded Systems.
-              </div>
-            )}
-          </div>
+
+          <ul>
+            {currentContent.faqs.map((item, index) => (
+              <li key={item.question} className="faq-item">
+                <div
+                  className="faq-question"
+                  onClick={() => toggleExpand(index)}
+                >
+                  <i>{item.question}</i>
+                  <span className="faq-arrow">
+                    {expanded[index].visited ? "▲" : "▼"}
+                  </span>
+                </div>
+                {expanded[index].visited && (
+                  <div className="faq-answer">{expanded[index].answer}</div>
+                )}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
 
@@ -320,12 +279,8 @@ function Training() {
 
       <div className="trai-contact">
         <div className="contactusDiv">
-          <p>
-            Ready to kickstart your career in Embedded Systems? Enroll now in
-            Erotech Solutions' Graduate Training program and unlock your
-            potential in this exciting field.{" "}
-          </p>
-          <h2>Take the first step towards success today</h2>
+          <p>{currentContent.conthead}</p>
+          <h2>{currentContent.contpara}</h2>
           <button>Contact US</button>
         </div>
       </div>

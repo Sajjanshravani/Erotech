@@ -20,7 +20,7 @@
   font-size: 33px;
   position: absolute;
   top: 188px;
-  left: 832px;
+  left: 816px;
   width: 401px;
   text-align: center;
 }
@@ -290,10 +290,13 @@
   
   @media screen and (min-width:1444px) {
     .train-banner p {
-      left: 1027px;
+      left: 961px;
+      width: 574px;
     }
     .train-banner h1{
-      left: 1109px;
+      left: 1104px;
+      font-size: 29px;
+      width: 294px;
     }
     .form-image{
       margin: 0px 88px;
