@@ -20,7 +20,7 @@ const initialForm = {
     Comment:""
 }
 
-function ContactUs(){
+function ContactUs({ onSubmit }){
 const [formInfo, setFormInfo] = useState({...initialForm});
 
 const handleInputs = (e)=>{
@@ -38,7 +38,7 @@ const handleSubmit = async (e)=>{
             }
         };
         const scriptURL =
-        "https://script.gooEnlSm_2X7xfC6BzTP_XlDturj_jf2A70F0m5f7UA/exec";
+        "https://script.google.com/macros/s/AKfycbzqV2mzpMaMYtxjfDvdR7I1d47iAfRz8myuxG5yDHM2_Slbqy9gG4BxvACl_zqzNrQ/exec";
       fetch(scriptURL, {
         method: "POST",
         body: formData,
