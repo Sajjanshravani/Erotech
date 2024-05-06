@@ -10,10 +10,60 @@ import mail from "../Assets/email.png";
 import phone from "../Assets/telephone.png";
 import chat from "../Assets/chat.png";
 import "./ContactUs.css";
+import swal from "sweetalert";
 
-
+const initialForm = {
+    Name:"",
+    MailId:"",
+    Course:"",
+    Phone:"",
+    Comment:""
+}
 
 function ContactUs(){
+const [formInfo, setFormInfo] = useState({...initialForm});
+
+const handleInputs = (e)=>{
+    const a = e.target.name;
+    const b = e.target.value
+    setFormInfo((prev)=> ({...prev,[a]:b}));
+};
+
+const handleSubmit = async (e)=>{
+        e.preventDefault();
+        const formData = new FormData();
+        for (const key in formInfo) {
+            if (formInfo.hasOwnProperty(key)) {
+              formData.append(key, formInfo[key]);
+            }
+        };
+        const scriptURL =
+        "https://script.gooEnlSm_2X7xfC6BzTP_XlDturj_jf2A70F0m5f7UA/exec";
+      fetch(scriptURL, {
+        method: "POST",
+        body: formData,
+      })
+        .then((response) =>
+          swal({
+            title: "Form has been Submitted!",
+            text: "Our experts will get back to you shortly",
+            icon: "success",
+            button: "Ok",
+          })
+        )
+        .then(() => {
+          form.reset();
+        })
+        .catch((error) =>
+          swal({
+            title: "Fields are Empty!",
+            text: "Please fill all the fields.",
+            icon: "warning",
+            button: "Ok",
+          })
+        );
+}
+
     return(
         <div className="container-fluid">
             <div className="row">
@@ -63,7 +113,7 @@ function ContactUs(){
             <div className="row">
                 <div className="form-section col-12">
                     <img src={ladysittingonbooks} alt="contactUs"/>
-                        <form >
+                        <form onSubmit={handleSubmit}>
                             <div className="custom-row">
                                 <div className="custom-col">
                                 <div className="custom-form-group">
@@ -74,8 +124,9 @@ function ContactUs(){
                                     
                                         type="text"
                                         id="name"
-                                        // value={name}
-                                        // onChange={(e) => setName(e.target.value)}
+                                        name="Name"
+                                        value={formInfo.Name}
+                                        onChange={handleInputs}
                                         required
                                     />
                                     </div>
@@ -89,8 +140,9 @@ function ContactUs(){
                                     <input
                                         type="email"
                                         id="email"
-                                        // value={email}
-                                        // onChange={(e) => setEmail(e.target.value)}
+                                        name="MailId"
+                                        value={formInfo.MailId}
+                                        onChange={handleInputs}
                                         required
                                     />
                                     </div>
@@ -105,8 +157,9 @@ function ContactUs(){
                                     {/* <img src={courseIcon} alt="" /> */}
                                     <select
                                         id="course"
-                                        // value={course}
-                                        // onChange={(e) => setCourse(e.target.value)}
+                                        name="Course"
+                                        value={formInfo.Course}
+                                        onChange={handleInputs}
                                         required
                                     >
                                         <option value="">Select Course</option>
@@ -125,8 +178,9 @@ function ContactUs(){
                                     <input
                                         type="tel"
                                         id="phone"
-                                        // value={phone}
-                                        // onChange={(e) => setPhone(e.target.value)}
+                                        name="Phone"
+                                        value={formInfo.Phone}
+                                        onChange={handleInputs}
                                         required
                                     />
                                     </div>
@@ -139,8 +193,9 @@ function ContactUs(){
                                 <img src={chat} alt="" style={{ top: "18%" }} />
                                 <textarea
                                     id="comment"
-                                    // value={comment}
-                                    // onChange={(e) => setComment(e.target.value)}
+                                    name='Comment'
+                                    value={formInfo.Comment}
+                                    onChange={ handleInputs}
                                     rows="4"
                                     cols="50"
                                 ></textarea>

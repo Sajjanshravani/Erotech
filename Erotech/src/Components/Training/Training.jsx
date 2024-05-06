@@ -9,9 +9,21 @@ import phones from "../Assets/telephone.png";
 import mail from "../Assets/email.png";
 import chat from "../Assets/chat.png";
 import { trainingContent } from "../Assets/Trainingcontent";
+import swal from "sweetalert";
+
+const initialForm = {
+  Name:"",
+  MailId:"",
+  Course:"",
+  Phone:"",
+  Comment:""
+}
 
 function Training() {
   const { id } = useParams();
+  const [formInfo, setFormInfo] = useState({...initialForm});
+
+
   const [currentContent, setCurrentContent] = useState(
     trainingContent[parseInt(id) - 1]
   );
@@ -45,17 +57,47 @@ function Training() {
     setActiveTab(sections[index].title);
   };
 
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [course, setCourse] = useState("");
-  const [comment, setComment] = useState("");
+  const handleInputs = (e)=>{
+    const a = e.target.name;
+    const b = e.target.value
+    setFormInfo((prev)=> ({...prev,[a]:b}));
+};
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log("Form submitted:", { name, email, phone, course, comment });
+const handleSubmit = async (e)=>{
+  e.preventDefault();
+  const formData = new FormData();
+  for (const key in formInfo) {
+      if (formInfo.hasOwnProperty(key)) {
+        formData.append(key, formInfo[key]);
+      }
   };
-
+  const scriptURL =
+  "https://script.gooEnlSm_2X7xfC6BzTP_XlDturj_jf2A70F0m5f7UA/exec";
+fetch(scriptURL, {
+  method: "POST",
+  body: formData,
+})
+  .then((response) =>
+    swal({
+      title: "Form has been Submitted!",
+      text: "Our experts will get back to you shortly",
+      icon: "success",
+      button: "Ok",
+    })
+  )
+  .then(() => {
+    form.reset();
+  })
+  .catch((error) =>
+    swal({
+      title: "Fields are Empty!",
+      text: "Please fill all the fields.",
+      icon: "warning",
+      button: "Ok",
+    })
+  );
+}
+  
   const sectionRefs = useRef([]);
 
   useEffect(() => {
@@ -196,8 +238,9 @@ function Training() {
                       <input
                         type="text"
                         id="name"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
+                        name="Name"
+                        value={formInfo.Name}
+                        onChange={handleInputs}
                         required
                       />
                     </div>
@@ -211,8 +254,9 @@ function Training() {
                       <input
                         type="email"
                         id="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
+                        name="MailId"
+                        value={formInfo.MailId}
+                        onChange={handleInputs}
                         required
                       />
                     </div>
@@ -226,8 +270,9 @@ function Training() {
                     <div className="input-with-icon">
                       <select
                         id="course"
-                        value={course}
-                        onChange={(e) => setCourse(e.target.value)}
+                        name="Course"
+                        value={formInfo.Course}
+                        onChange={handleInputs}
                         required
                       >
                         <option value="">Select Course</option>
@@ -246,8 +291,9 @@ function Training() {
                       <input
                         type="tel"
                         id="phone"
-                        value={phone}
-                        onChange={(e) => setPhone(e.target.value)}
+                        name="Phone"
+                        value={formInfo.Phone}
+                        onChange={handleInputs}
                         required
                       />
                     </div>
@@ -260,8 +306,9 @@ function Training() {
                   <img src={chat} alt="" style={{ top: "18%" }} />
                   <textarea
                     id="comment"
-                    value={comment}
-                    onChange={(e) => setComment(e.target.value)}
+                    name='Comment'
+                    value={formInfo.Comment}
+                    onChange={ handleInputs}
                     rows="4"
                     cols="50"
                   ></textarea>
