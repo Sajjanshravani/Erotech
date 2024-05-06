@@ -7,6 +7,8 @@ import Section3Pentagon from "../Assets/Section3Pentagon.png";
 import Section3Dots from "../Assets/Section3Dots.png";
 import Section3Waves from "../Assets/Section3Waves.png";
 import greywave from "../Assets/Frame.png";
+import about1 from "../Assets/Aboutus1.jpg";
+import about2 from "../Assets/Aboutus2.jpg";
 
 function About() {
   const [isSection3Visible, setIsSection3Visible] = useState(false);
@@ -144,7 +146,9 @@ function About() {
                 alt="Section3Vectors"
                 className="Section3Vector pentagonVector1"
               />
-              <div className="Graybox">IMAGE</div>
+              <div className="Graybox">
+                <img src={about1} alt="" />
+              </div>
             </div>
           </div>
         </div>
@@ -164,14 +168,14 @@ function About() {
           ))}
         </div>
       </div>
-      <div className="greywave">
+      {/* <div className="greywave">
         <img src={greywave} alt="" />
         <div className="grey">
           <div className="greybox"></div>
           <div className="greybox"></div>
           <div className="greybox"></div>
         </div>
-      </div>
+      </div> */}
       <div className="text-image">
         <div
           ref={section3Ref2}
@@ -208,7 +212,9 @@ function About() {
                 alt="Section3Vectors"
                 className="Section3Vector pentagonVector3"
               />
-              <div className="GrayImg3">IMAGE</div>
+              <div className="GrayImg3">
+                <img src={about2} alt="" />
+              </div>
             </div>
             <div
               className={`col-lg-5 col-sm-12 section3-Description3 ${

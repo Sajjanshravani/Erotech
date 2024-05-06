@@ -120,14 +120,15 @@ box-shadow: 0px 0px 17px 0px #000000e3;
   z-index: 1;
 }
 .section3 .wavesVector1 {
-  left: 15%;
-  top: 15%;
+  left: 11%;
+  top: 13%;
   z-index: 3;
 }
 
 .section3 .pentagonVector1 {
   left: 74%;
   top: -5%;
+  z-index: -1;
 }
 
 .about-ani{
@@ -137,8 +138,8 @@ box-shadow: 0px 0px 17px 0px #000000e3;
 .box1{
   margin-bottom: 50px;
 }
-.Graybox {
-  background-color: #d9d9d9;
+.Graybox img {
+  /* background-color: #d9d9d9; */
   width: 515px;
   height: 455px;
   border-radius: 40px;
@@ -223,8 +224,8 @@ box-shadow: 0px 0px 17px 0px #000000e3;
   align-items: center;
   position: relative;
 }
-.GrayImg3 {
-  background-color: #d9d9d9;
+.GrayImg3 img {
+  /* background-color: #d9d9d9; */
   width: 515px;
   height: 455px;
   border-radius: 40px;
@@ -266,17 +267,18 @@ box-shadow: 0px 0px 17px 0px #000000e3;
 
 .section3 .pentagonVector3 {
   left: 2%;
-  top: 20%;
+  top: -13%;
+  z-index: -2;
 }
 
 .section3 .dotsVector3 {
   left: 3%;
-  top: 38%;
+  top: 15%;
   z-index: 1;
 }
 
 .section3 .wavesVector3 {
-  left: 78%;
+  left: 82%;
   top: 15%;
   z-index: 3;
 }
@@ -330,13 +332,20 @@ box-shadow: 0px 0px 17px 0px #000000e3;
   left: 1100px;
 }
 .about-ani{
-  margin-left: 106px;
+  margin-left: 38px;
 }
 .box1{
   margin-bottom: 64px;
 }
 .text-image{
   margin-right: 90px;
+}
+.section3 .pentagonVector3 {
+  left: 9%;
+  top: -7%;
+}
+.section3 .dotsVector3 {
+  left: 6%;
 }
 }
 
@@ -348,11 +357,21 @@ box-shadow: 0px 0px 17px 0px #000000e3;
     left: 1071px;
   }
   .about-ani{
-    margin-left: 88px;
+    margin-left: 43px;
+    margin-bottom: 70px;
   }
   .text-image{
     margin-right: 71px;
   }
+  .section3 .pentagonVector3 {
+    left: 6%;
+    top: -12%;
+  }
+  .section3 .dotsVector3 {
+    left: 3%;
+    top: 10%;
+  }
+
 }
 
 @media screen and (min-width:1300px) and (max-width:1376px) {
@@ -363,10 +382,11 @@ box-shadow: 0px 0px 17px 0px #000000e3;
   left: 998px;
 }
 .about-ani{
-  margin-left: 82px;
+  margin-left: 36px;
+  margin-bottom: 55px;
 }
 .text-image{
-  margin-right: 62px;
+  margin-right: 36px;
 }
 }
 
@@ -390,7 +410,7 @@ box-shadow: 0px 0px 17px 0px #000000e3;
   left: 92%;
 }
 .Graybox {
-  background-color: #d9d9d9;
+  /* background-color: #d9d9d9; */
   width: 423px;
 }
 .section3 .pentagonVector1 {
@@ -405,7 +425,7 @@ box-shadow: 0px 0px 17px 0px #000000e3;
 .section3-Description11 p {
   font-size: 20px;
   position: relative;
-  top: 8px;
+  top: 48px;
   left: 25px;
 }
 .animated-box h3 {
@@ -420,12 +440,12 @@ box-shadow: 0px 0px 17px 0px #000000e3;
   margin-bottom: 8px;
 }
 .GrayImg3 {
-  background-color: #d9d9d9;
+  /* background-color: #d9d9d9; */
   width: 428px;
 }
 .section3 .pentagonVector3 {
   left: 0%;
-  top: 12%;
+  top: -14%;
 }
 .section3 .wavesVector3 {
   left: 84%;
@@ -433,7 +453,7 @@ box-shadow: 0px 0px 17px 0px #000000e3;
 }
 .section3 .dotsVector3 {
   left: 1%;
-  top: 27%;
+  top: 12%;
 }
 .section3 .vector23 {
   left: 44%;
@@ -465,6 +485,9 @@ box-shadow: 0px 0px 17px 0px #000000e3;
   top: 115px;
   left: 514px;
   font-size: 13px;
+}
+.about-ani{
+  margin-bottom: 80px;
 }
 .abu{
   overflow: hidden;
@@ -550,8 +573,19 @@ box-shadow: 0px 0px 17px 0px #000000e3;
   top: -279px;
 }
 .section3 .vector23 {
-  left: 29%;
+  left: 26%;
   top: 54%;
+  z-index: -2;
+}
+.section3 .dotsVector3 {
+  left: 3%;
+  top: 9%;
+  z-index: -1;
+}
+.section3 .pentagonVector3 {
+  left: 2%;
+  top: -14%;
+  z-index: -2;
 }
 .section3 .wavesVector3 {
   left: 82%;
@@ -579,7 +613,7 @@ box-shadow: 0px 0px 17px 0px #000000e3;
   margin-bottom: 20px;
 }
 .text-image {
-  margin-top: -88px;
+  margin-top: 74px;
 }
 .section3-Description11 p {
   font-size: 19px;
@@ -587,6 +621,19 @@ box-shadow: 0px 0px 17px 0px #000000e3;
   text-align: justify;
   position: relative;
   left: 5px;
+}
+.section3-Image.visible {
+  opacity: 1;
+  transform: translateX(0);
+  position: relative;
+  right: 18px;
+  top: 13px;
+}
+.box1{
+  margin-top: 78px;
+}
+.GrayImg3 img{
+  width: 294px;
 }
 }
 
@@ -619,7 +666,7 @@ box-shadow: 0px 0px 17px 0px #000000e3;
     height: 476px;
   }
   .vector22 {
-    left: 0%;
+    left: 2%;
     top: 55%;
   }
   .vector12 {
@@ -647,6 +694,7 @@ box-shadow: 0px 0px 17px 0px #000000e3;
   }
   .dotsVector1 {
     left: 58%;
+    z-index: -1;
   }
   .animated-box {
     width: 90px;
@@ -668,14 +716,26 @@ box-shadow: 0px 0px 17px 0px #000000e3;
   margin-bottom: 20px;
 }
 .text-image {
-  margin-top: -143px;
+  margin-top: 72px;
 }
 .grey {
   top: -253px;
 }
 .section3 .vector23 {
-  left: 29%;
-  top: 54%;
+  left: 24%;
+  top: 52%;
+  z-index: -2;
+}
+.section3 .pentagonVector3 {
+  left: 8%;
+  top: -10%;
+  z-index: -2;
+  width: 120px;
+}
+.section3 .dotsVector3 {
+  left: 5%;
+  top: 5%;
+  z-index: -1;
 }
 .section3 .wavesVector3 {
   left: 82%;
@@ -691,7 +751,22 @@ box-shadow: 0px 0px 17px 0px #000000e3;
   left: 2px;
   top: 54px;
 }
-
+.section3-Image.visible {
+  opacity: 1;
+  transform: translateX(0);
+  position: relative;
+  right: 33px;
+  top: 11px;
+}
+.about-ani {
+  margin-bottom: 72px;
+}
+.GrayImg3 img{
+  width: 293px;
+  height: 429px;
+  border-radius: 40px;
+  margin-left: 52px;
+}
 }
 
 @media screen and (min-width:300px) and (max-width:374px){
@@ -722,7 +797,7 @@ box-shadow: 0px 0px 17px 0px #000000e3;
     height: 476px;
   }
   .vector22 {
-    left: 0%;
+    left: 1%;
     top: 55%;
   }
   .vector12 {
@@ -743,13 +818,19 @@ box-shadow: 0px 0px 17px 0px #000000e3;
     height: 400px;
   }
   .section3 .wavesVector1 {
-    left: 4%;
+    left: 9%;
+    width: 49px;
+    top: 10%;
   }
+  .about-ani {
+    margin-bottom: 79px;
+}
   .section3 .pentagonVector1 {
     left: 58%;
   }
   .dotsVector1 {
     left: 58%;
+    z-index: -2;
   }
   .animated-box {
     width: 90px;
@@ -771,11 +852,30 @@ box-shadow: 0px 0px 17px 0px #000000e3;
   top: -276px;
 }
 .text-image {
-  margin-top: -93px;
+  margin-top: 72px;
+}
+.GrayImg3 img {
+  /* background-color: #d9d9d9; */
+  width: 286px;
+  height: 374px;
+  border-radius: 40px;
+  margin-left: 48px;
+}
+.section3 .pentagonVector3 {
+  left: 9%;
+  top: -11%;
+  z-index: -2;
+  width: 123px;
+}
+.section3 .dotsVector3 {
+  left: 4%;
+  top: 7%;
+  z-index: -1;
 }
 .section3 .vector23 {
-  left: 29%;
-  top: 54%;
+  left: 27%;
+  top: 46%;
+  z-index: -1;
 }
 .section3 .wavesVector3 {
   left: 82%;
@@ -790,5 +890,12 @@ box-shadow: 0px 0px 17px 0px #000000e3;
   position: relative;
   left: 0px;
   top: 54px;
+}
+.section3-Image.visible {
+  opacity: 1;
+  transform: translateX(0);
+  position: relative;
+  right: 35px;
+  top: 12px;
 }
 }
