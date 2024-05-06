@@ -12,17 +12,16 @@ import { trainingContent } from "../Assets/Trainingcontent";
 import swal from "sweetalert";
 
 const initialForm = {
-  Name:"",
-  MailId:"",
-  Course:"",
-  Phone:"",
-  Comment:""
-}
+  Name: "",
+  MailId: "",
+  Course: "",
+  Phone: "",
+  Comment: "",
+};
 
 function Training() {
   const { id } = useParams();
-  const [formInfo, setFormInfo] = useState({...initialForm});
-
+  const [formInfo, setFormInfo] = useState({ ...initialForm });
 
   const [currentContent, setCurrentContent] = useState(
     trainingContent[parseInt(id) - 1]
@@ -57,47 +56,47 @@ function Training() {
     setActiveTab(sections[index].title);
   };
 
-  const handleInputs = (e)=>{
+  const handleInputs = (e) => {
     const a = e.target.name;
-    const b = e.target.value
-    setFormInfo((prev)=> ({...prev,[a]:b}));
-};
+    const b = e.target.value;
+    setFormInfo((prev) => ({ ...prev, [a]: b }));
+  };
 
-const handleSubmit = async (e)=>{
-  e.preventDefault();
-  const formData = new FormData();
-  for (const key in formInfo) {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const formData = new FormData();
+    for (const key in formInfo) {
       if (formInfo.hasOwnProperty(key)) {
         formData.append(key, formInfo[key]);
       }
+    }
+    const scriptURL =
+      "https://script.gooEnlSm_2X7xfC6BzTP_XlDturj_jf2A70F0m5f7UA/exec";
+    fetch(scriptURL, {
+      method: "POST",
+      body: formData,
+    })
+      .then((response) =>
+        swal({
+          title: "Form has been Submitted!",
+          text: "Our experts will get back to you shortly",
+          icon: "success",
+          button: "Ok",
+        })
+      )
+      .then(() => {
+        form.reset();
+      })
+      .catch((error) =>
+        swal({
+          title: "Fields are Empty!",
+          text: "Please fill all the fields.",
+          icon: "warning",
+          button: "Ok",
+        })
+      );
   };
-  const scriptURL =
-  "https://script.gooEnlSm_2X7xfC6BzTP_XlDturj_jf2A70F0m5f7UA/exec";
-fetch(scriptURL, {
-  method: "POST",
-  body: formData,
-})
-  .then((response) =>
-    swal({
-      title: "Form has been Submitted!",
-      text: "Our experts will get back to you shortly",
-      icon: "success",
-      button: "Ok",
-    })
-  )
-  .then(() => {
-    form.reset();
-  })
-  .catch((error) =>
-    swal({
-      title: "Fields are Empty!",
-      text: "Please fill all the fields.",
-      icon: "warning",
-      button: "Ok",
-    })
-  );
-}
-  
+
   const sectionRefs = useRef([]);
 
   useEffect(() => {
@@ -224,7 +223,7 @@ fetch(scriptURL, {
 
       <div className="form-image" id="enrollment" ref={sectionRefs.current[3]}>
         <div className="image-form">
-          <img src={cbox} alt="" />
+          <img src={currentContent.banneerimage} alt="" />
         </div>
         <div className="form">
           <div className="custom-form-container">
@@ -306,9 +305,9 @@ fetch(scriptURL, {
                   <img src={chat} alt="" style={{ top: "18%" }} />
                   <textarea
                     id="comment"
-                    name='Comment'
+                    name="Comment"
                     value={formInfo.Comment}
-                    onChange={ handleInputs}
+                    onChange={handleInputs}
                     rows="4"
                     cols="50"
                   ></textarea>
