@@ -19,7 +19,7 @@ const initialForm = {
   Comment: "",
 };
 
-function Training() {
+function Training({ onSubmit }) {
   const { id } = useParams();
   const [formInfo, setFormInfo] = useState({ ...initialForm });
 
