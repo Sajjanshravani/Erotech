@@ -54,7 +54,12 @@ const Service = ({ page }) => {
         <div className="industryCards">
           {currentPage.industryCard.map((e, i) => {
             return (
-              <div className="industyCard">
+              <div
+                className="industyCard"
+                style={{
+                  backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${e.bgimg})`,
+                }}
+              >
                 <h3>{e.title}</h3>
                 <p>{e.info}</p>
               </div>
@@ -98,29 +103,20 @@ const Service = ({ page }) => {
               alt="Section3Vectors"
               className="Section3Vector pentagonVector"
             />
-            <div className="GrayImg">IMAGE</div>
+            <div className="GrayImg">
+              <img src={currentPage.section3Image} alt={currentPage.id} />
+            </div>
           </div>
           <div
             className={`col-lg-5 col-sm-12 section3-Description ${
               isSection3Visible ? "visible" : ""
             }`}
           >
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. Lorem
-              Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
-            </p>
+            <p>{currentPage.section3Text}</p>
           </div>
         </div>
       </div>
-      <ContactDiv />
+      <ContactDiv ptag={currentPage.ptag} htag={currentPage.htag} />
     </>
   );
 };

@@ -10,7 +10,8 @@ img {
   height: auto;
 }
 
-html {
+html,
+body {
   overflow-x: hidden;
 }
 
@@ -37,6 +38,7 @@ html {
 }
 
 .BannerText {
+  width: 80%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -59,15 +61,39 @@ html {
   gap: 10rem;
   margin-top: 30px;
   align-items: center;
+  justify-content: center;
 }
 
 .iconBox {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 150px;
-  height: 110px;
+  width: 110px !important;
+  height: auto !important;
+}
+.grayIcon {
   background-color: #d9d9d9;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 525px) {
+  .BannerText h2 {
+    font-size: 18px;
+  }
+
+  .BannerText p {
+    font-size: 13px;
+  }
+  .iconBox {
+    width: 70px !important;
+    height: auto !important;
+  }
+  .Bannericons {
+    gap: 1rem;
+    margin-top: 10px;
+  }
+  .HomeSlide img {
+    height: 60vh;
+    width: 100%;
+  }
 }
 
 /* ---------- Investing -------- */
@@ -109,8 +135,8 @@ html {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  padding: 3% 2%;
   gap: 2rem;
-  padding: 6% 2%;
   background-color: #d3ebf5;
   border: 3px solid #29b0e8;
   border-radius: 43px;
@@ -125,7 +151,17 @@ html {
 .invest-text {
   width: 60%;
 }
+.invest-img {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.invest-img img {
+  height: 350px;
+  border-radius: 16px;
+}
 .investVector {
   position: absolute;
   z-index: -2;
@@ -153,12 +189,60 @@ html {
   width: 82px;
   left: 8.5%;
 }
+@media screen and (max-width: 525px) {
+  .invest-title p {
+    font-size: 15px;
+    text-align: center;
+  }
+  .invest-title h2 {
+    font-size: 30px;
+  }
+  .invest-body {
+    flex-direction: column;
+    margin-top: 0;
+    gap: 1rem;
+  }
+  .invest-text {
+    width: 90%;
+  }
+  .invest-img {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .invest-img img {
+    height: 150px;
+  }
+  .invest-body p {
+    font-size: 13px;
+  }
+  .vector1 {
+    left: 82%;
+    width: 55px;
+    top: 60%;
+  }
+  .vector2 {
+    width: 110px;
+    left: 2%;
+    top: 50%;
+  }
+  .vector3 {
+    left: 61.5%;
+    top: 86%;
+    width: 137px;
+  }
+  .vector4 {
+    width: 50px;
+    left: 2.5%;
+  }
+}
 /* ---------- Explore -------- */
 
 .explore {
   margin-top: 220px;
   text-align: center;
-  margin-bottom: 100px;
+  margin-bottom: 20px;
 }
 .explore p {
   font-size: 20px;
@@ -189,6 +273,17 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media screen and (max-width: 525px) {
+  .explore {
+    margin-top: 75px;
+  }
+  .explore p {
+    font-size: 16px;
+  }
+  .explore h2 {
+    font-size: 30px;
+  }
 }
 /*---------Section 3-----------*/
 .section3 {
@@ -399,7 +494,40 @@ html {
   opacity: 1;
   transition-delay: 2.2s;
 }
-
+@media screen and (max-width: 525px) {
+  .section4 .row {
+    flex-direction: column-reverse;
+  }
+  .section4-Description p {
+    font-size: 15px;
+  }
+  .section4Box {
+    width: 145px;
+    height: 145px;
+  }
+  .section4Box h2 {
+    font-size: 35px;
+  }
+  .section4Box h3 {
+    font-size: 15px;
+  }
+  .section4Box p {
+    font-size: 13px;
+  }
+  .leftBoxes {
+    gap: 2rem;
+  }
+  .rightBoxes {
+    gap: 2rem;
+    margin-top: -90px;
+  }
+  .section4-Boxes {
+    gap: 2rem;
+  }
+  .section4-Description {
+    margin-top: 50px;
+  }
+}
 /* ---------------Popular Courses---------------- */
 
 .popularCourses {
@@ -434,6 +562,21 @@ html {
   height: 454px;
   background-color: #d9d9d9;
 }
+
+@media screen and (max-width: 525px) {
+  .popularCourseCards {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 30px;
+  }
+  .popularCourseCard {
+    width: 300px;
+    height: 300px;
+  }
+}
 /* -----------------section6---------------- */
 .section6 {
   background-position: center;
@@ -442,15 +585,139 @@ html {
   height: 100vh;
   position: relative;
 }
-
-.section6ImageBox {
-  width: 527px;
-  height: 300px;
-  border-radius: 16px;
-  box-shadow: 0px 0px 4px 0px #000000b8;
-  background-color: white;
+.section6 h2 {
+  margin-top: 50px;
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0;
+}
+.testimonial {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 10px;
+}
+.section6 .slick-slider {
   position: absolute;
-  top: 52.5%;
-  left: 63%;
+  top: 55%;
+  left: 50%;
   transform: translate(-50%, -50%);
+  width: 80%;
+}
+.test-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 790px;
+  height: 232px;
+}
+.test-text p {
+  font-size: 20px;
+  font-weight: 400;
+  text-align: justify;
+}
+.test-img img {
+  width: 220px;
+  height: 180px;
+  border-radius: 16px;
+  box-shadow: 0px 0px 2px 0px #000000b8;
+}
+.section6 .slick-arrow {
+  display: none !important;
+}
+@media screen and (max-width: 525px) {
+  .section6 {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 120vh;
+    position: relative;
+  }
+  .testimonial {
+    flex-direction: column-reverse;
+    gap: 0.5rem;
+    padding: 10px;
+  }
+  .test-text {
+    width: 250px;
+  }
+  .test-text p {
+    font-size: 15px;
+    font-weight: 400;
+    text-align: justify;
+  }
+  .section6 .slick-slider {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+  }
+}
+/*---------------- IconCategories--------------- */
+.categories {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.category {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 10px;
+}
+
+.category img {
+  width: 130px;
+}
+
+.category h3 {
+  font-size: 25px;
+  font-weight: 400;
+  text-align: center;
+  width: 70%;
+}
+
+.IconCategories .section3-Image .categorygrayImg {
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+}
+
+.IconCategories .section3-Description p {
+  font-size: 20px;
+}
+.mobileView {
+  display: none;
+}
+@media screen and (max-width: 525px) {
+  .desktopView {
+    display: none;
+  }
+  .mobileView {
+    display: block;
+  }
+  .mobileCAtegory-Image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .mobileCategory img {
+    width: 200px;
+  }
+  .mobileCategory-Description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    padding: 1% 10%;
+  }
 }
