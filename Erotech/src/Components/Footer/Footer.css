@@ -230,9 +230,6 @@
         top: -1138px !important;
         left: 603px;    
     }
-    .footer{
-        overflow: hidden;
-    }
     .foot-line{
         right: -22px;
     }
@@ -243,14 +240,16 @@
 
 @media screen and (min-width:400px) and (max-width:500px){
 .pentogon img{
-    top: -1102px;
+    top: -1092px;
     width: 32px;
     position: relative;
     left: 3px;
 }
 .shape2 {
-    top: -1174px !important;
-    left: 262px !important;
+    top: -1165px !important;
+    left: 282px !important;
+    width: 67px !important;
+    height: 52px;
 }
 .footer{
     overflow: hidden;
@@ -269,14 +268,16 @@
 
 @media screen and (min-width:375px) and (max-width:399px) {
     .pentogon img{
-        top: -1103px;
+        top: -1093px;
         width: 32px;
         position: relative;
         left: 3px;
     }
     .shape2 {
-        top: -1176px !important;
-        left: 223px !important;
+        top: -1162px !important;
+        left: 226px !important;
+        width: 67px !important;
+        height: 52px;
     }
     .footer{
         overflow: hidden;
@@ -295,14 +296,16 @@
 
 @media screen and (min-width:300px) and (max-width:374px){
     .pentogon img{
-        top: -1108px;
+        top: -1093px;
         width: 32px;
         position: relative;
         left: 3px;
     }
     .shape2 {
-        top: -1175px !important;
-        left: 207px !important;
+        top: -1162px !important;
+        left: 223px !important;
+        width: 67px !important;
+        height: 52px;
     }
     .footer{
         overflow: hidden;
@@ -315,6 +318,7 @@
     }
     .foot-line p{
         font-size: 20px;
+        width: 321px;
     }
     .social{
         left: 15px;
