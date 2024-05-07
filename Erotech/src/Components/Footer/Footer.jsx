@@ -24,7 +24,7 @@ function Footer() {
           <path
             d="M0 123.251V460.006H1442V0.844482C1379.85 7.12109 1344.62 12.8469 1281.5 25.6113C1119.36 54.6821 1013.92 51.6265 827.657 33.523C608.963 8.8082 512.627 20.1103 362.382 60.9398C215.333 94.8928 136.715 107.503 0 123.251Z"
             fill="url(#paint0_linear_1_191)"
-            fill-opacity="0.84"
+            fillOpacity="0.84" // Corrected property name
           />
           <defs>
             <linearGradient
@@ -35,8 +35,9 @@ function Footer() {
               y2="0.844482"
               gradientUnits="userSpaceOnUse"
             >
-              <stop offset="0.145" stop-color="white" />
-              <stop offset="1" stop-color="#2BB2E9" />
+              <stop offset="0.145" stopColor="white" /> // Corrected property
+              name
+              <stop offset="1" stopColor="#2BB2E9" /> // Corrected property name
             </linearGradient>
           </defs>
         </svg>
