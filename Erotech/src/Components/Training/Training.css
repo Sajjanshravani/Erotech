@@ -12,19 +12,31 @@
 .train-banner h1{
   position: absolute;
   top: 147px;
-  left: 839px;
+  left: 901px;
   font-size: 24px;
-  width: 402px;
+  width: 260px;
 }
 .train-banner p{
   font-size: 33px;
   position: absolute;
   top: 188px;
-  left: 832px;
-  width: 381px;
+  left: 816px;
+  width: 401px;
   text-align: center;
 }
 
+.headi-tra{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.line{
+  border-bottom: 1px solid black;
+  width: 89%;
+  position: relative;
+  left: 45px;
+}
 .train-banner img{
   width: 100%;
 }
@@ -55,9 +67,9 @@
     border-top: 3px solid transparent;
   }
   
-  .tab.active {
+  /* .tab.active {
     border-top-color: blue;
-  }
+  } */
   
   .content-train {
     padding: 20px;
@@ -77,8 +89,13 @@
   .custom-image img{
     width: 319px;
     height: 259.65px;
+    position: relative;
+    left: 33px;
   }
-  
+  .par-train{
+    margin: 0px 44px;
+  }
+
   .table-container {
     display: flex;
     flex-direction: column;
@@ -87,7 +104,7 @@
     border-collapse: collapse;
     position: relative;
     top: 37px;
-    right: 42px;
+    right: 11px;
     font-family: "Judson", serif;
   }
   
@@ -108,33 +125,40 @@
 
   .train-head{
     position: relative;
-    top: -11px;
-    left: 87px;
+    top: 12px;
+    left: 44px;
     width: 175px;
   }
   .side-train{
     display: flex;
+    margin-top: 42px;
   }
 
   .side-image-train{
     width: 257px;
     height: 167px;
-    background-color: #D9D9D9;
     position: relative;
-    left: 90px;
+    left: 44px;
+  }
+  .side-image-train img{
+    position: relative;
+    top: -55px;
+    z-index: -2;
   }
   .side-text-image p{
-    width: 801px;
+    width: 837px;
     position: relative;
-    left: 16px;
-    top: 19px;
+    /* left: -73px; */
+    top: 8px;
     text-align: justify;
+    right: 71px;
+    font-size: 22px;
   }
 
   .name-traine{
     position: relative;
     top: 170px;
-    right: 80px;
+    right: 126px;
     font-size: 24px;
     font-weight: 400;
   }
@@ -142,7 +166,7 @@
   .desgi-traine{
     position: relative;
     top: 199px;
-    right: 168px;
+    right: 211px;
     font-size: 24px;
     font-weight: 400;
   }
@@ -161,6 +185,7 @@
     position: relative;
     top: 80px;
     margin-bottom: 169px;
+    right: 74px;
   }
   
   .faq-item {
@@ -269,10 +294,13 @@
   
   @media screen and (min-width:1444px) {
     .train-banner p {
-      left: 1027px;
+      left: 961px;
+      width: 574px;
     }
     .train-banner h1{
-      left: 1037px;
+      left: 1104px;
+      font-size: 29px;
+      width: 294px;
     }
     .form-image{
       margin: 0px 88px;
@@ -280,14 +308,14 @@
     .side-text-image p {
       width: 916px;
       position: relative;
-      left: 16px;
+      left: -53px;
       top: -7px;
       text-align: justify;
-      font-size: 20px;
+      font-size: 26px;
     }
-    .frequent{
-      right: 68px;
-    }
+    .frequent {
+      right: 99px;
+  }
   }
 
   @media screen and (min-width:1377px) and (max-width:1443px) {
@@ -295,7 +323,7 @@
     .train-banner h1{
       position: absolute;
       top: 147px;
-      left: 969px;
+      left: 1044px;
     }
     .train-banner p{
       top: 188px;
@@ -304,13 +332,13 @@
     .side-text-image p {
       width: 837px;
       position: relative;
-      left: 16px;
-      top: 10px;
+      left: -74px;
+      top: -11px;
       text-align: justify;
-      font-size: 18px;
+      font-size: 25px;
     }
     .frequent{
-      right: 54px;
+      right: 90px;
     }
     .form-image{
       margin: 0px 40px;
@@ -322,19 +350,19 @@
       left: 908px;
     }
     .train-banner h1{
-      left: 917px;
+      left: 995px;
 
     }
     .side-text-image p {
       width: 807px;
       position: relative;
-      left: 3px;
-      top: 2px;
+      left: -66px;
+      top: -11px;
       text-align: justify;
-      font-size: 18px;
+      font-size: 24px;
     }
     .frequent{
-      right: 47px;
+      right: 87px;
     }
     .form-image{
       margin: 0px 15px;
@@ -343,9 +371,10 @@
   
   @media screen and (min-width:1024px) and (max-width:1199px){
     .train-banner h1{
-      left: 639px;
+      left: 713px;
       top: 128px;
-      width: 375px;
+      width: 244px;
+      font-size: 22px;
     }
     .train-banner p {
       font-size: 27px;
@@ -360,7 +389,7 @@
     }
     .custom-image{
       position: relative;
-      right: 28px;
+      right: 62px;
     }
     .name-traine {
       position: relative;
@@ -397,9 +426,9 @@
     .train-banner h1 {
       position: absolute;
       top: 84px;
-      left: 478px;
+      left: 527px;
       font-size: 17px;
-      width: 275px;
+      width: 175px;
   }
   .train-banner p {
     font-size: 26px;
@@ -438,9 +467,12 @@
 .side-image-train {
   width: 207px;
   height: 167px;
-  background-color: #D9D9D9;
   position: relative;
   left: 13px;
+}
+.side-image-train img{
+  top: -21px;
+
 }
 .name-traine{
   right: 132px;
@@ -461,27 +493,30 @@
   left: 106px;
     top: 32px;
 }
+.custom-image img{
+  left: 0px;
+}
 }
 
 
 @media screen and (min-width:400px) and (max-width:500px){
   .train-banner img {
     width: 100%;
-    height: 500px;
+    height: 330px;
 }
 .train-banner h1 {
   position: absolute;
-  top: 192px;
-  left: 256px;
+  top: 112px;
+  left: 294px;
   font-size: 10px;
-  width: 160px;
+  width: 119px;
 }
 .train-banner p {
   font-size: 12px;
   position: absolute;
-  top: 209px;
-  left: 241px;
-  width: 182px;
+  top: 134px;
+  left: 254px;
+  width: 169px;
 }
 .training {
   display: flex;
@@ -505,9 +540,9 @@
 .custom-image{
   margin: 0px auto;
   position: absolute;
-        top: 4034px;
-        left: 58px;
-        z-index: 98;
+  top: 2703px;
+  left: 16px;
+  z-index: 98;
 }
 .trai-contact{
   position: relative;
@@ -519,19 +554,22 @@
   width: 247px;
   position: relative;
   left: -82px;
-  top: -6px;
+  top: 23px;
+  font-size: 10px;
 }
 .side-train {
   display: inline-flex;
-  margin-top: 44px;
+  margin-top: 22px;
 }
 .side-image-train {
   width: 127px;
   height: 97px;
-  background-color: #D9D9D9;
   position: relative;
   left: 8px;
   top: 21px;
+}
+.side-image-train img{
+  top: -18px;
 }
 .name-traine {
   height: 10px;
@@ -555,7 +593,7 @@
 }
 .frequent {
   position: relative;
-  top: 27px;
+  top: 65px;
   margin-bottom: 103px;
   right: 26px;
 }
@@ -579,26 +617,32 @@
 .custom-button{
   left: 242px;
 }
+.line{
+  left: 21px;
+}
+.par-train {
+  margin: 0px 17px;
+}
 }
 
 @media screen and (min-width:375px) and (max-width:399px) {
   .train-banner img {
     width: 100%;
-    height: 500px;
+    height: 330px;
 }
 .train-banner h1 {
   position: absolute;
-  top: 192px;
-  left: 208px;
+  top: 102px;
+  left: 252px;
   font-size: 10px;
-  width: 160px;
+  width: 106px;
 }
 .train-banner p {
-  font-size: 12px;
+  font-size: 11px;
   position: absolute;
-  top: 209px;
-  left: 191px;
-  width: 182px;
+  top: 119px;
+  left: 219px;
+  width: 156px;
 }
 .training {
   display: flex;
@@ -621,22 +665,25 @@
   margin: 20px 0px 0px 10px;
 }
 .side-text-image p {
-  width: 247px;
+  width: 211px;
   position: relative;
-  left: -82px;
-  top: -6px;
+  left: -78px;
+  top: 14px;
+  font-size: 10px;
 }
 .side-train {
   display: inline-flex;
-  margin-top: 44px;
+  margin-top: 25px;
 }
 .side-image-train {
   width: 127px;
   height: 97px;
-  background-color: #D9D9D9;
   position: relative;
   left: 8px;
   top: 21px;
+}
+.side-image-train img{
+  top: -19px;
 }
 .name-traine {
   height: 10px;
@@ -660,9 +707,9 @@
 }
 .frequent {
   position: relative;
-  top: 27px;
+  top: 56px;
   margin-bottom: 103px;
-  right: 26px;
+  right: 32px;
 }
 .faq-container {
   width: 92%;
@@ -695,8 +742,8 @@ input[type="text"], input[type="email"], input[type="tel"], select, textarea {
 .custom-image{
   margin: 0px auto;
   position: absolute;
-  top: 4261px;
-  left: 24px;
+  top: 2754px;
+  left: -7px;
   z-index: 98;
 }
 .trai-contact{
@@ -704,26 +751,32 @@ input[type="text"], input[type="email"], input[type="tel"], select, textarea {
   top: 517px;
   margin-bottom: 518px;
 }
+.line{
+  left: 14px;
+}
+.par-train {
+  margin: 0px 12px;
+}
 }
 
 @media screen and (min-width:300px) and (max-width:374px){
   .train-banner img {
     width: 100%;
-    height: 500px;
-}
+    height: 278px;
+  }
 .train-banner h1 {
   position: absolute;
-  top: 192px;
-  left: 197px;
+  top: 92px;
+  left: 241px;
   font-size: 10px;
-  width: 160px;
+  width: 103px;
 }
 .train-banner p {
-  font-size: 12px;
+  font-size: 10px;
   position: absolute;
-  top: 209px;
-  left: 176px;
-  width: 182px;
+  top: 109px;
+  left: 196px;
+  width: 161px;
 }
 .training {
   display: flex;
@@ -748,8 +801,8 @@ input[type="text"], input[type="email"], input[type="tel"], select, textarea {
 .custom-image{
   margin: 0px auto;
   position: absolute;
-  top: 4328px;
-  left: 20px;
+  top: 2761px;
+  left: -13px;
   z-index: 98;
 }
 .trai-contact{
@@ -761,19 +814,22 @@ input[type="text"], input[type="email"], input[type="tel"], select, textarea {
   width: 201px;
   position: relative;
   left: -84px;
-  top: -12px;
+  top: 16px;
+  font-size: 10px;
 }
 .side-train {
   display: inline-flex;
-  margin-top: 44px;
+  margin-top: 24px;
 }
 .side-image-train {
   width: 127px;
   height: 97px;
-  background-color: #D9D9D9;
   position: relative;
   left: 8px;
   top: 21px;
+}
+.side-image-train img{
+  top: -20px;
 }
 .name-traine {
   height: 10px;
@@ -797,7 +853,7 @@ input[type="text"], input[type="email"], input[type="tel"], select, textarea {
 }
 .frequent {
   position: relative;
-  top: 1px;
+  top: 45px;
   margin-bottom: 103px;
   right: 26px;
 }
@@ -830,4 +886,29 @@ input[type="text"], input[type="email"], input[type="tel"], select, textarea {
   width: 100%;
   padding: 9px 1px 10px 32px;
 }
+.line{
+    width: 93%;
+    position: relative;
+    left: 10px;
+}
+.par-train {
+  margin: 0px 18px;
+}
+}
+
+.tab.active .underline {
+  width: 100%;
+  height: 2px;
+  background-color: #000; /* Change to your desired underline color */
+}
+
+.active-underline {
+  display: block;
+}
+
+.underline {
+  width: 0;
+  height: 2px;
+  background-color: transparent;
+  transition: width 0.3s;
 }

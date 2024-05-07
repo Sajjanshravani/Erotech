@@ -48,12 +48,24 @@ function Footer() {
         <div className="footer-column">
           <h4>Training</h4>
           <ul>
-            <li>Embedded Graduate</li>
-            <li>Embedded Software Developer</li>
-            <li>Embedded Automotive Engineer</li>
-            <li>Embedded IoT Engineer</li>
-            <li>Short Term Courses</li>
-            <li>Workshops</li>
+            <li>
+              <a href="/training/1">Embedded Graduate</a>
+            </li>
+            <li>
+              <a href="/training/2">Embedded Software Developer</a>
+            </li>
+            <li>
+              <a href="/training/3">Embedded Automotive Engineer</a>
+            </li>
+            <li>
+              <a href="/training/4">Embedded IoT Engineer</a>
+            </li>
+            <li>
+              <a href="/training/5">Short Term Courses</a>
+            </li>
+            <li>
+              <a href="/training/6">Workshops</a>
+            </li>
           </ul>
         </div>
         <div className="footer-column">

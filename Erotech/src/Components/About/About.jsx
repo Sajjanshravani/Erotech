@@ -7,6 +7,8 @@ import Section3Pentagon from "../Assets/Section3Pentagon.png";
 import Section3Dots from "../Assets/Section3Dots.png";
 import Section3Waves from "../Assets/Section3Waves.png";
 import greywave from "../Assets/Frame.png";
+import about1 from "../Assets/Aboutus1.jpg";
+import about2 from "../Assets/Aboutus2.jpg";
 
 function About() {
   const [isSection3Visible, setIsSection3Visible] = useState(false);
@@ -39,56 +41,69 @@ function About() {
       }
     };
   }, []);
-  const [counts, setCounts] = useState([0, 0, 0, 0]);
-  const numbers = [100, 200, 300, 400];
+
+  const [isSection4Visible, setIsSection4Visible] = useState(false);
+  const section4Ref = useRef(null);
+  const [box1Count, setBox1Count] = useState(0);
+  const [box2Count, setBox2Count] = useState(0);
+  const [box3Count, setBox3Count] = useState(0);
+  const [box4Count, setBox4Count] = useState(0);
 
   useEffect(() => {
-    const timeouts = numbers.map((number, index) => {
-      let start = 0;
-      const interval = setInterval(() => {
-        if (start <= number) {
-          setCounts((prevCounts) => {
-            const updatedCounts = [...prevCounts];
-            updatedCounts[index] = start;
-            return updatedCounts;
-          });
-          start++;
-        } else {
-          clearInterval(interval);
-        }
-      }, 5);
-      return interval;
-    });
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsSection4Visible(entry.isIntersecting);
+      },
+      { threshold: 0.5 }
+    );
+
+    if (section4Ref.current) {
+      observer.observe(section4Ref.current);
+    }
 
     return () => {
-      timeouts.forEach((interval) => clearInterval(interval));
+      if (section4Ref.current) {
+        observer.unobserve(section4Ref.current);
+      }
     };
-  }, [numbers]);
-  const boxContent = [
-    {
-      title: "Finished Sessions",
-      description: "Get Some Variety Guidance And For Your Future Career.",
-    },
-    {
-      title: "Satisfaction Rate",
-      description: "Develop Skill For Career Various Science & Language.",
-    },
-    {
-      title: "Enrolled Learners",
-      description: "Make Reservation With Consultant To Get Dream Career.",
-    },
-    {
-      title: "Online Instructors",
-      description: "Learn From Anywhere In The World With Any Devices.",
-    },
-  ];
+  }, []);
+
+  useEffect(() => {
+    let start = 0;
+    let end1 = 100;
+    let end2 = 98;
+    let end3 = 100;
+    let end4 = 1000;
+    let totalSteps = 100;
+    let currentStep = 0;
+
+    const interval = setInterval(() => {
+      currentStep++;
+      const step1 = ((end1 - start) * (currentStep / totalSteps)).toFixed(0);
+      const step2 = ((end2 - start) * (currentStep / totalSteps)).toFixed(0);
+      const step3 = ((end3 - start) * (currentStep / totalSteps)).toFixed(0);
+      const step4 = ((end4 - start) * (currentStep / totalSteps)).toFixed(0);
+      setBox1Count(step1);
+      setBox2Count(step2);
+      setBox3Count(step3);
+      setBox4Count(step4);
+
+      if (currentStep >= totalSteps) {
+        clearInterval(interval);
+      }
+    }, 30);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [isSection4Visible]);
 
   return (
     <div className="abu">
       <div className="about">
         <img src={background} alt="" />
-        <h1>Get Personalized Recommendations</h1>
-        <p>Your high- Quality Training Specialist of IT - EROTECH Solutions</p>
+        <h1>Empowering Innovation</h1>
+        <p>Unveiling the Story of Erotech Solutions</p>
       </div>
       <div className="about-ani">
         <div
@@ -102,16 +117,16 @@ function About() {
               }`}
             >
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. Lorem
-                Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book.
+                Welcome to Erotech Solutions, your premier destination for
+                cutting-edge training and consultancy services in Embedded
+                Systems.
+                <br />
+                At Erotech Solutions, we specialize in empowering individuals
+                and businesses with the knowledge and skills needed to excel in
+                the dynamic field of Embedded Systems. With a deep understanding
+                of the industry's evolving landscape, we're dedicated to
+                equipping our clients with the tools and expertise necessary to
+                thrive in today's technology-driven world.
               </p>
             </div>
             <div
@@ -144,34 +159,47 @@ function About() {
                 alt="Section3Vectors"
                 className="Section3Vector pentagonVector1"
               />
-              <div className="Graybox">IMAGE</div>
+              <div className="Graybox">
+                <img src={about1} alt="" />
+              </div>
             </div>
           </div>
         </div>
       </div>
       <div className="box-1">
         <div className="container">
-          {counts.map((count, index) => (
-            <div
-              className="animated-box"
-              key={index}
-              style={{ animationDelay: `${index + 1}s` }}
-            >
-              <span className="animated-count">{count}</span>
-              <h3>{boxContent[index].title}</h3>
-              <p>{boxContent[index].description}</p>
-            </div>
-          ))}
+          <div className="animated-box">
+            <span className="animated-count">{box1Count}%</span>
+            <h3>Training Success Rate</h3>
+            <p>Our Success meets with our Expert Trainers</p>
+          </div>
+          <div className="animated-box">
+            <span className="animated-count">{box2Count}%</span>
+            <h3>Job Placement Rate</h3>
+            <p>Top Companies are hiring our Candidates</p>
+          </div>
+          <div className="animated-box">
+            <span className="animated-count">{box3Count}+</span>
+            <h3>Online Instructors</h3>
+            <p>Expert Instructors to train the Candidates</p>
+          </div>
+          <div className="animated-box">
+            <span className="animated-count">{box4Count}+</span>
+            <h3>Finished Sessions</h3>
+            <p>Completed Sessions with our core team</p>
+          </div>
+          {/* Repeat for other boxes */}
         </div>
       </div>
-      <div className="greywave">
+
+      {/* <div className="greywave">
         <img src={greywave} alt="" />
         <div className="grey">
           <div className="greybox"></div>
           <div className="greybox"></div>
           <div className="greybox"></div>
         </div>
-      </div>
+      </div> */}
       <div className="text-image">
         <div
           ref={section3Ref2}
@@ -208,7 +236,9 @@ function About() {
                 alt="Section3Vectors"
                 className="Section3Vector pentagonVector3"
               />
-              <div className="GrayImg3">IMAGE</div>
+              <div className="GrayImg3">
+                <img src={about2} alt="" />
+              </div>
             </div>
             <div
               className={`col-lg-5 col-sm-12 section3-Description3 ${
@@ -216,16 +246,14 @@ function About() {
               }`}
             >
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. Lorem
-                Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book.
+                Our team of seasoned professionals brings a wealth of experience
+                and insight to every project, ensuring that our training
+                programs and consultancy services are not only comprehensive but
+                also tailored to meet the specific needs of our clients. Whether
+                you're a novice looking to break into the world of Embedded
+                Systems or a seasoned professional seeking to expand your skill
+                set, Erotech Solutions is here to support you every step of the
+                way.
               </p>
             </div>
           </div>
@@ -233,8 +261,14 @@ function About() {
       </div>
       <div className="con-last">
         <div className="contactusDiv">
-          <p>START TODAY FOR GETTING ONLINE CERTIFICATION</p>
-          <h2>You Can Be Your Own Guiding Star With Our Help</h2>
+          <p>
+            Join us as we embark on a journey of discovery and innovation with
+            Erotech Solutions.
+          </p>
+          <h2>
+            Together, let's unlock new opportunities and shape the future of
+            Embedded Systems.
+          </h2>
           <button>Contact US</button>
         </div>
       </div>

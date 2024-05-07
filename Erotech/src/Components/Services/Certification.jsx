@@ -1,6 +1,9 @@
 import './Certification.css'
+import { useNavigate } from "react-router-dom";
 import {cirtificationContent,whyGetCirtificateContent,processContent} from '../Assets/ServicesContent/Service';
 function Certification(){
+    const navigate = useNavigate();
+
     return(
         <div className='container-fluid'>
             <div className='row'>
@@ -29,7 +32,7 @@ function Certification(){
                             <img src={cource.quality} alt="quality" className='quality-logo'/>
                         </div>
                         <p>{cource.description}</p>
-                        <button type='button' className='start-button'>Start Certification</button>
+                        <button type='button' className='start-button' onClick={()=> navigate('/training')}>Start Certification</button>
                     </li>)}
                 </ul>
             </div>

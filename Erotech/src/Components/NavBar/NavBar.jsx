@@ -13,12 +13,16 @@ function NavBar() {
 
   const toggleServicesDropdown = () => {
     setShowServicesDropdown(!showServicesDropdown);
-    setShowTrainingDropdown(false); // Close training dropdown when opening or closing services dropdown
+    setShowTrainingDropdown(false);
   };
 
   const toggleTrainingDropdown = () => {
     setShowTrainingDropdown(!showTrainingDropdown);
-    setShowServicesDropdown(false); // Close services dropdown when opening or closing training dropdown
+    setShowServicesDropdown(false);
+  };
+
+  const closeNav = () => {
+    setIsNavOpen(false);
   };
 
   return (
@@ -54,7 +58,7 @@ function NavBar() {
               onMouseEnter={toggleServicesDropdown}
               onMouseLeave={toggleServicesDropdown}
             >
-              <a href="/Services/IOT">Services</a>
+              <a href="#">Services</a>
               {showServicesDropdown && (
                 <div className="dropdown-content">
                   <a href="/Services/EmbeddedSystems">Embedded Software</a>
@@ -70,15 +74,15 @@ function NavBar() {
               onMouseEnter={toggleTrainingDropdown}
               onMouseLeave={toggleTrainingDropdown}
             >
-              <a href="/training">Training</a>
+              <a href="#">Training</a>
               {showTrainingDropdown && (
                 <div className="dropdown-content">
-                  <a href="/">Embedded Graduate</a>
-                  <a href="/">Embedded Software Developer</a>
-                  <a href="/">Embedded Automotive Engineer</a>
-                  <a href="/">Embedded IoT Engineer</a>
-                  <a href="/">Short Term Courses</a>
-                  <a href="/">Workshops</a>
+                  <a href="/training/1">Embedded Graduate</a>
+                  <a href="/training/2">Embedded Software Developer</a>
+                  <a href="/training/3">Embedded Automotive Engineer</a>
+                  <a href="/training/4">Embedded IoT Engineer</a>
+                  <a href="/training/5">Short Term Courses</a>
+                  <a href="/training/6">Workshops</a>
                 </div>
               )}
             </li>
@@ -90,6 +94,11 @@ function NavBar() {
             </li>
           </ul>
         </nav>
+        {isNavOpen && (
+          <button className="closes-btn" onClick={closeNav}>
+            X
+          </button>
+        )}
       </header>
     </div>
   );

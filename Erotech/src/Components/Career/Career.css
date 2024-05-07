@@ -5,6 +5,10 @@
     font-family: "Judson", serif;
   }
 
+  .career-banner img{
+    width: 100%;
+  }
+
   .recent{
     text-align: center;
     font-weight: 700;
@@ -18,140 +22,161 @@
 
   /* CardSection.css */
 
-.card-section .title {
-    color: black;
-    font-size: 22px;
-    text-align: center;
-    position: relative;
-    margin: -129px 23px 26px 20px;
-    background-color: #5FC5EE;
-    padding: 10px 3px 13px 3px;
-    transition: all 0.8s ease-in-out 0s;
-    height: 100px;
-  }
-  
-  .content {
-    position: relative;
-    width: 100%;
-    max-width: 400px;
-    margin: auto;
-    overflow: hidden;
-    margin-top: 10px;
-  }
-  
-  .content-image {
-    width: 100%;
-    border-radius: 3px;
-    height: 300px;
-  }
-  
-  .content-details {
-    position: absolute;
-    text-align: center;
-    padding-left: 1em;
-    padding-right: 1em;
-    width: 100%;
-    top: 50%;
-    left: 50%;
-    opacity: 0;
-    transform: translate(-50%, -50%);
-    transition: all 0.3s ease-in-out 0s;
-  }
-  
-  .content:hover .content-details {
-    top: 50%;
-    left: 50%;
-    opacity: 1;
-  }
-  
-  .content:hover .title {
-    margin: -270px 23px 26px 20px;
-    height: 250px;
-  }
-  
-  .content .title p {
-    font-size: 15px;
-  }
-  
-  .title .content-text {
-    visibility: hidden;
-    opacity: 0;
-    transition: 0.2s ease;
-  }
-  
-  .title .content-text:hover {
-    visibility: visible;
-    opacity: 1;
-  }
-  
-  .content:hover .content-text {
-    visibility: visible;
-    margin-top: -60px;
-    color: white !important;
-    font-size: 15px;
-    opacity: 1;
-    transition: 1.6s;
-    color: #a1a0a0 !important;
-  }
-  
-  .content:hover .content-text-1 {
-    visibility: hidden;
-  }
-  
-  .content-details h3 {
-    color: #fff;
-    font-size: 22px;
-    font-weight: 500;
-    margin-bottom: 0.5em;
-    border-bottom: 1px solid gray;
-    padding-bottom: 10px;
-  }
-     
-  .fadeIn-bottom {
-    top: 80%;
-  }
-  
-  .badge-img {
-    float: right;
-    margin-top: -175px;
-    position: relative;
-    margin-right: 25px;
-  }
-  
-  .content:hover .badge-img {
-    visibility: hidden;
-  }
-  
-  .btn  {
+  .btns  {
     color: #2BB0E9;
     background-color: white;
-    width: 118px;
+    width: 163px;
+    height: 52px;
     position: relative;
-    top: 39px;
-  }
-  
-  .description{
-    text-align: justify;
-    position: relative;
-    top: 40px;
-    color: black !important;
-    left: 30px;
-    font-size: 16px;
-    width: 265px;
-    padding: 10px;
-  }
-  .career-banner img{
-    width: 100%;
+    top: 47px;
+    border: none;
+    border-radius: 6px;
   }
 
+  .con-con{
+    margin-top: -4%;
+  }
+  .about-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    padding: 56px;
+  }
+  
+  .about-card {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .about-card img {
+    display: block;
+    width: 100%;
+    height: 363px;
+  }
+  
+  .overlay {
+    justify-self: center;
+    margin: 4% 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(95, 197, 238, 0.67);
+    overflow: hidden;
+    width: 90%;
+    height: 30%;
+    transition: 0.5s ease;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+  }
+  
+  .about-card:hover .overlay {
+    height: 80%;
+  }
+  
+  .overlay-text {
+    width: 90%;
+    color: black;
+    font-size: 20px;
+    position: absolute;
+    text-align: center;
+  }
+  .overlay-text h2 {
+    font-size: 21px;
+    font-weight: 600;
+  }
+  
+  .overlay-text h3 {
+    font-size: 17px;
+  }
+  
+  .overlay-text h4 {
+    margin-top: 100px;
+    color: black;
+    font-size: 17px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .about-card:hover .overlay-text h3 {
+    display: none;
+  }
+  
+  .about-card:hover .overlay-text h4 {
+    opacity: 1;
+    margin-top: 0px;
+    text-align: justify;
+  }
+  
+  .cardbadge {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 40px !important;
+  }
+.modform{
+  max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    position: absolute;
+    left: 362px;
+    top: 793px;
+    background-color: #F0FBFF;
+    width: 556px;
+    height: 541px;
+}
+.close-btn{
+  position: absolute;
+  top: 800px;
+  left: 69%;
+  z-index: 2;
+  background-color: unset;
+  border: none;
+  font-size: 20px;
+}
+.cus-button{
+padding: 10px 20px;
+    background-color: #2BB0E9;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    left: 369px;
+    width: 100px;
+}
   @media screen and (min-width:1444px) {
     .description{
         left: 49px;
     }
+    .modform{
+      left: 490px;
+    }
+    .close-btn{
+      left: 66%;
+    }
   }
+  @media screen and (min-width:1377px) and (max-width:1443px) {
+  .modform{
+    left: 435px;
+  }
+  .close-btn{
+    left: 66%;
+  }
+}
   @media screen and (min-width:1300px) and (max-width:1376px) {
     .description{
         left: 26px;
+    }
+    .modform{
+      left: 380px;
+    }
+    .close-btn{
+      left: 66%;
     }
   }
   @media screen and (min-width:1024px) and (max-width:1199px){
@@ -159,12 +184,53 @@
     font-size: 15px;
     width: 200px;
   }
+  .modform{
+    left: 246px;
+    top: 628px;
+  }
+  .close-btn{
+    top: 640px;
+    left: 74%;
+
+  }
+  .overlay-text h4 {
+    margin-top: 100px;
+    color: black;
+    font-size: 14px;
+
+  }
 }
 
 @media screen and (min-width:500px) and (max-width:786px) {
     .description{
         font-size: 11px;
         width: 116px;
+    }
+    .about-card img{
+      height: 261px;
+    }
+    .overlay-text h2 {
+      font-size: 15px;
+    }
+    .overlay-text h4{
+      font-size: 10px;
+    }
+    .btns{
+      width: 114px;
+      height: 35px;
+      position: relative;
+      top: 23px;
+    }
+    .modform{
+      left: 99px;
+      top: 528px;
+    }
+    .close-btn{
+      top: 536px;
+      left: 79%;
+    }
+    .select{
+      font-size: 10px;
     }
 }
 @media screen and (min-width:400px) and (max-width:500px){
@@ -175,8 +241,55 @@
   .description{
     left: 49px;
 }
+.about-cards{
+  padding: 20px;
 }
-
+.about-card img{
+  height: 161px;
+}
+.overlay-text h2 {
+  font-size: 8px;
+}
+.overlay-text h4{
+  font-size: 7px;
+}
+.btns{
+  width: 61px;
+  font-size: 12px;
+  height: 26px;
+  position: relative;
+  top: -2px;
+}
+.about-card:hover .overlay {
+  height: 91%;
+}
+.modform {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  position: absolute;
+  left: 54px;
+  top: 393px;
+  background-color: #F0FBFF;
+  width: 328px;
+  height: 460px;
+}
+.close-btn {
+  position: absolute;
+  top: 400px;
+  left: 80%;
+}
+.cus-button{
+  left: 189px;
+  width: 100px;
+  top: -7px;
+}
+.select{
+  font-size: 10px;
+}
+}
 @media screen and (min-width:375px) and (max-width:399px){
     .description {
         left: 24px;
@@ -185,6 +298,55 @@
       width: 100%;
       height: 300px;
   }
+  .recent{
+    font-size: 34px;
+  }
+  .discover{
+    font-size: 18px;
+  }
+  .about-cards{
+    padding: 20px;
+  }
+  .about-card img{
+    height: 128px;
+  }
+  .overlay{
+    height: 38%;
+  }
+  .overlay-text h2 {
+    font-size: 8px;
+  }
+  .about-card:hover .overlay {
+    height: 89%;
+}
+.overlay-text h4{
+  font-size: 5px;
+}
+.btns{
+  width: 49px;
+  height: 18px;
+  position: relative;
+  top: -6px;
+  font-size: 7px;
+}
+.modform{
+  left: 7px;
+    top: 282px;
+    background-color: #F0FBFF;
+    width: 355px;
+    height: 490px;
+}
+.cus-button{
+  left: 217px;
+}
+.close-btn {
+  position: absolute;
+  top: 288px;
+  left: 84%;
+}
+.select{
+  font-size: 10px;
+}
 }
 
 @media screen and (min-width:300px) and (max-width:374px){
@@ -196,4 +358,49 @@
       width: 100%;
       height: 300px;
   }
+  .about-cards{
+    padding: 15px;
+  }
+  .about-card img{
+    height: 132px;
+  }
+  .overlay-text h2 {
+    font-size: 7px;
+  }
+  .about-card:hover .overlay {
+    height: 85%;
 }
+.overlay-text h4{
+  font-size: 5px;
+}
+.btns{
+  width: 62px;
+    height: 17px;
+    position: relative;
+    top: -3px;
+    border: none;
+    border-radius: 6px;
+    font-size: 9px;
+}
+.modform{
+  left: 32px;
+  top: 350px;
+  background-color: #F0FBFF;
+  width: 289px;
+  height: 507px;
+}
+.close-btn {
+  position: absolute;
+  top: 354px;
+  left: 77%;
+}
+.cus-button{
+  left: 145px;
+}
+.select{
+  font-size: 10px;
+}
+}
+
+
+
