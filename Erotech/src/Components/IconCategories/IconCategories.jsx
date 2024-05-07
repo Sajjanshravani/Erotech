@@ -192,7 +192,7 @@ const IconCategories = () => {
         <Slider {...settings}>
           {Categories.map((Categories, i) => {
             return (
-              <div className="mobileCategory">
+              <div className="mobileCategory" key={i}>
                 <div className="row">
                   <div className="col-lg-7 col-sm-12 mobileCAtegory-Image">
                     <img src={Categories.icon} alt={Categories.id} />

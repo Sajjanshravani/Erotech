@@ -360,7 +360,7 @@ const Home = () => {
         <div className="popularCourseCards">
           {PopularCourses.map((e, i) => {
             return (
-              <div className="popularCourseCard">
+              <div className="popularCourseCard" key={i}>
                 <img src={e.image} alt="popular1" />
                 <div className="popularHover">
                   <h2>{e.title}</h2>
@@ -381,7 +381,7 @@ const Home = () => {
         <Slider {...tests}>
           {testimonials.map((e, i) => {
             return (
-              <div className="testimonial">
+              <div className="testimonial" key={i}>
                 <div className="test-text">
                   <p>{e.text}</p>
                 </div>
