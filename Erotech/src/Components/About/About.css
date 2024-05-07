@@ -483,7 +483,7 @@ box-shadow: 0px 0px 17px 0px #000000e3;
 }
 .about h1{
   top: 115px;
-  left: 514px;
+  left: 544px;
   font-size: 13px;
 }
 .about-ani{
@@ -898,4 +898,33 @@ box-shadow: 0px 0px 17px 0px #000000e3;
   right: 35px;
   top: 12px;
 }
+}
+
+.animated-box {
+  /* Other styles */
+  animation: appear 0.5s forwards;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animated-count {
+  /* Other styles */
+  animation: countUp 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes countUp {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }

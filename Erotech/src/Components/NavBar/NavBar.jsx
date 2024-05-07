@@ -95,7 +95,7 @@ function NavBar() {
           </ul>
         </nav>
         {isNavOpen && (
-          <button className="close-btn" onClick={closeNav}>
+          <button className="closes-btn" onClick={closeNav}>
             X
           </button>
         )}

@@ -20,8 +20,7 @@
 }
 
 .contactusDiv button {
-  width: 342px;
-  height: 94px;
+  padding: 10px 40px;
   border-radius: 23px;
   background-color: #2bb0e9;
   color: white;

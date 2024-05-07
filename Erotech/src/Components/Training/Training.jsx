@@ -12,12 +12,12 @@ import { trainingContent } from "../Assets/Trainingcontent";
 import swal from "sweetalert";
 
 const initialForm = {
-  Name:"",
-  MailId:"",
-  Course:"",
-  Phone:"",
-  Comment:""
-}
+  Name: "",
+  MailId: "",
+  Course: "",
+  Phone: "",
+  Comment: "",
+};
 
 function Training({ onSubmit }
 ) {
@@ -58,11 +58,11 @@ function Training({ onSubmit }
     setActiveTab(sections[index].title);
   };
 
-  const handleInputs = (e)=>{
+  const handleInputs = (e) => {
     const a = e.target.name;
-    const b = e.target.value
-    setFormInfo((prev)=> ({...prev,[a]:b}));
-};
+    const b = e.target.value;
+    setFormInfo((prev) => ({ ...prev, [a]: b }));
+  };
 
 const handleSubmit = async (e)=>{
   e.preventDefault();
@@ -191,7 +191,9 @@ fetch(scriptURL, {
 
       <h1 className="train-head">Trainer</h1>
       <div className="side-train" id="instructor" ref={sectionRefs.current[1]}>
-        <div className="side-image-train"></div>
+        <div className="side-image-train">
+          <img src={currentContent.trainer} alt="" />
+        </div>
         <p className="name-traine">Name</p>
         <p className="desgi-traine">Designation</p>
         <div className="side-text-image">
@@ -227,7 +229,7 @@ fetch(scriptURL, {
 
       <div className="form-image" id="enrollment" ref={sectionRefs.current[3]}>
         <div className="image-form">
-          <img src={cbox} alt="" />
+          <img src={currentContent.banneerimage} alt="" />
         </div>
         <div className="form">
           <div className="custom-form-container">
@@ -309,9 +311,9 @@ fetch(scriptURL, {
                   <img src={chat} alt="" style={{ top: "18%" }} />
                   <textarea
                     id="comment"
-                    name='Comment'
+                    name="Comment"
                     value={formInfo.Comment}
-                    onChange={ handleInputs}
+                    onChange={handleInputs}
                     rows="4"
                     cols="50"
                   ></textarea>

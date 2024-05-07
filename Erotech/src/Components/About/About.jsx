@@ -41,49 +41,62 @@ function About() {
       }
     };
   }, []);
-  const [counts, setCounts] = useState([0, 0, 0, 0]);
-  const numbers = [100, 200, 300, 400];
+
+  const [isSection4Visible, setIsSection4Visible] = useState(false);
+  const section4Ref = useRef(null);
+  const [box1Count, setBox1Count] = useState(0);
+  const [box2Count, setBox2Count] = useState(0);
+  const [box3Count, setBox3Count] = useState(0);
+  const [box4Count, setBox4Count] = useState(0);
 
   useEffect(() => {
-    const timeouts = numbers.map((number, index) => {
-      let start = 0;
-      const interval = setInterval(() => {
-        if (start <= number) {
-          setCounts((prevCounts) => {
-            const updatedCounts = [...prevCounts];
-            updatedCounts[index] = start;
-            return updatedCounts;
-          });
-          start++;
-        } else {
-          clearInterval(interval);
-        }
-      }, 5);
-      return interval;
-    });
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsSection4Visible(entry.isIntersecting);
+      },
+      { threshold: 0.5 }
+    );
+
+    if (section4Ref.current) {
+      observer.observe(section4Ref.current);
+    }
 
     return () => {
-      timeouts.forEach((interval) => clearInterval(interval));
+      if (section4Ref.current) {
+        observer.unobserve(section4Ref.current);
+      }
     };
-  }, [numbers]);
-  const boxContent = [
-    {
-      title: "Training Success Rate",
-      description: "Our Success meets with our Expert Trainers",
-    },
-    {
-      title: "Job Placement Rate",
-      description: " Top Companies are hiring our Candidates",
-    },
-    {
-      title: "Online Instructors",
-      description: "Expert Instructors to train the Candidates",
-    },
-    {
-      title: "Finished Sessions",
-      description: " Completed Sessions with our core team",
-    },
-  ];
+  }, []);
+
+  useEffect(() => {
+    let start = 0;
+    let end1 = 100;
+    let end2 = 98;
+    let end3 = 100;
+    let end4 = 1000;
+    let totalSteps = 100;
+    let currentStep = 0;
+
+    const interval = setInterval(() => {
+      currentStep++;
+      const step1 = ((end1 - start) * (currentStep / totalSteps)).toFixed(0);
+      const step2 = ((end2 - start) * (currentStep / totalSteps)).toFixed(0);
+      const step3 = ((end3 - start) * (currentStep / totalSteps)).toFixed(0);
+      const step4 = ((end4 - start) * (currentStep / totalSteps)).toFixed(0);
+      setBox1Count(step1);
+      setBox2Count(step2);
+      setBox3Count(step3);
+      setBox4Count(step4);
+
+      if (currentStep >= totalSteps) {
+        clearInterval(interval);
+      }
+    }, 30);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [isSection4Visible]);
 
   return (
     <div className="abu">
@@ -155,19 +168,30 @@ function About() {
       </div>
       <div className="box-1">
         <div className="container">
-          {counts.map((count, index) => (
-            <div
-              className="animated-box"
-              key={index}
-              style={{ animationDelay: `${index + 1}s` }}
-            >
-              <span className="animated-count">{count}</span>
-              <h3>{boxContent[index].title}</h3>
-              <p>{boxContent[index].description}</p>
-            </div>
-          ))}
+          <div className="animated-box">
+            <span className="animated-count">{box1Count}%</span>
+            <h3>Training Success Rate</h3>
+            <p>Our Success meets with our Expert Trainers</p>
+          </div>
+          <div className="animated-box">
+            <span className="animated-count">{box2Count}%</span>
+            <h3>Job Placement Rate</h3>
+            <p>Top Companies are hiring our Candidates</p>
+          </div>
+          <div className="animated-box">
+            <span className="animated-count">{box3Count}+</span>
+            <h3>Online Instructors</h3>
+            <p>Expert Instructors to train the Candidates</p>
+          </div>
+          <div className="animated-box">
+            <span className="animated-count">{box4Count}+</span>
+            <h3>Finished Sessions</h3>
+            <p>Completed Sessions with our core team</p>
+          </div>
+          {/* Repeat for other boxes */}
         </div>
       </div>
+
       {/* <div className="greywave">
         <img src={greywave} alt="" />
         <div className="grey">

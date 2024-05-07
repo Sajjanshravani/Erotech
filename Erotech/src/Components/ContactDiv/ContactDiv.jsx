@@ -1,13 +1,16 @@
 import React from "react";
 import "./ContactDiv.css";
 import contactDivVector from "../Assets/contactDivVector.png";
+import { Link } from "react-router-dom";
 
-const ContactDiv = () => {
+const ContactDiv = (props) => {
   return (
     <div className="contactusDiv">
-      <p>START TODAY FOR GETTING ONLINE CERTIFICATION</p>
-      <h2>You Can Be Your Own Guiding Star With Our Help</h2>
-      <button>Contact US</button>
+      <p>{props.ptag}</p>
+      <h2>{props.htag}</h2>
+      <Link to={"/contactUs"}>
+        <button>Contact Us</button>
+      </Link>
       <img
         src={contactDivVector}
         alt="contactDivVector"

@@ -81,7 +81,7 @@ header nav ul li a.active {
         background: #fff;
         padding: 30px;
         transition: top 0.3s; 
-        z-index: 1;
+        z-index: 99;
     }
     header.nav-open nav {
         top: 0; 
@@ -90,7 +90,7 @@ header nav ul li a.active {
         display: block;
     }
     header nav ul li a {
-        margin: 5px 0;
+        margin: 5px 13px;
     }
     .logo img {
         top: 3px;
@@ -98,11 +98,14 @@ header nav ul li a.active {
     .dropdown-content a{
         right: 13px !important;
     }
-    .close-btn{
-        z-index: 2;
+    .closes-btn{
         width: 36px;
         background: none;
         border: none;
+        position: fixed;
+        top: 18px;
+        right: 46px;
+        z-index: 99;
     }
     .recent{
         font-size: 40px;
@@ -110,6 +113,7 @@ header nav ul li a.active {
     .discover{
         font-size: 18px;
     }
+    
 }
 
   .dropdown  {
