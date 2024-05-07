@@ -1,6 +1,7 @@
 import cbox from "../Assets/cbox.png";
 import train from "../Assets/train-1.png";
-import Embedded from "../Assets/Embedded Graduate.jpg";
+import Embedded from "../Assets/1.jpg";
+import grad from "../Assets/2.jpg";
 import IOT1 from "../Assets/IOT1.jpg";
 import IOT2 from "../Assets/IOT2.jpg";
 import ESD1 from "../Assets/ESD1.jpg";
@@ -10,6 +11,8 @@ import EAD2 from "../Assets/TrainingpageESD.jpg";
 import Workshop1 from "../Assets/Workshop1.jpg";
 import Workshop2 from "../Assets/Workshop2.jpg";
 import short from "../Assets/shortterm1.jpg";
+import short1 from "../Assets/shortterm2.jpg";
+import trainer from "../Assets/TrainerPlacement.jpg";
 
 const trainingContent = [
   {
@@ -19,7 +22,8 @@ const trainingContent = [
     para1:
       "Master Embedded Systems with Erotech Solutions Graduate Training Program",
     banneerimage: Embedded,
-    paraimage: train,
+    paraimage: grad,
+    trainer: trainer,
     trainingparagragh:
       "Embark on a transformative journey towards mastering Embedded Systems with Erotech Solutions Graduate Training program. Designed for aspiring professionals seeking to launch their careers in this dynamic field, our comprehensive training curriculum, expert instructors, and hands-on approach ensure that you acquire the skills and knowledge needed to excel in today's technology-driven world.",
     trainshortdesc:
@@ -69,6 +73,7 @@ const trainingContent = [
       "Excel in Embedded Software Development with Erotech Solutions Training Program",
     banneerimage: ESD1,
     paraimage: ESD2,
+    trainer: trainer,
     trainingparagragh:
       "Elevate your skills and embark on a rewarding career journey in Embedded Software Development with Erotech Solutions' comprehensive training program. Our industry-leading curriculum, hands-on approach, and expert instruction ensure that you gain the knowledge and experience needed to thrive in this competitive field.",
     trainshortdesc:
@@ -118,6 +123,7 @@ const trainingContent = [
       "Excel in Embedded Automotive Engineering with Erotech Solutions Training Program",
     banneerimage: EAD1,
     paraimage: EAD2,
+    trainer: trainer,
     trainingparagragh:
       "Rev up your career in Embedded Automotive Engineering with Erotech Solutions specialized training program. Dive into the world of automotive technology, learn from industry experts, and gain the skills and knowledge needed to succeed in this exciting and rapidly evolving field.",
     trainshortdesc:
@@ -167,6 +173,7 @@ const trainingContent = [
       "Master Embedded IoT Engineering with Erotech Solutions Training Program",
     banneerimage: IOT1,
     paraimage: IOT2,
+    trainer: trainer,
     trainingparagragh:
       "Dive into the world of the Internet of Things (IoT) and unleash your potential as an Embedded IoT Engineer with Erotech Solutions' comprehensive training program. Explore cutting-edge technologies, gain hands-on experience, and acquire the skills needed to thrive in the fast-growing field of IoT.",
     trainshortdesc:
@@ -214,7 +221,8 @@ const trainingContent = [
     head1: "Accelerate Your Skills",
     para1: "Explore Short-Term Courses with Erotech Solutions",
     banneerimage: short,
-    paraimage: short,
+    paraimage: short1,
+    trainer: trainer,
     trainingparagragh:
       "Ready to enhance your skills and stay ahead in your career? Dive into our range of short-term courses designed to provide you with practical, focused training in key areas of technology. From programming languages to emerging technologies, our courses are tailored to help you acquire new skills quickly and effectively.",
     trainshortdesc:
@@ -262,6 +270,7 @@ const trainingContent = [
     para1: "Explore Workshops with Erotech Solutions",
     banneerimage: Workshop1,
     paraimage: Workshop2,
+    trainer: trainer,
     trainingparagragh:
       "Immerse yourself in experiential learning with Erotech Solutions dynamic workshops. Designed to provide practical, hands-on experience in key areas of technology, our workshops offer participants the opportunity to learn new skills, solve real-world challenges, and network with industry experts. From introductory sessions to advanced topics, our workshops cater to learners of all levels and interests.",
     trainshortdesc:

@@ -187,7 +187,9 @@ function Training({ onSubmit }) {
 
       <h1 className="train-head">Trainer</h1>
       <div className="side-train" id="instructor" ref={sectionRefs.current[1]}>
-        <div className="side-image-train"></div>
+        <div className="side-image-train">
+          <img src={currentContent.trainer} alt="" />
+        </div>
         <p className="name-traine">Name</p>
         <p className="desgi-traine">Designation</p>
         <div className="side-text-image">
