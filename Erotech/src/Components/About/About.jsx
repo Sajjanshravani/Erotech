@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import "./About.css";
 import background from "../Assets/banner-about.png";
 import pentagon from "../Assets/pentagon.png";
@@ -269,7 +270,12 @@ function About() {
             Together, let's unlock new opportunities and shape the future of
             Embedded Systems.
           </h2>
-          <button>Contact US</button>
+          <Link
+            to="/contactUS"
+            style={{ color: "inherit", textDecoration: "inherit" }}
+          >
+            <button>Contact US</button>
+          </Link>
         </div>
       </div>
     </div>

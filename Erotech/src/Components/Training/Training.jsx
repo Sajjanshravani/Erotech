@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Training.css";
 import trainbanner from "../Assets/train-banner.png";
 import train from "../Assets/train-1.png";
@@ -19,10 +20,9 @@ const initialForm = {
   Comment: "",
 };
 
-function Training({ onSubmit }
-) {
+function Training({ onSubmit }) {
   const { id } = useParams();
-  const [formInfo, setFormInfo] = useState({...initialForm});
+  const [formInfo, setFormInfo] = useState({ ...initialForm });
   const [validated, setValidated] = useState(false);
 
   const [currentContent, setCurrentContent] = useState(
@@ -64,43 +64,42 @@ function Training({ onSubmit }
     setFormInfo((prev) => ({ ...prev, [a]: b }));
   };
 
-const handleSubmit = async (e)=>{
-  e.preventDefault();
-  setValidated(true);
-  const formData = new FormData();
-  for (const key in formInfo) {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setValidated(true);
+    const formData = new FormData();
+    for (const key in formInfo) {
       if (formInfo.hasOwnProperty(key)) {
         formData.append(key, formInfo[key]);
       }
-  };
-  const scriptURL =
-  "https://script.google.com/macros/s/AKfycbzqV2mzpMaMYtxjfDvdR7I1d47iAfRz8myuxG5yDHM2_Slbqy9gG4BxvACl_zqzNrQ/exec";
-fetch(scriptURL, {
-  method: "POST",
-  body: formData,
-})
-  .then((response) =>{
-    swal({
-      title: "Form has been Submitted!",
-      text: "Our experts will get back to you shortly",
-      icon: "success",
-      button: "Ok",
-    });
-})
-  .then(() => {
-    
-    setValidated(false);
-  })
-  .catch((error) =>
-    swal({
-      title: "Fields are Empty!",
-      text: "Please fill all the fields.",
-      icon: "warning",
-      button: "Ok",
+    }
+    const scriptURL =
+      "https://script.google.com/macros/s/AKfycbzqV2mzpMaMYtxjfDvdR7I1d47iAfRz8myuxG5yDHM2_Slbqy9gG4BxvACl_zqzNrQ/exec";
+    fetch(scriptURL, {
+      method: "POST",
+      body: formData,
     })
-  );
-}
-  
+      .then((response) => {
+        swal({
+          title: "Form has been Submitted!",
+          text: "Our experts will get back to you shortly",
+          icon: "success",
+          button: "Ok",
+        });
+      })
+      .then(() => {
+        setValidated(false);
+      })
+      .catch((error) =>
+        swal({
+          title: "Fields are Empty!",
+          text: "Please fill all the fields.",
+          icon: "warning",
+          button: "Ok",
+        })
+      );
+  };
+
   const sectionRefs = useRef([]);
 
   useEffect(() => {
@@ -333,7 +332,12 @@ fetch(scriptURL, {
         <div className="contactusDiv">
           <p>{currentContent.conthead}</p>
           <h2>{currentContent.contpara}</h2>
-          <button>Contact US</button>
+          <Link
+            to="/contactUS"
+            style={{ color: "inherit", textDecoration: "inherit" }}
+          >
+            <button>Contact US</button>
+          </Link>
         </div>
       </div>
     </div>

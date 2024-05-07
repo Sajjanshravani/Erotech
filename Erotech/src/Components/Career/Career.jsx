@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Career.css";
 import career from "../Assets/career.png";
 import carImage1 from "../Assets/career-box.png";
@@ -94,7 +95,12 @@ function Career() {
         <div className="contactusDiv" style={{ marginTop: "0" }}>
           <p>START TODAY FOR GETTING ONLINE CERTIFICATION</p>
           <h2>You Can Be Your Own Guiding Star With Our Help</h2>
-          <button>Contact US</button>
+          <Link
+            to="/contactUS"
+            style={{ color: "inherit", textDecoration: "inherit" }}
+          >
+            <button>Contact US</button>
+          </Link>
         </div>
       </div>
     </div>
