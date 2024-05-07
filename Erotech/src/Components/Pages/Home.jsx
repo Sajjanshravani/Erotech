@@ -26,6 +26,7 @@ import investImg from "../Assets/home page first section.jpg";
 import popular1 from "../Assets/2.jpg";
 import popular2 from "../Assets/ESD2.jpg";
 import popular3 from "../Assets/TrainingpageESD.jpg";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   var settings = {
@@ -62,6 +63,27 @@ const Home = () => {
       id: 2,
       text: "As someone passionate about automotive technology, the Embedded Automotive Engineer training at Erotech Solutions exceeded my expectations. The hands-on projects and real-world applications provided valuable insights into the automotive industry. I now feel equipped to tackle complex challenges in this field. Truly grateful for the experience!",
       image: testimonial3,
+    },
+  ];
+
+  let PopularCourses = [
+    {
+      id: 0,
+      image: popular1,
+      title: "Embedded Graduate",
+      link: "/training/1",
+    },
+    {
+      id: 1,
+      image: popular2,
+      title: "Embedded Software Developer",
+      link: "/training/2",
+    },
+    {
+      id: 2,
+      image: popular3,
+      title: "Embedded Automative Engineer",
+      link: "/training/3",
     },
   ];
 
@@ -336,9 +358,19 @@ const Home = () => {
         <p>BEGIN YOUR JOURNEY AT EROTECH</p>
         <h2>Popular Courses</h2>
         <div className="popularCourseCards">
-          <img src={popular1} alt="popular1" className="popularCourseCard" />
-          <img src={popular2} alt="popular2" className="popularCourseCard" />
-          <img src={popular3} alt="popular3" className="popularCourseCard" />
+          {PopularCourses.map((e, i) => {
+            return (
+              <div className="popularCourseCard">
+                <img src={e.image} alt="popular1" />
+                <div className="popularHover">
+                  <h2>{e.title}</h2>
+                  <Link to={e.link}>
+                    <button>View Details</button>
+                  </Link>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
       <div
