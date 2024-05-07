@@ -19,9 +19,11 @@ const initialForm = {
   Comment: "",
 };
 
-function Training({ onSubmit }) {
+function Training({ onSubmit }
+) {
   const { id } = useParams();
-  const [formInfo, setFormInfo] = useState({ ...initialForm });
+  const [formInfo, setFormInfo] = useState({...initialForm});
+  const [validated, setValidated] = useState(false);
 
   const [currentContent, setCurrentContent] = useState(
     trainingContent[parseInt(id) - 1]
@@ -62,41 +64,43 @@ function Training({ onSubmit }) {
     setFormInfo((prev) => ({ ...prev, [a]: b }));
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const formData = new FormData();
-    for (const key in formInfo) {
+const handleSubmit = async (e)=>{
+  e.preventDefault();
+  setValidated(true);
+  const formData = new FormData();
+  for (const key in formInfo) {
       if (formInfo.hasOwnProperty(key)) {
         formData.append(key, formInfo[key]);
       }
-    }
-    const scriptURL =
-      "https://script.gooEnlSm_2X7xfC6BzTP_XlDturj_jf2A70F0m5f7UA/exec";
-    fetch(scriptURL, {
-      method: "POST",
-      body: formData,
-    })
-      .then((response) =>
-        swal({
-          title: "Form has been Submitted!",
-          text: "Our experts will get back to you shortly",
-          icon: "success",
-          button: "Ok",
-        })
-      )
-      .then(() => {
-        form.reset();
-      })
-      .catch((error) =>
-        swal({
-          title: "Fields are Empty!",
-          text: "Please fill all the fields.",
-          icon: "warning",
-          button: "Ok",
-        })
-      );
   };
-
+  const scriptURL =
+  "https://script.google.com/macros/s/AKfycbzqV2mzpMaMYtxjfDvdR7I1d47iAfRz8myuxG5yDHM2_Slbqy9gG4BxvACl_zqzNrQ/exec";
+fetch(scriptURL, {
+  method: "POST",
+  body: formData,
+})
+  .then((response) =>{
+    swal({
+      title: "Form has been Submitted!",
+      text: "Our experts will get back to you shortly",
+      icon: "success",
+      button: "Ok",
+    });
+})
+  .then(() => {
+    
+    setValidated(false);
+  })
+  .catch((error) =>
+    swal({
+      title: "Fields are Empty!",
+      text: "Please fill all the fields.",
+      icon: "warning",
+      button: "Ok",
+    })
+  );
+}
+  
   const sectionRefs = useRef([]);
 
   useEffect(() => {
