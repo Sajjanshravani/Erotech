@@ -51,9 +51,6 @@ const handleSubmit = async (e)=>{
             button: "Ok",
           })
         )
-        .then(() => {
-          form.reset();
-        })
         .catch((error) =>
           swal({
             title: "Fields are Empty!",

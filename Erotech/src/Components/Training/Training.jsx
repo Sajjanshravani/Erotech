@@ -19,10 +19,11 @@ const initialForm = {
   Comment:""
 }
 
-function Training({ onSubmit }) {
+function Training({ onSubmit }
+) {
   const { id } = useParams();
   const [formInfo, setFormInfo] = useState({...initialForm});
-
+  const [validated, setValidated] = useState(false);
 
   const [currentContent, setCurrentContent] = useState(
     trainingContent[parseInt(id) - 1]
@@ -65,6 +66,7 @@ function Training({ onSubmit }) {
 
 const handleSubmit = async (e)=>{
   e.preventDefault();
+  setValidated(true);
   const formData = new FormData();
   for (const key in formInfo) {
       if (formInfo.hasOwnProperty(key)) {
@@ -77,16 +79,17 @@ fetch(scriptURL, {
   method: "POST",
   body: formData,
 })
-  .then((response) =>
+  .then((response) =>{
     swal({
       title: "Form has been Submitted!",
       text: "Our experts will get back to you shortly",
       icon: "success",
       button: "Ok",
-    })
-  )
+    });
+})
   .then(() => {
-    form.reset();
+    
+    setValidated(false);
   })
   .catch((error) =>
     swal({
