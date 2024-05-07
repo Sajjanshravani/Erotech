@@ -39,6 +39,7 @@
   justify-content: center;
   align-items: center;
   gap: 3rem;
+  margin-bottom: 70px;
 }
 
 .industriesServe h2 {
@@ -56,14 +57,19 @@
 }
 
 .industyCard {
-  background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 16px;
+  width: 363px;
+  height: 250px;
   padding: 8%;
   box-shadow: 0px 0px 4px 0px #000000b8;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  backdrop-filter: blur(0.3);
 }
 
 .industyCard h3 {
@@ -89,7 +95,10 @@
   border: none;
   outline: none;
 }
-
+.GrayImg img {
+  height: 100%;
+  border-radius: 16px;
+}
 @media screen and (max-width: 525px) {
   .ServiceBanner {
     height: auto;
@@ -112,6 +121,7 @@
   .industriesServe {
     gap: 1rem;
     height: auto;
+    margin-bottom: 20px;
   }
   .industriesServe h2 {
     font-size: 30px;
@@ -148,13 +158,17 @@
   .contactusDiv h2 {
     font-size: 30px;
   }
+  .industyCard {
+    width: 300px;
+    height: 300px;
+  }
   .industrybtn {
     width: 300px;
     height: 50px;
     font-size: 20px;
   }
   .contactusDiv button {
-    width: 300px;
+    width: auto;
     height: 60px;
     font-size: 20px;
     margin-top: 20px;
