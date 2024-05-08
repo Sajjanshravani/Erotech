@@ -146,7 +146,7 @@ function Footer() {
         </div>
       </div>
       <div className="pentogon">
-        <img src={shape} alt="shape" />
+        <img src={shape} className="sha1" alt="shape" />
         <img src={shape} className="shape2" alt="shape" />
       </div>
     </footer>

@@ -18,6 +18,7 @@ const trainingContent = [
   {
     id: 1,
     course: "Embedded Graduate",
+    heading: "Empowering Minds, Engineering Futures",
     head1: "Accelerate Your Career",
     para1:
       "Master Embedded Systems with Erotech Solutions Graduate Training Program",
@@ -68,6 +69,7 @@ const trainingContent = [
   {
     id: 2,
     course: "Embedded Software Developer",
+    heading: "Code the Future, Embedded in Excellence",
     head1: "Unlock Your Potential",
     para1:
       "Excel in Embedded Software Development with Erotech Solutions Training Program",
@@ -118,6 +120,7 @@ const trainingContent = [
   {
     id: 3,
     course: "Embedded Automotive Engineer",
+    heading: "Drive the Future: Engineering Automotive Excellence",
     head1: "Drive Innovation",
     para1:
       "Excel in Embedded Automotive Engineering with Erotech Solutions Training Program",
@@ -168,6 +171,7 @@ const trainingContent = [
   {
     id: 4,
     course: "Embedded IoT Engineer",
+    heading: "Connectivity Redefined: IoT in Focus",
     head1: "Connect the Future",
     para1:
       "Master Embedded IoT Engineering with Erotech Solutions Training Program",
@@ -218,6 +222,7 @@ const trainingContent = [
   {
     id: 5,
     course: "Short Term Courses",
+    heading: "Quick, Concise, Impactful: Dive into Short Courses.",
     head1: "Accelerate Your Skills",
     para1: "Explore Short-Term Courses with Erotech Solutions",
     banneerimage: short,
@@ -266,6 +271,7 @@ const trainingContent = [
   {
     id: 6,
     course: "Work Shops ",
+    heading: "Hands-On Learning, Minds-On Experience",
     head1: "Hands-On Learning",
     para1: "Explore Workshops with Erotech Solutions",
     banneerimage: Workshop1,

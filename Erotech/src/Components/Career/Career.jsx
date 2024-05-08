@@ -2,7 +2,12 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Career.css";
 import career from "../Assets/career.png";
-import carImage1 from "../Assets/career-box.png";
+import carImage1 from "../Assets/CareersESD1.jpg";
+import carImage2 from "../Assets/CareersEIE2.jpg";
+import carImage3 from "../Assets/CareersEAD3.jpg";
+import carImage4 from "../Assets/CareersTrainer4.jpg";
+import carImage5 from "../Assets/CareersHR5.jpg";
+import carImage6 from "../Assets/CareersDigital6.jpg";
 import ApplyModal from "./ApplyModal";
 
 function Career() {
@@ -23,31 +28,31 @@ function Career() {
     },
     {
       id: 1,
-      img: carImage1,
+      img: carImage2,
       title: "Embedded IoT Engineer",
       body: "Drive innovation in the Internet of Things (IoT) space as an Embedded IoT Engineer. Design and implement IoT solutions that revolutionise industries and transform the way we live.",
     },
     {
       id: 3,
-      img: carImage1,
+      img: carImage3,
       title: "Embedded Automotive Engineer",
       body: "Accelerate your career in automotive technology as an Embedded Automotive Engineer. Develop cutting-edge software for connected and autonomous vehicles, shaping the future of mobility.",
     },
     {
       id: 3,
-      img: carImage1,
+      img: carImage4,
       title: "Trainer",
       body: "Inspire and empower the next generation of tech enthusiasts as a Trainer. Share your expertise, facilitate workshops, and help individuals thrive in the ever-evolving world of technology.",
     },
     {
       id: 4,
-      img: carImage1,
+      img: carImage5,
       title: "Human Resource Executive",
       body: "Join our dynamic HR team and play a pivotal role in talent management and organisational development as a Human Resource Executive. Shape our culture and support our team members' growth.",
     },
     {
       id: 5,
-      img: carImage1,
+      img: carImage6,
       title: "Digital Marketing Executive",
       body: "Elevate your career in digital marketing and drive business growth as a Digital Marketing Executive. Develop and execute innovative strategies to enhance our online presence and engage our audience effectively.",
     },
@@ -58,10 +63,10 @@ function Career() {
       <div className="career-banner">
         <img src={career} alt="" />
       </div>
-      <h1 className="recent">Our Recent Works</h1>
+      <h1 className="recent">Our Openings</h1>
       <p className="discover">
-        Discover our area of expertise and how you can leverage them to gain a
-        competitive edge and grow revenue
+        We're welcoming you all to join our Organisation to grow
+        together. Apply Now!
       </p>
       <div className="about-cards">
         {aboutCard.map((e, i) => {

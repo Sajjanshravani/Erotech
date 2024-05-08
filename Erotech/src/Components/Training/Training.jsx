@@ -3,12 +3,11 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import "./Training.css";
 import trainbanner from "../Assets/train-banner.png";
-import train from "../Assets/train-1.png";
-import cbox from "../Assets/cbox.png";
 import user from "../Assets/user.png";
-import phones from "../Assets/telephone.png";
-import mail from "../Assets/email.png";
-import chat from "../Assets/chat.png";
+import phones from "../Assets/phone.png";
+import mail from "../Assets/mail.png";
+import chat from "../Assets/comment.png";
+import course from "../Assets/course.png";
 import { trainingContent } from "../Assets/Trainingcontent";
 import swal from "sweetalert";
 
@@ -20,27 +19,28 @@ const initialForm = {
   Comment: "",
 };
 
-function Training({ onSubmit }) {
+function Training() {
   const { id } = useParams();
   const [formInfo, setFormInfo] = useState({ ...initialForm });
   const [validated, setValidated] = useState(false);
-
   const [currentContent, setCurrentContent] = useState(
     trainingContent[parseInt(id) - 1]
   );
-
   const [activeTab, setActiveTab] = useState("Description");
   const [expanded, setExpanded] = useState(
     trainingContent[parseInt(id) - 1].faqs
   );
   const [highlightedSection, setHighlightedSection] = useState("Description");
+  const [sectionRefs, setSectionRefs] = useState(
+    Array(trainingContent.length).fill(useRef(null))
+  );
 
-  const sections = [
-    { title: "Description", id: "description" },
-    { title: "Instructor", id: "instructor" },
-    { title: "FAQs", id: "faqs" },
-    { title: "For Enrollment", id: "enrollment" },
-  ];
+  useEffect(() => {
+    // Scroll to the corresponding section when id changes
+    if (sectionRefs[id]) {
+      sectionRefs[id].current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [id, sectionRefs]);
 
   const toggleExpand = (index) => {
     const temp = expanded.map((item, i) => {
@@ -100,26 +100,12 @@ function Training({ onSubmit }) {
       );
   };
 
-  const sectionRefs = useRef([]);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      sectionRefs.current.forEach((sectionRef) => {
-        if (sectionRef.current) {
-          const section = sectionRef.current;
-          const rect = section.getBoundingClientRect();
-          if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
-            setHighlightedSection(section.id);
-          }
-        }
-      });
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  const sections = [
+    { title: "Description", id: "description" },
+    { title: "Instructor", id: "instructor" },
+    { title: "FAQs", id: "faqs" },
+    { title: "For Enrollment", id: "enrollment" },
+  ];
 
   return (
     <div className="train">
@@ -128,16 +114,22 @@ function Training({ onSubmit }) {
         <h1>{currentContent.head1}</h1>
         <p>{currentContent.para1}</p>
       </div>
-
       <div className="training">
         <div className="custom">
-          <h1>Customer-centric Info-Tech Strategies tier level</h1>
+          <h1>{currentContent.heading}</h1>
           <div className="headi-tra">
             {sections.map(({ title, id }, index) => (
               <div
                 key={index}
                 className={`tab ${activeTab === title ? "active" : ""}`}
-                onClick={() => toggleExpand(index)}
+                onClick={() => {
+                  setActiveTab(title);
+                  setHighlightedSection(id);
+                  const sectionElement = document.getElementById(id);
+                  if (sectionElement) {
+                    sectionElement.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
               >
                 <p>{title}</p>
                 <div
@@ -149,11 +141,7 @@ function Training({ onSubmit }) {
             ))}
           </div>
           <hr className="line"></hr>
-          <div
-            className="par-train"
-            id="description"
-            ref={sectionRefs.current[0]}
-          >
+          <div className="par-train" id="description" ref={sectionRefs[0]}>
             <p>{currentContent.trainingparagragh}</p>
             <img src={currentContent.paraimage} className="tra1" alt="" />
             {/* <p>Description content goes here...</p> */}
@@ -189,7 +177,7 @@ function Training({ onSubmit }) {
       </div>
 
       <h1 className="train-head">Trainer</h1>
-      <div className="side-train" id="instructor" ref={sectionRefs.current[1]}>
+      <div className="side-train" id="instructor" ref={sectionRefs[1]}>
         <div className="side-image-train">
           <img src={currentContent.trainer} alt="" />
         </div>
@@ -200,7 +188,7 @@ function Training({ onSubmit }) {
         </div>
       </div>
 
-      <div className="frequent" id="faqs" ref={sectionRefs.current[2]}>
+      <div className="frequent" id="faqs" ref={sectionRefs[2]}>
         <div className="faq-container">
           <h2>Questions</h2>
           {/* FAQ Item 1 */}
@@ -226,7 +214,7 @@ function Training({ onSubmit }) {
         </div>
       </div>
 
-      <div className="form-image" id="enrollment" ref={sectionRefs.current[3]}>
+      <div className="form-image" id="enrollment" ref={sectionRefs[3]}>
         <div className="image-form">
           <img src={currentContent.banneerimage} alt="" />
         </div>
@@ -272,6 +260,7 @@ function Training({ onSubmit }) {
                   <div className="custom-form-group">
                     <label htmlFor="course">Course:</label>
                     <div className="input-with-icon">
+                      <img src={course} alt="" />
                       <select
                         id="course"
                         name="Course"

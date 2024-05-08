@@ -20,7 +20,7 @@
     position: relative; 
     max-width: 1200px;
     margin: 0 auto;
-    padding: 101px 11px 54px 31px;
+    padding: 101px 11px 0px 31px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -82,6 +82,7 @@
 .social{
     position: relative;
     left: 78px;
+    top: -9px;
 }
 .foot-line{
     position: relative;
@@ -93,20 +94,22 @@
     font-weight: 500;
 }
 .pentogon{
-    position: relative; 
+    position: absolute;
+    top: 0px;
 }
-.pentogon img{
+.sha1{
     z-index: 99;
-    top: -388px;
+    top: 66px;
     width: 32px;
     position: relative;
 }
 .shape2{
     position: relative;
-    top: -483px !important;
-    left: 1119px;
+    top: -23px !important;
+    left: 1105px;
     width: 82px !important;
     height: 75px;
+    z-index: 9;
 }
 .wave-shape svg{
     width: 100%;
@@ -127,13 +130,13 @@
 } 
 @media screen and (min-width:1444px) {
     .shape2{
-        top: -529px !important;
-        left: 1362px;    
+        top: -22px !important;
+        left: 1350px;  
     }
     .footer{
         overflow: unset;
     }
-    .pentogon img{
+    .sha1 img{
         top: -439px;
     }
     .footer-column img{
@@ -153,13 +156,13 @@
 
 @media screen and (min-width:1377px) and (max-width:1443px) {
     .shape2{
-        top: -509px !important;
+        top: -23px !important;
         left: 1270px;
     }
     .footer{
         overflow: unset;
     }
-    .pentogon img{
+    .sha1 img{
         top: -421px;
     }
     .footer-column img{
@@ -181,13 +184,13 @@
 
 @media screen and (min-width:1300px) and (max-width:1376px) {
     .shape2{
-        top: -554px !important;
-        left: 1214px;
+        top: -22px !important;
+        left: 1199px;
     }
     .footer{
         overflow: unset;
     }
-    .pentogon img{
+    .sha1 img{
         top: -462px;
     }
     .footer-column img{
@@ -209,13 +212,13 @@
 
 @media screen and (min-width:1024px) and (max-width:1199px){
     .shape2{
-        top: -481px !important;
-        left: 879px;
+        top: -23px !important;
+        left: 864px;
     }
     .footer{
         overflow: unset;
     }
-    .pentogon img{
+    .sha1 img{
         top: -395px;
     }
 
@@ -223,12 +226,12 @@
 }
 
 @media screen and (min-width:500px) and (max-width:786px) {
-    .pentogon img{
+    .sha1 img{
         top: -1059px;
     }
     .shape2{
-        top: -1138px !important;
-        left: 603px;    
+        top: -20px !important;
+        left: 603px;
     }
     .foot-line{
         right: -22px;
@@ -236,17 +239,20 @@
     .footer-last{
         justify-content: normal;
     }
+    .social {
+        top: -9px;
+    }
 }
 
 @media screen and (min-width:400px) and (max-width:500px){
-.pentogon img{
+.sha1 img{
     top: -1092px;
     width: 32px;
     position: relative;
     left: 3px;
 }
 .shape2 {
-    top: -1165px !important;
+    top: 0px !important;
     left: 282px !important;
     width: 67px !important;
     height: 52px;
@@ -262,20 +268,20 @@
 }
 .social{
     left: 15px;
-    top: -30px;
+    top: -16px;
 }
 }
 
 @media screen and (min-width:375px) and (max-width:399px) {
-    .pentogon img{
+    .sha1 img{
         top: -1093px;
         width: 32px;
         position: relative;
         left: 3px;
     }
     .shape2 {
-        top: -1162px !important;
-        left: 226px !important;
+        top: 0px !important;
+        left: 235px !important;
         width: 67px !important;
         height: 52px;
     }
@@ -290,19 +296,19 @@
     }
     .social{
         left: 15px;
-        top: -30px;
+        top: -14px;
     }
 }
 
 @media screen and (min-width:300px) and (max-width:374px){
-    .pentogon img{
+    .sha1 img{
         top: -1093px;
         width: 32px;
         position: relative;
         left: 3px;
     }
     .shape2 {
-        top: -1162px !important;
+        top: 0px !important;
         left: 223px !important;
         width: 67px !important;
         height: 52px;
@@ -322,6 +328,6 @@
     }
     .social{
         left: 15px;
-        top: -30px;
+        top: -16px;
     }
 }

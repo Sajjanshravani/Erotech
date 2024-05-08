@@ -48,17 +48,15 @@ function NavBar() {
         <nav>
           <ul>
             <li>
-              <a href="/">Home</a>
+              <a href="/">HOME</a>
             </li>
             <li>
-              <a href="/about">About Us</a>
+              <a href="/about">ABOUT US</a>
             </li>
-            <li
-              className="dropdown"
-              onMouseEnter={toggleServicesDropdown}
-              onMouseLeave={toggleServicesDropdown}
-            >
-              <a href="#">Services</a>
+            <li className="dropdown">
+              <a href="#" onClick={toggleServicesDropdown}>
+                SERVICES
+              </a>
               {showServicesDropdown && (
                 <div className="dropdown-content">
                   <a href="/Services/EmbeddedSystems">Embedded Software</a>
@@ -69,12 +67,10 @@ function NavBar() {
                 </div>
               )}
             </li>
-            <li
-              className="dropdown"
-              onMouseEnter={toggleTrainingDropdown}
-              onMouseLeave={toggleTrainingDropdown}
-            >
-              <a href="#">Training</a>
+            <li className="dropdown">
+              <a href="#" onClick={toggleTrainingDropdown}>
+                TRAINING
+              </a>
               {showTrainingDropdown && (
                 <div className="dropdown-content">
                   <a href="/training/1">Embedded Graduate</a>
@@ -87,10 +83,10 @@ function NavBar() {
               )}
             </li>
             <li>
-              <a href="/career">Careers</a>
+              <a href="/career">CAREERS</a>
             </li>
             <li>
-              <a href="/contactUs">Contact Us</a>
+              <a href="/contactUs">CONTACT US</a>
             </li>
           </ul>
         </nav>
