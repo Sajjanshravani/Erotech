@@ -90,7 +90,7 @@
   }
   .maps-embed {
     margin: auto;
-    width: 767px;
+    width: 833px;
     height: 439px;
     border-radius: 47px;
     border: 10px solid #62c6ef;
@@ -115,7 +115,7 @@
   form {
     background-color: #f0fbff;
     padding: 10px;
-    border: 1px solid black;
+    box-shadow: 0 1px 7px 0 black;
     height: 480px;
   }
 
