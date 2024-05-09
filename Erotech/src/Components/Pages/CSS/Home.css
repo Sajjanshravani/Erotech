@@ -17,7 +17,7 @@ body {
 
 .HomeBanner {
   position: relative;
-  z-index: -1;
+  z-index: 0;
 }
 
 .HomeBanner .slick-arrow {
@@ -58,20 +58,27 @@ body {
 }
 .Bannericons {
   display: flex;
-  gap: 10rem;
   margin-top: 30px;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .iconBox {
-  width: 110px !important;
+  width: 100px !important;
   height: auto !important;
 }
 .grayIcon {
   background-color: #d9d9d9;
   padding: 10px;
   border-radius: 10px;
+  width: 15vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.grayIcon h4 {
+  font-size: 16px;
 }
 
 @media screen and (max-width: 525px) {
@@ -480,19 +487,19 @@ body {
 
 .section4.visible .section4Box1 {
   opacity: 1;
-  transition-delay: 1s;
+  transition-delay: 0s;
 }
 .section4.visible .section4Box2 {
   opacity: 1;
-  transition-delay: 1.4s;
+  transition-delay: 0.6s;
 }
 .section4.visible .section4Box3 {
   opacity: 1;
-  transition-delay: 1.8s;
+  transition-delay: 1.2s;
 }
 .section4.visible .section4Box4 {
   opacity: 1;
-  transition-delay: 2.2s;
+  transition-delay: 1.8s;
 }
 @media screen and (max-width: 525px) {
   .section4 .row {
@@ -624,12 +631,15 @@ body {
   background-repeat: no-repeat;
   height: 100vh;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .section6 h2 {
-  margin-top: 50px;
+  position: absolute;
+  margin-top: 210px;
   font-size: 48px;
   font-weight: 700;
-  text-align: center;
   margin-bottom: 0;
 }
 .testimonial {
@@ -702,6 +712,7 @@ body {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  padding: 0% 2%;
 }
 
 .category {
@@ -710,9 +721,19 @@ body {
   align-items: center;
   flex-direction: column;
   cursor: pointer;
+  width: 18vw;
+  height: 32vh;
   gap: 10px;
+  transition: 0.3s;
 }
-
+.category:hover {
+  border-radius: 16px;
+  box-shadow: 0px 0px 10px 0px #000000b8;
+}
+.category.selected {
+  border-radius: 16px;
+  box-shadow: 0px 6px 20px 0px #000000b8;
+}
 .category img {
   width: 130px;
 }
@@ -721,7 +742,6 @@ body {
   font-size: 25px;
   font-weight: 400;
   text-align: center;
-  width: 70%;
 }
 
 .IconCategories .section3-Image .categorygrayImg {

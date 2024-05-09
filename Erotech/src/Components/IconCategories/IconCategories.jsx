@@ -81,26 +81,29 @@ const IconCategories = () => {
   const [selectedCategory, setSelectedCategory] = useState(0);
   const [isSection3Visible, setIsSection3Visible] = useState(false);
   const section3Ref = useRef(null);
+  const section3ObserverRef = useRef(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
+    section3ObserverRef.current = new IntersectionObserver(
       ([entry]) => {
         setIsSection3Visible(entry.isIntersecting);
+        if (entry.isIntersecting) {
+          section3ObserverRef.current.disconnect();
+        }
       },
       { threshold: 0.5 }
     );
 
     if (section3Ref.current) {
-      observer.observe(section3Ref.current);
+      section3ObserverRef.current.observe(section3Ref.current);
     }
 
     return () => {
-      if (section3Ref.current) {
-        observer.unobserve(section3Ref.current);
+      if (section3Ref.current && section3ObserverRef.current) {
+        section3ObserverRef.current.disconnect();
       }
     };
   }, []);
-
   return (
     <div className="IconCategories">
       <div className="desktopView">
@@ -114,7 +117,9 @@ const IconCategories = () => {
             {Categories.map((e, i) => {
               return (
                 <div
-                  className="category"
+                  className={`category ${
+                    selectedCategory === i ? "selected" : ""
+                  }`}
                   key={i}
                   onClick={() => setSelectedCategory(i)}
                 >

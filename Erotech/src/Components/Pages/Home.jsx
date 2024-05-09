@@ -36,8 +36,10 @@ const Home = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 5000,
+    pauseOnHover: true,
   };
+
   var tests = {
     dots: false,
     infinite: true,
@@ -45,7 +47,8 @@ const Home = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 5000,
+    pauseOnHover: true,
   };
 
   let testimonials = [
@@ -82,91 +85,100 @@ const Home = () => {
     {
       id: 2,
       image: popular3,
-      title: "Embedded Automative Engineer",
+      title: "Embedded Automotive Engineer",
       link: "/training/3",
     },
   ];
 
   const [isVisible, setIsVisible] = useState(false);
   const investingRef = useRef(null);
+  const investObserverRef = useRef(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
+    investObserverRef.current = new IntersectionObserver(
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
+        if (entry.isIntersecting) {
+          investObserverRef.current.disconnect();
+        }
       },
       { threshold: 0.5 }
     );
 
     if (investingRef.current) {
-      observer.observe(investingRef.current);
+      investObserverRef.current.observe(investingRef.current);
     }
 
     return () => {
-      if (investingRef.current) {
-        observer.unobserve(investingRef.current);
+      if (investingRef.current && investObserverRef.current) {
+        investObserverRef.current.disconnect();
       }
     };
   }, []);
 
   const [isSection4Visible, setIsSection4Visible] = useState(false);
   const section4Ref = useRef(null);
+  const section4ObserverRef = useRef(null);
   const [box1Count, setBox1Count] = useState(0);
   const [box2Count, setBox2Count] = useState(0);
   const [box3Count, setBox3Count] = useState(0);
   const [box4Count, setBox4Count] = useState(0);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
+    section4ObserverRef.current = new IntersectionObserver(
       ([entry]) => {
         setIsSection4Visible(entry.isIntersecting);
+        if (entry.isIntersecting) {
+          section4ObserverRef.current.disconnect();
+        }
       },
       { threshold: 0.5 }
     );
 
     if (section4Ref.current) {
-      observer.observe(section4Ref.current);
+      section4ObserverRef.current.observe(section4Ref.current);
     }
 
     return () => {
-      if (section4Ref.current) {
-        observer.unobserve(section4Ref.current);
+      if (section4Ref.current && section4ObserverRef.current) {
+        section4ObserverRef.current.disconnect();
       }
     };
   }, []);
-
   useEffect(() => {
-    let start = 0;
-    let end1 = 100;
-    let end2 = 98;
-    let end3 = 100;
-    let end4 = 1000;
-    let totalSteps = 100;
-    let currentStep = 0;
+    if (isSection4Visible) {
+      let start = 0;
+      let end1 = 100;
+      let end2 = 98;
+      let end3 = 100;
+      let end4 = 1000;
+      let totalSteps = 100;
+      let currentStep = 0;
 
-    const interval = setInterval(() => {
-      currentStep++;
-      const step1 = ((end1 - start) * (currentStep / totalSteps)).toFixed(0);
-      const step2 = ((end2 - start) * (currentStep / totalSteps)).toFixed(0);
-      const step3 = ((end3 - start) * (currentStep / totalSteps)).toFixed(0);
-      const step4 = ((end4 - start) * (currentStep / totalSteps)).toFixed(0);
-      setBox1Count(step1);
-      setBox2Count(step2);
-      setBox3Count(step3);
-      setBox4Count(step4);
+      const interval = setInterval(() => {
+        currentStep++;
+        const step1 = ((end1 - start) * (currentStep / totalSteps)).toFixed(0);
+        const step2 = ((end2 - start) * (currentStep / totalSteps)).toFixed(0);
+        const step3 = ((end3 - start) * (currentStep / totalSteps)).toFixed(0);
+        const step4 = ((end4 - start) * (currentStep / totalSteps)).toFixed(0);
+        setBox1Count(step1);
+        setBox2Count(step2);
+        setBox3Count(step3);
+        setBox4Count(step4);
 
-      if (currentStep >= totalSteps) {
+        if (currentStep >= totalSteps) {
+          clearInterval(interval);
+        }
+      }, 30);
+
+      return () => {
         clearInterval(interval);
-      }
-    }, 30);
-
-    return () => {
-      clearInterval(interval);
-    };
+      };
+    }
   }, [isSection4Visible]);
 
   return (
-    <div>
+    <div className="HomePage">
       <div className="HomeBanner">
         <Slider {...settings}>
           <div className="HomeSlide">
@@ -184,6 +196,7 @@ const Home = () => {
                     className="iconBox"
                     alt="bannericons"
                   />
+                  <h4>Embedded Systems</h4>
                 </div>
                 <div className="grayIcon">
                   <img
@@ -191,6 +204,7 @@ const Home = () => {
                     className="iconBox"
                     alt="bannericons"
                   />
+                  <h4>Structured Work Process</h4>
                 </div>
                 <div className="grayIcon">
                   <img
@@ -198,6 +212,7 @@ const Home = () => {
                     className="iconBox"
                     alt="bannericons"
                   />
+                  <h4>Strategic Growth</h4>
                 </div>
                 <div className="grayIcon">
                   <img
@@ -205,6 +220,7 @@ const Home = () => {
                     className="iconBox"
                     alt="bannericons"
                   />
+                  <h4>Top Rated Service</h4>
                 </div>
               </div>
             </div>
@@ -221,6 +237,7 @@ const Home = () => {
                     className="iconBox"
                     alt="bannericons"
                   />
+                  <h4>Embedded Solutions</h4>
                 </div>
                 <div className="grayIcon">
                   <img
@@ -228,6 +245,7 @@ const Home = () => {
                     className="iconBox"
                     alt="bannericons"
                   />
+                  <h4>Team Work</h4>
                 </div>
                 <div className="grayIcon">
                   <img
@@ -235,6 +253,7 @@ const Home = () => {
                     className="iconBox"
                     alt="bannericons"
                   />
+                  <h4>Successful Caree</h4>
                 </div>
                 <div className="grayIcon">
                   <img
@@ -242,6 +261,7 @@ const Home = () => {
                     className="iconBox"
                     alt="bannericons"
                   />
+                  <h4>Expert Trainings</h4>
                 </div>
               </div>
             </div>
@@ -327,7 +347,7 @@ const Home = () => {
                   <span className="count">{box2Count}%</span>
                 </h2>
                 <h3>Job Placement Rate</h3>
-                <p> Top Companies are hiring our Candidates</p>
+                <p>Top Companies are hiring our Candidates</p>
               </div>
             </div>
             <div className="rightBoxes">
