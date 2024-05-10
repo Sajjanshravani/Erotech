@@ -220,7 +220,7 @@ function Training() {
         </div>
         <div className="form">
           <div className="custom-form-container">
-            <form onSubmit={handleSubmit} style={{ border: "none" }}>
+            <form onSubmit={handleSubmit} style={{ boxShadow: "none" }}>
               <div className="custom-row">
                 <div className="custom-col">
                   <div className="custom-form-group">
