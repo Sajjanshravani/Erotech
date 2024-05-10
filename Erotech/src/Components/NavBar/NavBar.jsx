@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./NavBar.css";
 import logo from "../Assets/logo.png";
 
@@ -6,6 +6,29 @@ function NavBar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [showServicesDropdown, setShowServicesDropdown] = useState(false);
   const [showTrainingDropdown, setShowTrainingDropdown] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  const handleScroll = () => {
+    setScrollY(window.scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    handleResize(); // Call handleResize initially
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const handleResize = () => {
+    // Check if the screen width is less than or equal to 768 pixels
+    setIsMobile(window.innerWidth <= 768);
+  };
 
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
@@ -27,7 +50,12 @@ function NavBar() {
 
   return (
     <div className="app">
-      <header className={isNavOpen ? "nav-open" : ""}>
+      <header
+        className={isNavOpen ? "nav-open" : ""}
+        style={{
+          backgroundColor: scrollY > 0 && !isMobile ? "#fff" : "transparent", // Apply white background only when scrolled and not on mobile
+        }}
+      >
         <div className="logo">
           <a href="/">
             <img src={logo} alt="logo" />

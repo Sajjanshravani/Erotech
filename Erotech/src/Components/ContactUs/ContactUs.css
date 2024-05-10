@@ -172,9 +172,12 @@
     height: 20px;
   }
 
-  .address-section h3,
-  p {
-    font-size: 10px;
+  .address-section h3{
+    font-size: 20px;
+  }
+  .address-section p{
+    font-size: 14px;
+    text-align: center;
   }
   .maps-embed {
     width: 100%;
@@ -186,4 +189,24 @@
     width: 300px;
     height: 200px;
   }
+  .address-section div {
+    width: 286px;
+    height: 188px;
+    border-radius: 8px;
+    margin: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.3);
+    /* position: relative;
+    left: 34px; */
+}
+form {
+  background-color: #f0fbff;
+  padding: 10px;
+  box-shadow: 0 1px 7px 0 black;
+  height: 480px;
+}
 }

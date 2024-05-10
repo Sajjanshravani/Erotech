@@ -14,8 +14,9 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 13px 50px 20px;
-    position: absolute;
-    top: 19px;
+    position: fixed; /* Change position to fixed */
+    top: 0; /* Position at the top */
+    z-index: 9;
 }
 
 .logo img {
@@ -93,7 +94,8 @@ header nav ul li a.active {
         margin: 5px 13px;
     }
     .logo img {
-        top: 3px;
+        top: 12px;
+        right: 22px;
     }
     .dropdown-content a{
         right: 13px !important;
@@ -113,19 +115,17 @@ header nav ul li a.active {
     .discover{
         font-size: 18px;
     }
-    
+    header{
+        position: absolute;
+    }
+
 }
 
-  /* .dropdown  {
-   
-    position: relative; 
-  } */
   
   .dropdown .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    /* min-width: 160px; */
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     width: 300px;

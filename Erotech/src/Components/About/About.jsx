@@ -12,37 +12,56 @@ import about1 from "../Assets/Aboutus1.jpg";
 import about2 from "../Assets/Aboutus2.jpg";
 
 function About() {
-  const [isSection3Visible, setIsSection3Visible] = useState(false);
-  const section3Ref1 = useRef(null); // First section ref
-  const section3Ref2 = useRef(null); // Second section ref
+  const section3Ref1 = useRef(null); // Ref for the first section
+  const section3Ref2 = useRef(null); // Ref for the second section
+  const [isSection3Visible1, setIsSection3Visible1] = useState(false);
+  const [isSection3Visible2, setIsSection3Visible2] = useState(false);
 
+  // useEffect for intersection observer for section 1
   useEffect(() => {
-    const observer = new IntersectionObserver(
+    const observer1 = new IntersectionObserver(
       ([entry]) => {
-        setIsSection3Visible(entry.isIntersecting);
+        if (entry.isIntersecting) {
+          setIsSection3Visible1(true);
+          observer1.disconnect(); // Disconnect observer once section is intersecting
+        }
       },
       { threshold: 0.5 }
     );
 
     if (section3Ref1.current) {
-      observer.observe(section3Ref1.current);
-    }
-
-    if (section3Ref2.current) {
-      observer.observe(section3Ref2.current);
+      observer1.observe(section3Ref1.current);
     }
 
     return () => {
       if (section3Ref1.current) {
-        observer.unobserve(section3Ref1.current);
-      }
-
-      if (section3Ref2.current) {
-        observer.unobserve(section3Ref2.current);
+        observer1.unobserve(section3Ref1.current);
       }
     };
   }, []);
 
+  // useEffect for intersection observer for section 2
+  useEffect(() => {
+    const observer2 = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsSection3Visible2(true);
+          observer2.disconnect(); // Disconnect observer once section is intersecting
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (section3Ref2.current) {
+      observer2.observe(section3Ref2.current);
+    }
+
+    return () => {
+      if (section3Ref2.current) {
+        observer2.unobserve(section3Ref2.current);
+      }
+    };
+  }, []);
   const [isSection4Visible, setIsSection4Visible] = useState(false);
   const section4Ref = useRef(null);
   const [box1Count, setBox1Count] = useState(0);
@@ -109,12 +128,12 @@ function About() {
       <div className="about-ani">
         <div
           ref={section3Ref1}
-          className={`section3 ${isSection3Visible ? "visible" : ""}`}
+          className={`section3 ${isSection3Visible1 ? "visible" : ""}`} // Use isSection3Visible1 for visibility
         >
           <div className="row">
             <div
               className={`col-lg-5 col-sm-12 section3-Description11 ${
-                isSection3Visible ? "visible" : ""
+                isSection3Visible1 ? "visible" : ""
               }`}
             >
               <p>
@@ -132,7 +151,7 @@ function About() {
             </div>
             <div
               className={`col-lg-7 col-sm-12 section3-Image ${
-                isSection3Visible ? "visible" : ""
+                isSection3Visible1 ? "visible" : ""
               }`}
             >
               <img
@@ -204,12 +223,12 @@ function About() {
       <div className="text-image">
         <div
           ref={section3Ref2}
-          className={`section3 ${isSection3Visible ? "visible" : ""}`}
+          className={`section3 ${isSection3Visible2 ? "visible" : ""}`} // Use isSection3Visible2 for visibility
         >
           <div className="row">
             <div
               className={`col-lg-7 col-sm-12 section3-Image ${
-                isSection3Visible ? "visible" : ""
+                isSection3Visible2 ? "visible" : ""
               }`}
             >
               <img
@@ -243,7 +262,7 @@ function About() {
             </div>
             <div
               className={`col-lg-5 col-sm-12 section3-Description3 ${
-                isSection3Visible ? "visible" : ""
+                isSection3Visible2 ? "visible" : ""
               }`}
             >
               <p>
