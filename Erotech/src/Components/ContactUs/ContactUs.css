@@ -103,7 +103,6 @@
 
   .form-section {
     display: flex;
-    /* margin-top: 100px; */
     justify-content: space-around;
   }
 
@@ -172,10 +171,10 @@
     height: 20px;
   }
 
-  .address-section h3{
+  .address-section h3 {
     font-size: 20px;
   }
-  .address-section p{
+  .address-section p {
     font-size: 14px;
     text-align: center;
   }
@@ -202,11 +201,11 @@
     box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.3);
     /* position: relative;
     left: 34px; */
-}
-form {
-  background-color: #f0fbff;
-  padding: 10px;
-  box-shadow: 0 1px 7px 0 black;
-  height: 480px;
-}
+  }
+  form {
+    background-color: #f0fbff;
+    padding: 10px;
+    box-shadow: 0 1px 7px 0 black;
+    height: 480px;
+  }
 }
