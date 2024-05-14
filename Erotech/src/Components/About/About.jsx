@@ -12,18 +12,23 @@ import about1 from "../Assets/Aboutus1.jpg";
 import about2 from "../Assets/Aboutus2.jpg";
 
 function About() {
-  const section3Ref1 = useRef(null); // Ref for the first section
-  const section3Ref2 = useRef(null); // Ref for the second section
+  const section3Ref1 = useRef(null);
+  const section3Ref2 = useRef(null);
+  const section4Ref = useRef(null);
   const [isSection3Visible1, setIsSection3Visible1] = useState(false);
   const [isSection3Visible2, setIsSection3Visible2] = useState(false);
+  const [isSection4Visible, setIsSection4Visible] = useState(false);
+  const [box1Count, setBox1Count] = useState(0);
+  const [box2Count, setBox2Count] = useState(0);
+  const [box3Count, setBox3Count] = useState(0);
+  const [box4Count, setBox4Count] = useState(0);
 
-  // useEffect for intersection observer for section 1
   useEffect(() => {
     const observer1 = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsSection3Visible1(true);
-          observer1.disconnect(); // Disconnect observer once section is intersecting
+          observer1.disconnect();
         }
       },
       { threshold: 0.5 }
@@ -40,13 +45,12 @@ function About() {
     };
   }, []);
 
-  // useEffect for intersection observer for section 2
   useEffect(() => {
     const observer2 = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsSection3Visible2(true);
-          observer2.disconnect(); // Disconnect observer once section is intersecting
+          observer2.disconnect();
         }
       },
       { threshold: 0.5 }
@@ -62,12 +66,6 @@ function About() {
       }
     };
   }, []);
-  const [isSection4Visible, setIsSection4Visible] = useState(false);
-  const section4Ref = useRef(null);
-  const [box1Count, setBox1Count] = useState(0);
-  const [box2Count, setBox2Count] = useState(0);
-  const [box3Count, setBox3Count] = useState(0);
-  const [box4Count, setBox4Count] = useState(0);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -128,7 +126,7 @@ function About() {
       <div className="about-ani">
         <div
           ref={section3Ref1}
-          className={`section3 ${isSection3Visible1 ? "visible" : ""}`} // Use isSection3Visible1 for visibility
+          className={`section3 ${isSection3Visible1 ? "visible" : ""}`}
         >
           <div className="row">
             <div
@@ -187,43 +185,33 @@ function About() {
         </div>
       </div>
       <div className="box-1">
-        <div className="container">
-          <div className="animated-box">
+        <div className={`container ${isSection4Visible ? "animated" : ""}`}>
+          <div ref={section4Ref} className="animated-box">
             <span className="animated-count">{box1Count}%</span>
             <h3>Training Success Rate</h3>
             <p>Our Success meets with our Expert Trainers</p>
           </div>
-          <div className="animated-box">
+          <div ref={section4Ref} className="animated-box">
             <span className="animated-count">{box2Count}%</span>
             <h3>Job Placement Rate</h3>
             <p>Top Companies are hiring our Candidates</p>
           </div>
-          <div className="animated-box">
+          <div ref={section4Ref} className="animated-box">
             <span className="animated-count">{box3Count}+</span>
             <h3>Online Instructors</h3>
             <p>Expert Instructors to train the Candidates</p>
           </div>
-          <div className="animated-box">
+          <div ref={section4Ref} className="animated-box">
             <span className="animated-count">{box4Count}+</span>
             <h3>Finished Sessions</h3>
             <p>Completed Sessions with our core team</p>
           </div>
-          {/* Repeat for other boxes */}
         </div>
       </div>
-
-      {/* <div className="greywave">
-        <img src={greywave} alt="" />
-        <div className="grey">
-          <div className="greybox"></div>
-          <div className="greybox"></div>
-          <div className="greybox"></div>
-        </div>
-      </div> */}
       <div className="text-image">
         <div
           ref={section3Ref2}
-          className={`section3 ${isSection3Visible2 ? "visible" : ""}`} // Use isSection3Visible2 for visibility
+          className={`section3 ${isSection3Visible2 ? "visible" : ""}`}
         >
           <div className="row">
             <div
