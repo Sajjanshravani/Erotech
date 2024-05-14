@@ -154,9 +154,16 @@ function ContactUs({ onSubmit }) {
                       required
                     >
                       <option value="">Select Course</option>
-                      <option value="course1">Course 1</option>
-                      <option value="course2">Course 2</option>
-                      <option value="course3">Course 3</option>
+                      <option value="course1">Embedded Graduate</option>
+                      <option value="course2">
+                        Embedded Software Developer
+                      </option>
+                      <option value="course3">
+                        Embedded Automotive Engineer
+                      </option>
+                      <option value="course4">Embedded IoT Engineer</option>
+                      <option value="course5">Short Term Courses</option>
+                      <option value="course6">Workshops</option>
                     </select>
                   </div>
                 </div>
